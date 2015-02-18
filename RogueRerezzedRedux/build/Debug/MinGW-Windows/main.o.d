@@ -1,3 +1,3 @@
-build/Debug/MinGW-Windows/main.o: main.cpp c:/toolkits/winapifamily.h
+build/Debug/MinGW-Windows/main.o: main.cpp main.h
 
-c:/toolkits/winapifamily.h:
+main.h:

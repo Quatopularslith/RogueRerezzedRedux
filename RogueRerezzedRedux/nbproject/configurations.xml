@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>floorGen.h</itemPath>
       <itemPath>main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -13,6 +14,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>floorGen.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -44,6 +46,10 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="floorGen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="floorGen.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.h" ex="false" tool="3" flavor2="0">
@@ -69,6 +75,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="floorGen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="floorGen.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.h" ex="false" tool="3" flavor2="0">

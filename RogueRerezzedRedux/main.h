@@ -9,9 +9,8 @@
 #define	MAIN_H
 
 class Main{
-private:
-    int main(int argc, char* args[]);
 public:
+private:
 };
 
 #endif	/* MAIN_H */
