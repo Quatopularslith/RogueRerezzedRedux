@@ -8,9 +8,10 @@
 #include <cstdlib>
 #include <iostream>
 #include <SDL.h>
+#include "main.h";
 using namespace std;
 
-int main(int argc, char* args[]) {
+Main::main(int argc, char* args[]){
     SDL_Window** window;
     SDL_Renderer** renderer;
     SDL_Surface* screen = NULL;
