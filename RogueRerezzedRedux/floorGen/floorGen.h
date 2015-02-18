@@ -10,9 +10,7 @@
 
 class floorGen {
 public:
-    bool loadMedia();
-    floorGen(const floorGen& orig);
-    virtual ~floorGen();
+    bool loadFloor();
 private:
 
 };

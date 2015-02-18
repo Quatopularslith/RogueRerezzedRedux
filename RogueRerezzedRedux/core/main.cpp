@@ -9,15 +9,13 @@
 #include <iostream>
 #include <stdio.h>
 #include <SDL.h>
+#include <SDL_image.h>
 #include "main.h"
+#include "floorGen.h"
+
 using namespace std;
 
-SDL_Window *window;
-SDL_Surface *screenSurface;
-const int width = 640;
-const int height = 480;
-
-int init(){
+int Main::init(){
     bool success = true;
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
         printf("Initialization error: %s\n", SDL_GetError());
@@ -28,20 +26,40 @@ int init(){
             printf("Window creation error: %s\n", SDL_GetError());
             success = false;
         }else{
+            if(!(IMG_Init(IMG_INIT_PNG)& IMG_INIT_PNG)){
+                printf("SDL_Image error: %s\n", IMG_GetError());
+                success = false;
+            }else{
             screenSurface = SDL_GetWindowSurface(window);
+            }
         }
     }
     return success;
 }
-int quit(){
+void Main::quit(){
     SDL_DestroyWindow(window);
     SDL_FreeSurface(screenSurface);
     SDL_Quit();
 }
 int main(int argc, char* args[]){
-    init();
-    SDL_Delay(3000);
-    quit();
+    if(!Main::init()){
+        printf("Init failed");
+    }else{
+        if(!loadMedia::loadMedia()){
+            printf("Floor failed to load");
+        }else{
+            SDL_Event e;
+            bool quit = false;
+            while(!quit){
+                while(SDL_PollEvent(&e) != 0){
+                    if(e.type == SDL_QUIT){
+                        quit = true;
+                    }
+                }
+                SDL_BlitSurface();
+            }
+        }
+    }
     return 0;
 }
 
