@@ -51,10 +51,10 @@ int main(int argc, char* args[]){
         printf("U haz no init. WHAT DID YOU DO MAN");
     }else{
         if(!lM.doesMediaLoad()){
-            printf("Media Failed to load. HAVE FUN WITH NO GRAPHICS");
+            printf("U haz no media. HAVE FUN WITH NO GRAPHICS");
         }else{
             if(!fG.doesFloorGenLoad()){
-                printf("Floor Gen failed to load. GOOD JOB M8. HAVE FUN MOVING WITH NO LEVELS");
+                printf("U haz no floor gen. GOOD JOB M8. HAVE FUN PLAYING WITH NO LEVELS");
             }else{
                 SDL_Event e;
                 bool quit = false;
