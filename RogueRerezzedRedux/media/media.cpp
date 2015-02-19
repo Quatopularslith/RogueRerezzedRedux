@@ -19,7 +19,7 @@ media::media(){
 }
 bool media::doesMediaLoad(){
     bool success = true;
-    if(!mlM.loadPNG("")){
+    if(!mlM.loadPNG("floor.png")){
         success = false;
     }
     return success;
@@ -31,7 +31,7 @@ SDL_Surface* media::loadPNG(string path) {
     if(img == NULL){
         printf("img load error: %s\n", SDL_GetError());
     }else{
-        optimizedImg = SDL_ConvertSurface(img, mm.screenSurface->format, NULL);
+        optimizedImg = SDL_ConvertSurface(img, mm.screenSurface->format, 0);
         if(optimizedImg == NULL){
             printf("Floor optimization error: %s\n", SDL_GetError());
         }
