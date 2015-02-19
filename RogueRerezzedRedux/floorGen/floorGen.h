@@ -11,6 +11,7 @@
 class floorGen {
 public:
     floorGen();
+    bool doesFloorGenLoad();
     bool loadFloor();
 private:
 

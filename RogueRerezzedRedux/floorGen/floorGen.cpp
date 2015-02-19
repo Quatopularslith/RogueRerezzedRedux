@@ -10,14 +10,25 @@
 #include <stdio.h>
 #include <string>
 #include "../media/media.h"
-media lM;
+media fGlM;
+floorGen fGfG;
 floorGen::floorGen(){
     
 }
+
+bool floorGen::doesFloorGenLoad(){
+    bool success = true;
+    if(!fGfG.loadFloor()){
+        printf("Floor failed to load");
+        success = false;
+    }
+    return success;
+}
+
 bool floorGen::loadFloor(){
     SDL_Surface* floorBlock = NULL;
     bool success = true;
-    floorBlock = lM.loadPNG("floor.png");
+    floorBlock = fGlM.loadPNG("floor.png");
     if(floorBlock == NULL){
         printf("Floor Block failed to load\n");
     }

@@ -8,11 +8,13 @@
 #ifndef LOADMEDIA_H
 #define	LOADMEDIA_H
 #include <SDL.h>
+#include <SDL_image.h>
+#include <string>
 using namespace std;
 class media {
 public:
     media();
-    bool loadMedia();
+    bool doesMediaLoad();
     SDL_Surface* loadPNG(string path);
 private:
 

@@ -12,14 +12,14 @@
 #include <stdio.h>
 #include <string>
 using namespace std;
-media lM;
-Main m;
+media mlM;
+Main mm;
 media::media(){
     
 }
-bool media::loadMedia(){
+bool media::doesMediaLoad(){
     bool success = true;
-    if(!lM.loadPNG()){
+    if(!mlM.loadPNG("")){
         success = false;
     }
     return success;
@@ -31,12 +31,12 @@ SDL_Surface* media::loadPNG(string path) {
     if(img == NULL){
         printf("img load error: %s\n", SDL_GetError());
     }else{
-        optimizedImg = SDL_ConvertSurface(img, m.screenSurface->format, NULL);
+        optimizedImg = SDL_ConvertSurface(img, mm.screenSurface->format, NULL);
         if(optimizedImg == NULL){
             printf("Floor optimization error: %s\n", SDL_GetError());
         }
         SDL_FreeSurface(img);
     }
-    return optimizedImg();
+    //return optimizedImg();
 }
 

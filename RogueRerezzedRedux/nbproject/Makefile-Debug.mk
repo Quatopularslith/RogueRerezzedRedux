@@ -55,7 +55,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lmingw32 -lSDL2main -lSDL2.dll -lSDL_image -lSDL_image.dll
+LDLIBSOPTIONS=-lmingw32 -lSDL2main -lSDL2.dll -lSDL2_image -lSDL2_image.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}

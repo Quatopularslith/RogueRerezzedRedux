@@ -4,9 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>floorGen/floorGen.h</itemPath>
-      <itemPath>core/main.h</itemPath>
-      <itemPath>media/media.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -15,13 +12,22 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f3" displayName="core" projectFiles="true">
+        <itemPath>core/main.cpp</itemPath>
+        <itemPath>core/main.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="floorGen" projectFiles="true">
+        <itemPath>floorGen/floorGen.cpp</itemPath>
+        <itemPath>floorGen/floorGen.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="gen" projectFiles="true">
         <itemPath>StoryGen.cpp</itemPath>
         <itemPath>StoryGen.h</itemPath>
       </logicalFolder>
-      <itemPath>floorGen/floorGen.cpp</itemPath>
-      <itemPath>core/main.cpp</itemPath>
-      <itemPath>media/media.cpp</itemPath>
+      <logicalFolder name="f2" displayName="media" projectFiles="true">
+        <itemPath>media/media.cpp</itemPath>
+        <itemPath>media/media.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -49,8 +55,8 @@
             <linkerLibLibItem>mingw32</linkerLibLibItem>
             <linkerLibLibItem>SDL2main</linkerLibLibItem>
             <linkerLibLibItem>SDL2.dll</linkerLibLibItem>
-            <linkerLibLibItem>SDL_image</linkerLibLibItem>
-            <linkerLibLibItem>SDL_image.dll</linkerLibLibItem>
+            <linkerLibLibItem>SDL2_image</linkerLibLibItem>
+            <linkerLibLibItem>SDL2_image.dll</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

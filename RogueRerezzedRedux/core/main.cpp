@@ -48,20 +48,24 @@ void Main::quit(){
 }
 int main(int argc, char* args[]){
     if(!m.init()){
-        printf("Init failed");
+        printf("U haz no init. WHAT DID YOU DO MAN");
     }else{
-        if(!lM.loadPNG("")){
-            printf("Floor failed to load");
+        if(!lM.doesMediaLoad()){
+            printf("Media Failed to load. HAVE FUN WITH NO GRAPHICS");
         }else{
-            SDL_Event e;
-            bool quit = false;
-            while(!quit){
-                while(SDL_PollEvent(&e) != 0){
-                    if(e.type == SDL_QUIT){
-                        quit = true;
+            if(!fG.doesFloorGenLoad()){
+                printf("Floor Gen failed to load. GOOD JOB M8. HAVE FUN MOVING WITH NO LEVELS");
+            }else{
+                SDL_Event e;
+                bool quit = false;
+                while(!quit){
+                    while(SDL_PollEvent(&e) != 0){
+                        if(e.type == SDL_QUIT){
+                            quit = true;
+                        }
                     }
+                    //SDL_BlitSurface();
                 }
-                //SDL_BlitSurface();
             }
         }
     }
