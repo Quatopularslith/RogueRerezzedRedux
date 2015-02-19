@@ -41,5 +41,9 @@ bool Main::init(){
     return true;
 }
 int main(int argc, char* args[]){
-
+    if(!m.init()){
+        
+    }else{
+        
+    }
 }

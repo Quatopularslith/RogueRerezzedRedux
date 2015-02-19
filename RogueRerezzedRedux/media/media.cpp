@@ -7,8 +7,10 @@
 
 #include "media.h"
 #include "../core/main.h"
+#include "../core/main.h"
 #include <SDL_image.h>
 #include <SDL.h>
+#include <iostream>
 #include <stdio.h>
 #include <string>
 using namespace std;
@@ -18,12 +20,12 @@ media::media(){
 }
 
 bool media::loadMedia(){
-    if(!main::m.lM::loadImg("floor.png")){
+    if(!Main::m.lM::loadImg("floor.png")){
         return false;
     }
 }
 
-SDL_Surface* media::loadImg(string img){
+SDL_Surface* media::loadImg(char img){
     SDL_Surface *image;
     SDL_RWops *rwop;
     rwop = SDL_RWFromFile(img, "rb");

@@ -15,7 +15,7 @@ class media {
 public:
     media();
     bool loadMedia();
-    SDL_Surface* loadImg(string img);
+    SDL_Surface* loadImg(char img);
 private:
 
 };

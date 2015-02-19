@@ -15,21 +15,21 @@ floorGen::floorGen(){
     
 }
 
-bool floorGen::doesFloorGenLoad(){
-    bool success = true;
-    if(!fGfG.loadFloor()){
-        printf("Floor failed to load");
-        success = false;
-    }
-    return success;
-}
-
-bool floorGen::loadFloor(){
-    SDL_Surface* floorBlock = NULL;
-    bool success = true;
-    floorBlock = fGlM.loadPNG("floor.png");
-    if(floorBlock == NULL){
-        printf("Floor Block failed to load\n");
-    }
-    return success;
-}
+//bool floorGen::doesFloorGenLoad(){
+//    bool success = true;
+//    if(!fGfG.loadFloor()){
+//        printf("Floor failed to load");
+//        success = false;
+//    }
+//    return success;
+//}
+//
+//bool floorGen::loadFloor(){
+//    SDL_Surface* floorBlock = NULL;
+//    bool success = true;
+//    floorBlock = fGlM.loadPNG("floor.png");
+//    if(floorBlock == NULL){
+//        printf("Floor Block failed to load\n");
+//    }
+//    return success;
+//}
