@@ -13,7 +13,6 @@
 using namespace std;
 class Media {
 public:
-    media();
     bool loadMedia();
     SDL_Surface* loadImg(string img);
 private:

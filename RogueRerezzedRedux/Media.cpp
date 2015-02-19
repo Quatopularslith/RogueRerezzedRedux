@@ -15,15 +15,12 @@
 #include <string>
 using namespace std;
 
-Media::media(){
-    
-}
-
 bool Media::loadMedia(){
     Media m;
-    if(!m.loadImg("floor.png")){
+    if(!m.loadImg("")){
         return false;
     }
+    return true;
 }
 
 SDL_Surface* Media::loadImg(string img){

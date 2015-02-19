@@ -14,8 +14,8 @@
 #include "FloorGen.h"
 #include "Media.h"
 
-const int width = 640;
-const int height = 480;
+const int WINDOW_WIDTH = 640;
+const int WINDOW_HEIGHT = 480;
 using namespace std;
 
 bool Main::init(){
@@ -23,7 +23,7 @@ bool Main::init(){
         printf("SDL_Init: %s\n", SDL_GetError());
         return false;
     }else{
-        window = SDL_CreateWindow("RogueRerezzedRedux", width, height, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_RESIZABLE);
+        window = SDL_CreateWindow("RogueRerezzedRedux", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_RESIZABLE);
         if(window == NULL){
             printf("Window Creation: %s\n", SDL_GetError());
             return false;
@@ -40,9 +40,12 @@ bool Main::init(){
 }
 int main(int argc, char* args[]){
     Main m;
+    Media me;
     if(!m.init()){
-        
+        printf("Initialization failed");
     }else{
-        
+        if(!me.loadMedia()){
+            printf("Failed to load media");
+        }
     }
 }

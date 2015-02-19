@@ -11,8 +11,11 @@
 #include <string>
 #include "Media.h"
 
-FloorGen::floorGen(){
-    
+bool FloorGen::loadFloor(){
+    FloorGen f;
+    Media m;
+    SDL_Surface* floorBlock = NULL;
+    floorBlock = m.loadFloor();
 }
 
 //bool floorGen::doesFloorGenLoad(){
