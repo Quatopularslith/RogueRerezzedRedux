@@ -9,11 +9,15 @@
 #include <SDL_image.h>
 #include <stdio.h>
 #include <string>
-
-bool loadFloor(){
+#include "../media/media.h"
+media lM;
+floorGen::floorGen(){
+    
+}
+bool floorGen::loadFloor(){
     SDL_Surface* floorBlock = NULL;
     bool success = true;
-    floorBlock = loadMedia::loadPNG("floor.png");
+    floorBlock = lM.loadPNG("floor.png");
     if(floorBlock == NULL){
         printf("Floor Block failed to load\n");
     }

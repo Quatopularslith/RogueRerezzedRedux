@@ -12,8 +12,6 @@ class Main{
 public:
     SDL_Window *window;
     SDL_Surface *screenSurface;
-    const int width = 640;
-    const int height = 480;
     int init();
     void quit();
 private:

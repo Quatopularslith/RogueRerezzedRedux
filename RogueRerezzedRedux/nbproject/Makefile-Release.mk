@@ -35,9 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/floorGen.o \
-	${OBJECTDIR}/loadMedia.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/core/main.o \
+	${OBJECTDIR}/floorGen/floorGen.o \
+	${OBJECTDIR}/media/media.o
 
 
 # C Compiler Flags
@@ -64,20 +64,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roguererezzedredux.exe: ${OBJECTFILES
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roguererezzedredux ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/floorGen.o: floorGen.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/core/main.o: core/main.cpp 
+	${MKDIR} -p ${OBJECTDIR}/core
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/floorGen.o floorGen.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/core/main.o core/main.cpp
 
-${OBJECTDIR}/loadMedia.o: loadMedia.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/floorGen/floorGen.o: floorGen/floorGen.cpp 
+	${MKDIR} -p ${OBJECTDIR}/floorGen
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/loadMedia.o loadMedia.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/floorGen/floorGen.o floorGen/floorGen.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/media/media.o: media/media.cpp 
+	${MKDIR} -p ${OBJECTDIR}/media
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/media/media.o media/media.cpp
 
 # Subprojects
 .build-subprojects:

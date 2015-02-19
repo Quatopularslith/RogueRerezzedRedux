@@ -11,8 +11,13 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "main.h"
-#include "floorGen.h"
-
+#include "../floorGen/floorGen.h"
+#include "../media/media.h"
+Main m;
+floorGen fG;
+media lM;
+const int width = 640;
+const int height = 480;
 using namespace std;
 
 int Main::init(){
@@ -42,10 +47,10 @@ void Main::quit(){
     SDL_Quit();
 }
 int main(int argc, char* args[]){
-    if(!Main::init()){
+    if(!m.init()){
         printf("Init failed");
     }else{
-        if(!loadMedia::loadMedia()){
+        if(!lM.loadPNG("")){
             printf("Floor failed to load");
         }else{
             SDL_Event e;
@@ -56,7 +61,7 @@ int main(int argc, char* args[]){
                         quit = true;
                     }
                 }
-                SDL_BlitSurface();
+                //SDL_BlitSurface();
             }
         }
     }
