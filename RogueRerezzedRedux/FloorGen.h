@@ -8,7 +8,7 @@
 #ifndef FLOORGEN_H
 #define	FLOORGEN_H
 
-class floorGen {
+class FloorGen {
 public:
     floorGen();
     bool doesFloorGenLoad();

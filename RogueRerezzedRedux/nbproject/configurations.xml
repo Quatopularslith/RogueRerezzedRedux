@@ -13,20 +13,18 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f3" displayName="core" projectFiles="true">
-        <itemPath>core/main.cpp</itemPath>
-        <itemPath>core/main.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="f4" displayName="floorGen" projectFiles="true">
+        <itemPath>Main.cpp</itemPath>
+        <itemPath>Main.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="gen" projectFiles="true">
+        <itemPath>FloorGen.cpp</itemPath>
+        <itemPath>FloorGen.h</itemPath>
         <itemPath>StoryGen.cpp</itemPath>
         <itemPath>StoryGen.h</itemPath>
-        <itemPath>floorGen/floorGen.cpp</itemPath>
-        <itemPath>floorGen/floorGen.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="media" projectFiles="true">
-        <itemPath>media/media.cpp</itemPath>
-        <itemPath>media/media.h</itemPath>
+        <itemPath>Media.cpp</itemPath>
+        <itemPath>Media.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -60,21 +58,21 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="FloorGen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FloorGen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Main.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Media.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Media.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="StoryGen.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="StoryGen.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="core/main.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="core/main.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="floorGen/floorGen.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="floorGen/floorGen.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="media/media.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="media/media.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -97,21 +95,21 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="FloorGen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FloorGen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Main.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Media.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Media.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="StoryGen.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="StoryGen.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="core/main.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="core/main.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="floorGen/floorGen.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="floorGen/floorGen.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="media/media.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="media/media.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

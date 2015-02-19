@@ -35,10 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/StoryGen.o \
-	${OBJECTDIR}/core/main.o \
-	${OBJECTDIR}/floorGen/floorGen.o \
-	${OBJECTDIR}/media/media.o
+	${OBJECTDIR}/FloorGen.o \
+	${OBJECTDIR}/Main.o \
+	${OBJECTDIR}/Media.o \
+	${OBJECTDIR}/StoryGen.o
 
 
 # C Compiler Flags
@@ -65,25 +65,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roguererezzedredux.exe: ${OBJECTFILES
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roguererezzedredux ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/FloorGen.o: FloorGen.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FloorGen.o FloorGen.cpp
+
+${OBJECTDIR}/Main.o: Main.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Main.o Main.cpp
+
+${OBJECTDIR}/Media.o: Media.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Media.o Media.cpp
+
 ${OBJECTDIR}/StoryGen.o: StoryGen.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StoryGen.o StoryGen.cpp
-
-${OBJECTDIR}/core/main.o: core/main.cpp 
-	${MKDIR} -p ${OBJECTDIR}/core
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/core/main.o core/main.cpp
-
-${OBJECTDIR}/floorGen/floorGen.o: floorGen/floorGen.cpp 
-	${MKDIR} -p ${OBJECTDIR}/floorGen
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/floorGen/floorGen.o floorGen/floorGen.cpp
-
-${OBJECTDIR}/media/media.o: media/media.cpp 
-	${MKDIR} -p ${OBJECTDIR}/media
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/media/media.o media/media.cpp
 
 # Subprojects
 .build-subprojects:
