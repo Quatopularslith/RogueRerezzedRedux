@@ -10,8 +10,7 @@
 #include <stdio.h>
 #include <string>
 #include "../media/media.h"
-media fGlM;
-floorGen fGfG;
+
 floorGen::floorGen(){
     
 }

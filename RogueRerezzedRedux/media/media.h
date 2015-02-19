@@ -14,8 +14,8 @@ using namespace std;
 class media {
 public:
     media();
-    bool doesMediaLoad();
-    SDL_Surface* loadPNG(string path);
+    bool loadMedia();
+    SDL_Surface* loadImg(string img);
 private:
 
 };

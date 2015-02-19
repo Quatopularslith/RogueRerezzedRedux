@@ -12,31 +12,26 @@
 #include <stdio.h>
 #include <string>
 using namespace std;
-media mlM;
-Main mm;
+
 media::media(){
     
 }
-bool media::doesMediaLoad(){
-    bool success = true;
-    if(!mlM.loadPNG("floor.png")){
-        success = false;
+
+bool media::loadMedia(){
+    if(!main::m.lM::loadImg("floor.png")){
+        return false;
     }
-    return success;
 }
 
-SDL_Surface* media::loadPNG(string path) {
-    SDL_Surface* optimizedImg = NULL;
-    SDL_Surface* img = IMG_Load(path.c_str());
-    if(img == NULL){
-        printf("img load error: %s\n", SDL_GetError());
-    }else{
-        optimizedImg = SDL_ConvertSurface(img, mm.screenSurface->format, 0);
-        if(optimizedImg == NULL){
-            printf("Floor optimization error: %s\n", SDL_GetError());
-        }
-        SDL_FreeSurface(img);
+SDL_Surface* media::loadImg(string img){
+    SDL_Surface *image;
+    SDL_RWops *rwop;
+    rwop = SDL_RWFromFile(img, "rb");
+    image = IMG_LoadPNG_RW(rwop);
+    if(!image){
+        image = NULL;
+        cout << "Image: " << img << " failed to load\n";
+        printf("Error: %s\n", IMG_GetError());
     }
-    //return optimizedImg();
+    return image;
 }
-

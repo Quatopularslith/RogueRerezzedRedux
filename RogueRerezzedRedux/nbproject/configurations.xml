@@ -17,12 +17,12 @@
         <itemPath>core/main.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="floorGen" projectFiles="true">
-        <itemPath>floorGen/floorGen.cpp</itemPath>
-        <itemPath>floorGen/floorGen.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="gen" projectFiles="true">
         <itemPath>StoryGen.cpp</itemPath>
         <itemPath>StoryGen.h</itemPath>
+        <itemPath>floorGen/floorGen.cpp</itemPath>
+        <itemPath>floorGen/floorGen.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="media" projectFiles="true">
         <itemPath>media/media.cpp</itemPath>

@@ -12,7 +12,7 @@ class Main{
 public:
     SDL_Window *window;
     SDL_Surface *screenSurface;
-    int init();
+    bool init();
     void quit();
 private:
 };

@@ -11,64 +11,35 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "main.h"
-#include "../floorGen/floorGen.h"
+//#include "../floorGen/floorGen.h"
 #include "../media/media.h"
-Main m;
-floorGen fG;
+static Main m;
+//floorGen fG;
 media lM;
 const int width = 640;
 const int height = 480;
 using namespace std;
 
-int Main::init(){
-    bool success = true;
-    if(SDL_Init(SDL_INIT_VIDEO) < 0){
-        printf("Initialization error: %s\n", SDL_GetError());
-        success = false;
+bool Main::init(){
+    if(!SDL_Init(SDL_INIT_VIDEO)){
+        printf("SDL_Init: %s\n", SDL_GetError());
+        return false;
     }else{
-        window = SDL_CreateWindow("RogueRerezzedRedux", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, height, width, SDL_WINDOW_OPENGL);
+        window = SDL_CreateWindow("RogueRerezzedRedux", width, height, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_RESIZABLE);
         if(window == NULL){
-            printf("Window creation error: %s\n", SDL_GetError());
-            success = false;
+            printf("Window Creation: %s\n", SDL_GetError());
+            return false;
         }else{
-            if(!(IMG_Init(IMG_INIT_PNG)& IMG_INIT_PNG)){
-                printf("SDL_Image error: %s\n", IMG_GetError());
-                success = false;
+            if(!IMG_Init(IMG_INIT_PNG)){
+                printf("IMG_Init: %s\n", IMG_GetError());
+                return false;
             }else{
-            screenSurface = SDL_GetWindowSurface(window);
+                screenSurface = SDL_GetWindowSurface(window);
             }
         }
     }
-    return success;
-}
-void Main::quit(){
-    SDL_DestroyWindow(window);
-    SDL_FreeSurface(screenSurface);
-    SDL_Quit();
+    return true;
 }
 int main(int argc, char* args[]){
-    if(!m.init()){
-        printf("U haz no init. WHAT DID YOU DO MAN");
-    }else{
-        if(!lM.doesMediaLoad()){
-            printf("U haz no media. HAVE FUN WITH NO GRAPHICS");
-        }else{
-            if(!fG.doesFloorGenLoad()){
-                printf("U haz no floor gen. GOOD JOB M8. HAVE FUN PLAYING WITH NO LEVELS");
-            }else{
-                SDL_Event e;
-                bool quit = false;
-                while(!quit){
-                    while(SDL_PollEvent(&e) != 0){
-                        if(e.type == SDL_QUIT){
-                            quit = true;
-                        }
-                    }
-                    //SDL_BlitSurface();
-                }
-            }
-        }
-    }
-    return 0;
-}
 
+}
