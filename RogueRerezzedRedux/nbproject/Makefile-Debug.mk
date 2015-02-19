@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/StoryGen.o \
 	${OBJECTDIR}/core/main.o \
 	${OBJECTDIR}/floorGen/floorGen.o \
 	${OBJECTDIR}/media/media.o
@@ -63,6 +64,11 @@ LDLIBSOPTIONS=-lmingw32 -lSDL2main -lSDL2.dll -lSDL_image -lSDL_image.dll
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roguererezzedredux.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roguererezzedredux ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/StoryGen.o: StoryGen.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StoryGen.o StoryGen.cpp
 
 ${OBJECTDIR}/core/main.o: core/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/core
