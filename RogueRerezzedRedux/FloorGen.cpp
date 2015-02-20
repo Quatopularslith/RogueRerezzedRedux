@@ -15,7 +15,7 @@ bool FloorGen::loadFloor(){
     FloorGen f;
     Media m;
     SDL_Surface* floorBlock = NULL;
-    floorBlock = m.loadFloor();
+    floorBlock = m.loadIMG("floor.png");
 }
 
 //bool floorGen::doesFloorGenLoad(){
