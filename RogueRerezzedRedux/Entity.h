@@ -10,7 +10,7 @@
 
 class Entity {
 public:
-    Entity(int _x, int _y);
+    Entity(int, int);
     int x;
     int y;
 private:
