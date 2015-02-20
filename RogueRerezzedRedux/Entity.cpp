@@ -15,6 +15,10 @@ Entity::Entity(int _x, int _y, LTexture* tex) {
     texture = tex;
 }
 
+Entity::~Entity(){
+    texture = NULL;
+}
+
 void Entity::render(){
     if(texture != NULL){
         (*texture).render(x, y);
