@@ -13,10 +13,21 @@
 using namespace std;
 class Media {
 public:
+    Media();
+    ~Media();
+    void freeTexture();
+    void loadTexture(string texture);
+    SDL_Renderer* renderer = NULL;
+    void setColor(Uint8 red, Uint8 green, Uint8 blue);
+    void render(int x, int y,SDL_Rect* clip = NULL);
+    int getWidth();
+    int getHeight();
     bool loadMedia();
     SDL_Surface* loadImg(string img);
 private:
-
+    SDL_Texture* rTexture;
+    int rWidth;
+    int rHeight;
 };
 
 #endif	/* LOADMEDIA_H */

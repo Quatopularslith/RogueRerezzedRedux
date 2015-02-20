@@ -19,11 +19,11 @@ const int WINDOW_HEIGHT = 480;
 using namespace std;
 
 bool Main::init(){
-    if(!SDL_Init(SDL_INIT_VIDEO)){
+    if(SDL_Init(SDL_INIT_VIDEO) < 0){
         printf("SDL_Init: %s\n", SDL_GetError());
         return false;
     }else{
-        window = SDL_CreateWindow("RogueRerezzedRedux", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_RESIZABLE);
+        window = SDL_CreateWindow("RogueRerezzedRedux", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_SHOWN);
         if(window == NULL){
             printf("Window Creation: %s\n", SDL_GetError());
             return false;
@@ -38,6 +38,13 @@ bool Main::init(){
     }
     return true;
 }
+
+void Main::quit(){
+    SDL_DestroyWindow(window);
+    SDL_FreeSurface(screenSurface);
+    SDL_Quit();
+}
+
 int main(int argc, char* args[]){
     Main m;
     Media me;
@@ -50,7 +57,19 @@ int main(int argc, char* args[]){
         }else{
             if(!f.loadFloorGen()){
                 printf("FloorGen failed");
+            }else{
+                bool quit = false;
+                SDL_Event e;
+                while(!quit){
+                    while(SDL_PollEvent(&e) != 0){
+                        if(e.type == SDL_QUIT){
+                            quit = true;
+                        }
+                    }
+                }
             }
         }
     }
+    m.quit();
+    return 0;
 }
