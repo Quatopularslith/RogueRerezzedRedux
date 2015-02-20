@@ -7,12 +7,14 @@
 
 #ifndef ENTITY_H
 #define	ENTITY_H
-
+#include "LTexture.h"
 class Entity {
 public:
     Entity(int, int);
+    void render();
     int x;
     int y;
+    LTexture* entityTexture;
 private:
 
 };

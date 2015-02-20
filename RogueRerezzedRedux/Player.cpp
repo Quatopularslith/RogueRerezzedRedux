@@ -11,15 +11,14 @@
 #include <SDL.h>
 #include <SDL_image.h>
 Player::Player(int hp, int _x, int _y) : Entity (_x, _y){
-    playerTexture = NULL;
     health = hp;
     maxHealth = hp;
 }
 Player::~Player(){
-    playerTexture = NULL;
+    
 }
-void Player::render(){
-    if(playerTexture != NULL){
-        (*playerTexture).render(x, y);
-    }else{printf("Texture is null\n");}
-}
+//void Player::render(){
+//    if(playerTexture != NULL){
+//        (*playerTexture).render(x, y);
+//    }else{printf("Texture is null\n");}
+//}

@@ -58,7 +58,7 @@ int main(int argc, char* args[]){
         LTexture playerTexture("player.png");
         
         Player player1(100);
-        player1.playerTexture = &playerTexture;
+        player1.entityTexture = &playerTexture;
         
         while(!quit){
             while(SDL_PollEvent(&e) != 0){

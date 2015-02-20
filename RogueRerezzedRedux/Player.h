@@ -16,7 +16,7 @@ public:
     int health;
     int maxHealth;
     
-    LTexture* playerTexture;
+    //LTexture* playerTexture;
 private:
 
 };
