@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Entity.o \
 	${OBJECTDIR}/FloorGen.o \
 	${OBJECTDIR}/Item.o \
 	${OBJECTDIR}/LTexture.o \
@@ -67,6 +68,11 @@ LDLIBSOPTIONS=-lmingw32 -lSDL2main -lSDL2.dll -lSDL2_image -lSDL2_image.dll
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roguererezzedredux.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roguererezzedredux ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/Entity.o: Entity.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Entity.o Entity.cpp
 
 ${OBJECTDIR}/FloorGen.o: FloorGen.cpp 
 	${MKDIR} -p ${OBJECTDIR}
