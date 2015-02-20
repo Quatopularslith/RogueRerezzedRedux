@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/FloorGen.o \
+	${OBJECTDIR}/Item.o \
 	${OBJECTDIR}/Main.o \
 	${OBJECTDIR}/Media.o \
 	${OBJECTDIR}/StoryGen.o
@@ -69,6 +70,11 @@ ${OBJECTDIR}/FloorGen.o: FloorGen.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FloorGen.o FloorGen.cpp
+
+${OBJECTDIR}/Item.o: Item.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Item.o Item.cpp
 
 ${OBJECTDIR}/Main.o: Main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
