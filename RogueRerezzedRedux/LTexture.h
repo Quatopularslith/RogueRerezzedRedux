@@ -8,6 +8,9 @@
 #ifndef LTEXTURE_H
 #define	LTEXTURE_H
 #include <stdio.h>
+#include <string>
+#include <SDL.h>
+#include <SDL_image.h>
 class LTexture {
 public:
     LTexture(std::string texture);

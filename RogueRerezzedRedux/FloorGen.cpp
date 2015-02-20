@@ -20,18 +20,6 @@ bool FloorGen::loadFloorGen(){
     return true;
 }
 
-bool FloorGen::loadFloor(){
-    FloorGen f;
-    Media m;
-    SDL_Texture* floorBlock = NULL;
-    floorBlock = m.loadTexture("floor.png");
-    if(floorBlock == NULL){
-        printf("loadFloor failure\n");
-        return false;
-    }
-    return true;
-}
-
 //bool floorGen::doesFloorGenLoad(){
 //    bool success = true;
 //    if(!fGfG.loadFloor()){

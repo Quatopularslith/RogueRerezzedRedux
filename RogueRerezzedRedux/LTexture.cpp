@@ -11,17 +11,20 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <string>
-LTexture::LTexture(std::string texture):rTexture(NULL), rWidth(0), rHeight(0) {
+LTexture::LTexture(std::string texture) {
+    rTexture = NULL;
+    rWidth = 0; 
+    rHeight = 0;
     loadTexture(texture);
 }
 
 LTexture::~LTexture() {
-    free();
+    freeTexture();
 }
 
-LTexture::loadTexture(std::string texture){
+bool LTexture::loadTexture(std::string texture){
     Main m;
-    free();
+    freeTexture();
     SDL_Texture* newTexture = NULL;
     SDL_Surface* loadedSurface = IMG_Load(texture.c_str());
     if(loadedSurface == NULL) printf("Unable to load %s. SDL_image error: %s\n", texture.c_str(), IMG_GetError());
@@ -56,7 +59,7 @@ bool LTexture::loadText(std::string text, SDL_Color textColor){
 #endif
 
 void LTexture::freeTexture(){
-    if(!rTexture != NULL){
+    if(rTexture != NULL){
         SDL_DestroyTexture(rTexture);
         rTexture = NULL;
         rWidth = 0;
@@ -76,7 +79,7 @@ void LTexture::setAlpha(Uint8 alpha){
     SDL_SetTextureAlphaMod(rTexture, alpha);
 }
 
-void LTexture::render(int x, int y, SDL_Rect* clip = NULL, double angle = 0.0, SDL_Point* center, SDL_RendererFlip flip){
+void LTexture::render(int x, int y, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip){
     Main m;
     SDL_Rect renderQuad = {x, y, rWidth, rHeight};
     if(clip != NULL){

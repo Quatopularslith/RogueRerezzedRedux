@@ -6,6 +6,7 @@
  */
 
 #include "Item.h"
+#include "Entity.h"
 #include <string>
 #include <stdio.h>
 #include <map>
