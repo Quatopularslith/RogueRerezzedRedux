@@ -11,11 +11,20 @@
 #include <string>
 #include "Media.h"
 
+bool FloorGen::loadFloorGen(){
+    
+}
+
 bool FloorGen::loadFloor(){
     FloorGen f;
     Media m;
     SDL_Surface* floorBlock = NULL;
-    //floorBlock = m.loadIMG("floor.png");
+    floorBlock = m.loadImg("floor.png");
+    if(floorBlock == NULL){
+        printf("loadFloor failure");
+        return false;
+    }
+    return true;
 }
 
 //bool floorGen::doesFloorGenLoad(){

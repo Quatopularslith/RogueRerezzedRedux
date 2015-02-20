@@ -41,11 +41,16 @@ bool Main::init(){
 int main(int argc, char* args[]){
     Main m;
     Media me;
+    FloorGen f;
     if(!m.init()){
         printf("Initialization failed");
     }else{
         if(!me.loadMedia()){
             printf("Failed to load media");
+        }else{
+            if(!f.loadFloorGen()){
+                printf("FloorGen failed");
+            }
         }
     }
 }

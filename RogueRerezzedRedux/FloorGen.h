@@ -10,7 +10,7 @@
 
 class FloorGen {
 public:
-    bool doesFloorGenLoad();
+    bool loadFloorGen();
     bool loadFloor();
 private:
 
