@@ -5,7 +5,7 @@
  * Created on February 18, 2015, 12:46 PM
  */
 
-#include "floorGen.h"
+#include "FloorGen.h"
 #include <SDL_image.h>
 #include <stdio.h>
 #include <string>
