@@ -1,5 +1,5 @@
 /* 
- * File:   loadMedia.cpp
+ * File:   loadme.cpp
  * Author: Razim Zavac
  * 
  * Created on February 18, 2015, 4:00 PM
@@ -23,14 +23,27 @@ Media::Media(){
 }
 
 bool Media::loadMedia(){
-    Media m;
-    if(!m.loadImg("")){
+    Media me;
+    if(!me.loadImg("")){
+        printf("Load image failure\n");
+        return false;
+    }
+    if(!me.loadTexture("")){
+        printf("Load texture failure\n");
         return false;
     }
     return true;
 }
 
-void Media::loadTexture(string texture){
+void Media::renderLoop(){
+    Media me;
+    SDL_SetRenderDrawColor(me.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+    SDL_RenderClear(me.renderer);
+    
+    SDL_RenderClear(me.renderer);
+}
+
+bool Media::loadTexture(string texture){
     Media m;
     m.freeTexture();
     SDL_Texture* newTexture = NULL;

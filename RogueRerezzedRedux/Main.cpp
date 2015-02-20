@@ -19,6 +19,7 @@ const int WINDOW_HEIGHT = 480;
 using namespace std;
 
 bool Main::init(){
+    Media me;
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
         printf("SDL_Init: %s\n", SDL_GetError());
         return false;
@@ -28,11 +29,18 @@ bool Main::init(){
             printf("Window Creation: %s\n", SDL_GetError());
             return false;
         }else{
-            if(!IMG_Init(IMG_INIT_PNG)){
-                printf("IMG_Init: %s\n", IMG_GetError());
+            me.renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+            if(me.renderer == NULL){
+                printf("Renderer creation failed: %s\n", SDL_GetError());
                 return false;
             }else{
-                screenSurface = SDL_GetWindowSurface(window);
+                SDL_SetRenderDrawColor(me.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+                if(!IMG_Init(IMG_INIT_PNG)){
+                    printf("IMG_Init: %s\n", IMG_GetError());
+                    return false;
+                }else{
+                    screenSurface = SDL_GetWindowSurface(window);
+                }
             }
         }
     }
@@ -40,8 +48,15 @@ bool Main::init(){
 }
 
 void Main::quit(){
+    Media me;
+    me.freeTexture();
+    SDL_DestroyRenderer(me.renderer);
     SDL_DestroyWindow(window);
     SDL_FreeSurface(screenSurface);
+    window = NULL;
+    screenSurface = NULL;
+    me.renderer = NULL;
+    IMG_Quit();
     SDL_Quit();
 }
 
@@ -66,6 +81,7 @@ int main(int argc, char* args[]){
                             quit = true;
                         }
                     }
+                    me.renderLoop();
                 }
             }
         }
