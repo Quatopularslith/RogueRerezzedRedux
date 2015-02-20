@@ -10,21 +10,21 @@
 
 #include <string>
 #include <stdio.h>
-#include <map>
+#include "Entity.h"
 
 using namespace std;
 
-class Item {
+class Item : public Entity {
 public:
-
-    const string intname;
-    const string name;
-    Item();
-    int ItemThing(int id);
+    Item(int);
+    string getName();
+    int getID();
 protected:
-    const int id;
-    
+    string name;
+    int id;
+private:
+    string otherNamer(int);
 };
 
-#endif	/* ITEM_H */
+#endif
 

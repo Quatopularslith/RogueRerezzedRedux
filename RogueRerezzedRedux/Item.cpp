@@ -11,58 +11,77 @@
 #include <map>
 #include <iostream>
 
-using namespace std; 
+using namespace std;
 
-/*
- *  READ THIS TORRI
- *  OK SO MAYBE YOU DON'T LIKE ITS NOT STATIC AND CONST AND CRAP
- *  DEAL WITH IT FOR NOW BECUASE IT WORKS LIKE THIS
- * 
- *  BTW YOU REALIZE WHEN YOU'RE USING THIS->ID = ID;
- *  YOU'RE TRYING TO ASSING A VARIABLE TO A CONST INT
- *  YOU KNOW THAT RIGHT?
- */
+static string weapon[] = {
+    "Sword", "Axe",
+    "Bow", "Crossbow",
+    "Wand", "Staff"
+};
+static string armor[] = {
+    "Helm", "Chestpiece",
+    "Greaves", "Boots",
+    "Ring"
+};
+static string tool[] = {
+    "Pickaxe", "Drill",
+    "Chisel", "Magnifying Glass",
+    "Hammer", "Lockpick"
+};
+static string other[] = {
+    "Scroll", "Tome",
+    "Potion", "Gold",
+    "Food", "Note",
+    "Crystal Shard"
+};
+static string material[] = {
+    "Leather", "Chainmail",
+    "Iron", "Steel",
+    "Hyperium", "Alanium",
+    "Tsinium", "Visium"
+};
+static string modifier[] = {
+    "Cursed", "Broken", "Weak",
+    "Good", "Great", "Legendary",
+    "Powerful", "Magical", "Ancient"
+};
 
-int Item::ItemThing(int id){
-    const static string keys[] = {
-        "weapon", "armor",
-        "other", "material",
-        "modifier"
-    };
-    map<string, string> item;
-    item["weapon"] = 
-        "Sword", "Axe",
-        "Bow", "Crossbow",
-        "Wand", "Staff"
-    ;
-    item["armor"] = 
-        "Helm", "Chestpiece",
-        "Greaves", "Boots",
-        "Ring"
-    ;
-    item["other"] = 
-        "Scroll", "Tome",
-        "Potion", "Gold",
-        "Food", "Note",
-        "Crystal Shard"
-    ;
-    item["material"] = 
-        "Leather", "Chainmail",
-        "Iron", "Steel",
-        "Hyperium", "Alanium",
-        "Tsinium", "Visium"
-    ;
-    item["modifier"] = 
-        "Cursed", "Broken", "Weak",
-        "Good", "Great", "Legendary",
-        "Powerful", "Magical", "Ancient"
-    ;
-    id = id;
+Item::Item(int _id) : Entity(0, 0) {
+    id = _id;
     string name = "";
-    int mod = id % item["modifier"].size();
-    int mat = id % item["material"].size();
-    int type = id % (item["weapon"].size() + item["armor"].size() + item["other"].size());
-    name += item["modifier"][mod];
+    int mod = id % sizeof(modifier);
+    int mat = id % sizeof(material);
+    int type = id % (sizeof(weapon) + sizeof(armor) + sizeof(tool) + sizeof(other));
+    name += modifier[mod];
     name += " "; 
-    name += item["material"][mat];
+    name += material[mat];
+    name += " ";
+    if(type < sizeof(weapon)){
+        name += weapon[type];
+    }else if(type < sizeof(weapon) + sizeof(armor)){
+        type -= sizeof(weapon);
+        name += armor[type];
+    }else if(type < sizeof(weapon) + sizeof(armor) + sizeof(tool)){
+        type -= sizeof(weapon);
+        type -= sizeof(armor);
+        name += tool[type];
+    }else{
+        type -= sizeof(weapon);
+        type -= sizeof(armor);
+        type -= sizeof(tool);
+        name = Item::otherNamer(type);
+    }
+    this->name = name;
+}
+
+string Item::getName(){
+    return name;
+}
+int Item::getID(){
+    return id;
+}
+string Item::otherNamer(int type){
+    if(type == 0){
+        
+    }
 }
