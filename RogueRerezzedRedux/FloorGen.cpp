@@ -12,16 +12,21 @@
 #include "Media.h"
 
 bool FloorGen::loadFloorGen(){
-    
+    FloorGen f;
+//    if(!f.loadFloor()){
+//        printf("Floor failed to load\n");
+//        return false;
+//    }
+    return true;
 }
 
 bool FloorGen::loadFloor(){
     FloorGen f;
     Media m;
-    SDL_Surface* floorBlock = NULL;
-    floorBlock = m.loadImg("floor.png");
+    SDL_Texture* floorBlock = NULL;
+    floorBlock = m.loadTexture("floor.png");
     if(floorBlock == NULL){
-        printf("loadFloor failure");
+        printf("loadFloor failure\n");
         return false;
     }
     return true;

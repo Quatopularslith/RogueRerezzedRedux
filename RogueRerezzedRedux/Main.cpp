@@ -19,27 +19,31 @@ const int WINDOW_HEIGHT = 480;
 using namespace std;
 
 bool Main::init(){
-    Media me;
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
         printf("SDL_Init: %s\n", SDL_GetError());
         return false;
     }else{
-        window = SDL_CreateWindow("RogueRerezzedRedux", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_SHOWN);
-        if(window == NULL){
-            printf("Window Creation: %s\n", SDL_GetError());
+        if(!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")){
+            printf("Linear texture filtering not enabled\n");
             return false;
         }else{
-            me.renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-            if(me.renderer == NULL){
-                printf("Renderer creation failed: %s\n", SDL_GetError());
+            window = SDL_CreateWindow("RogueRerezzedRedux", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_SHOWN);
+            if(window == NULL){
+                printf("Window Creation: %s\n", SDL_GetError());
                 return false;
             }else{
-                SDL_SetRenderDrawColor(me.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-                if(!IMG_Init(IMG_INIT_PNG)){
-                    printf("IMG_Init: %s\n", IMG_GetError());
+                renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+                if(renderer == NULL){
+                    printf("Renderer creation failed: %s\n", SDL_GetError());
                     return false;
                 }else{
-                    screenSurface = SDL_GetWindowSurface(window);
+                    SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+                    if(!IMG_Init(IMG_INIT_PNG)){
+                        printf("IMG_Init: %s\n", IMG_GetError());
+                        return false;
+                    }else{
+                        screenSurface = SDL_GetWindowSurface(window);
+                    }
                 }
             }
         }

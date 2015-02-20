@@ -19,6 +19,8 @@
       <logicalFolder name="f4" displayName="entity" projectFiles="true">
         <itemPath>Item.cpp</itemPath>
         <itemPath>Item.h</itemPath>
+        <itemPath>Player.cpp</itemPath>
+        <itemPath>Player.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="gen" projectFiles="true">
         <itemPath>FloorGen.cpp</itemPath>
@@ -27,6 +29,8 @@
         <itemPath>StoryGen.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="media" projectFiles="true">
+        <itemPath>LTexture.cpp</itemPath>
+        <itemPath>LTexture.h</itemPath>
         <itemPath>Media.cpp</itemPath>
         <itemPath>Media.h</itemPath>
       </logicalFolder>
@@ -70,6 +74,10 @@
       </item>
       <item path="Item.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="LTexture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LTexture.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Main.h" ex="false" tool="3" flavor2="0">
@@ -77,6 +85,10 @@
       <item path="Media.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Media.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Player.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="StoryGen.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -111,6 +123,10 @@
       </item>
       <item path="Item.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="LTexture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LTexture.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Main.h" ex="false" tool="3" flavor2="0">
@@ -118,6 +134,10 @@
       <item path="Media.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Media.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Player.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="StoryGen.cpp" ex="false" tool="1" flavor2="0">
       </item>

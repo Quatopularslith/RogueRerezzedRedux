@@ -37,8 +37,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/FloorGen.o \
 	${OBJECTDIR}/Item.o \
+	${OBJECTDIR}/LTexture.o \
 	${OBJECTDIR}/Main.o \
 	${OBJECTDIR}/Media.o \
+	${OBJECTDIR}/Player.o \
 	${OBJECTDIR}/StoryGen.o
 
 
@@ -76,6 +78,11 @@ ${OBJECTDIR}/Item.o: Item.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Item.o Item.cpp
 
+${OBJECTDIR}/LTexture.o: LTexture.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LTexture.o LTexture.cpp
+
 ${OBJECTDIR}/Main.o: Main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -85,6 +92,11 @@ ${OBJECTDIR}/Media.o: Media.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Media.o Media.cpp
+
+${OBJECTDIR}/Player.o: Player.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Player.o Player.cpp
 
 ${OBJECTDIR}/StoryGen.o: StoryGen.cpp 
 	${MKDIR} -p ${OBJECTDIR}
