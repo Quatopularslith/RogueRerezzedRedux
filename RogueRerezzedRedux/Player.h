@@ -8,11 +8,11 @@
 #ifndef PLAYER_H
 #define	PLAYER_H
 #include "LTexture.h"
-class Player {
+class Player : public Entity{
 public:
-    Player(int hp);
+    Player(int hp, int x, int y);
     ~Player();
-    void render(int x, int y);
+    void render();
     int health;
     int maxHealth;
     

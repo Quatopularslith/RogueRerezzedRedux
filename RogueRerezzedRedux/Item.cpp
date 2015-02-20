@@ -82,7 +82,7 @@ int Item::getID(){
     return id;
 }
 string Item::otherNamer(int type){
-    if(type == 0){
+    if(other[type] == "Tome"){
         
     }
 }
