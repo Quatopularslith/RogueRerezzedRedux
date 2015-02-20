@@ -14,7 +14,6 @@ public:
     SDL_Renderer *renderer;
     SDL_Surface *screenSurface;
     bool init();
-    void quit();
 private:
 };
 
