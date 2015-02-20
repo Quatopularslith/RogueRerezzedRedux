@@ -57,8 +57,8 @@ int main(int argc, char* args[]){
         LTexture floorTexture("floor.png");
         LTexture playerTexture("player.png");
         
-        Player player1(100);
-        player1.entityTexture = &playerTexture;
+        Player player1(100, 0, 0);
+        player1.texture = &playerTexture;
         
         while(!quit){
             while(SDL_PollEvent(&e) != 0){
@@ -69,7 +69,7 @@ int main(int argc, char* args[]){
             SDL_SetRenderDrawColor(m.renderer, 0, 0, 0, 255);
             SDL_RenderClear(m.renderer);
             
-            player1.render(0, 0);
+            player1.render();
             
             SDL_RenderPresent(m.renderer);
         }

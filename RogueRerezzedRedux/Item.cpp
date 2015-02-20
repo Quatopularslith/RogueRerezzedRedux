@@ -47,7 +47,7 @@ static string modifier[] = {
     "Powerful", "Magical", "Ancient"
 };
 
-Item::Item(int _id) : Entity(0, 0) {
+Item::Item(int _id) : Entity(0, 0, NULL) {
     id = _id;
     string name = "";
     int mod = id % sizeof(modifier);

@@ -10,11 +10,12 @@
 #include "LTexture.h"
 class Entity {
 public:
-    Entity(int, int);
+    Entity(int, int, LTexture*);
+    ~Entity();
     void render();
     int x;
     int y;
-    LTexture* entityTexture;
+    LTexture* texture;
 private:
 
 };

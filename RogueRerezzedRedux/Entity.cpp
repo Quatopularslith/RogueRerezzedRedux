@@ -9,13 +9,14 @@
 #include "LTexture.h"
 #include <stdio.h>
 
-Entity::Entity(int _x, int _y) {
+Entity::Entity(int _x, int _y, LTexture* tex) {
     x = _x;
     y = _y;
+    texture = tex;
 }
 
 void Entity::render(){
-    if(entityTexture != NULL){
-        (*entityTexture).render(x, y);
+    if(texture != NULL){
+        (*texture).render(x, y);
     }else{printf("Texture is null\n");}
 }
