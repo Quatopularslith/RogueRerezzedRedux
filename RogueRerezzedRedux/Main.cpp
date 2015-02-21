@@ -11,9 +11,8 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "Main.h"
-#include "FloorGen.h"
+#include "Floor.h"
 #include "Media.h"
-#include "FloorGen.h"
 #include "Player.h"
 #include "LTexture.h"
 

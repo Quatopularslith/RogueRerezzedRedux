@@ -36,7 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Entity.o \
-	${OBJECTDIR}/FloorGen.o \
+	${OBJECTDIR}/Floor.o \
 	${OBJECTDIR}/Item.o \
 	${OBJECTDIR}/LTexture.o \
 	${OBJECTDIR}/Main.o \
@@ -74,10 +74,10 @@ ${OBJECTDIR}/Entity.o: Entity.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Entity.o Entity.cpp
 
-${OBJECTDIR}/FloorGen.o: FloorGen.cpp 
+${OBJECTDIR}/Floor.o: Floor.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FloorGen.o FloorGen.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Floor.o Floor.cpp
 
 ${OBJECTDIR}/Item.o: Item.cpp 
 	${MKDIR} -p ${OBJECTDIR}
