@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: Razim Zavac
+ * Author: Razim Zavac & Torri
  *
  * Created on February 17, 2015, 6:20 PM
  */
@@ -58,7 +58,7 @@ int main(int argc, char* args[]){
         LTexture playerTexture("player.png");
         
         Player player1(100, 0, 0);
-        player1.texture = &playerTexture;
+        Entity.textures[player1.tpath] = &playerTexture;
         
         while(!quit){
             while(SDL_PollEvent(&e) != 0){

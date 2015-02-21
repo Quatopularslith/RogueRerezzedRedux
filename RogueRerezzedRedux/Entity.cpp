@@ -20,22 +20,22 @@ Entity::Entity(int _x, int _y, string path) {
 }
 
 Entity::~Entity(){
-    tpath = NULL;
+    //tpath = NULL;
 }
 
 void Entity::loadTex(string path){
-    if(path == NULL){
+    /*if(path == NULL){
         return;
-    }
-    if(!textures[path]){
+    }*/
+    /*if(!textures[path]){
         textures.insert(std::make_pair(path, *LTexture(path)));
-    }
+    }*/
 }
 
 void Entity::render(){
-    if(textures[tpath] != NULL){
+    /*if(textures[tpath] != NULL){
         (*textures[tpath]).render(x, y);
-    }else{printf("Texture %s is null\n", (*textures[tpath]).getTexturePath());}
+    }else{printf("Texture %s is null\n", (*textures[tpath]).getTexturePath());}*/
 }
 
 void Entity::moveTo(int newX, int newY){
