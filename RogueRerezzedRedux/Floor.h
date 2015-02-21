@@ -11,10 +11,17 @@
 class Floor {
 public:
     Floor();
-    void setFloor(int,int,char);
     virtual ~Floor();
 private:
     void makeFloor(int,int,int,int);
+    void setFloor(Point, char);
+    char getFloor(Point);
+    Point pickWall();
+    bool isSpace(Point);
+    struct Point;
+    struct Room;
+    const int width = 100;
+    const int height = 100;
     /**
      * # = floor
      * D = door
@@ -23,7 +30,7 @@ private:
      * @ = player spawn
      * * = enemy spawn
      */
-    char floor[100 + 100 * 100];
+    char floor[width + width * height];
 };
 
 #endif	/* FLOOR_H */

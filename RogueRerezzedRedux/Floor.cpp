@@ -9,30 +9,51 @@
 
 const double chanceRoom = 0.5;
 
+struct Floor::Point {
+    int x;
+    int y;
+};
+
+struct Floor::Room {
+    int x;//top left
+    int y;//top left
+    int sizex;//right length
+    int sizey;//down length
+};
+
 Floor::Floor() {
-    int sizex = rand() % 5;
-    int sizey = rand() % 5;
-    int cx = 50 - sizex;
-    int cy = 50 - sizey;
+    Room room = new Room(rand() % 5, rand() % 5, 45, 45);
+    Point check;
     bool cont = true;
     while(cont == true){
-        makeFloor(cx, cy, sizex, sizey);
-        
+        makeFloor(room);
+        check = pickWall();
     }
 }
 
-void Floor::makeFloor(int cornerx, int cornery, int sizex, int sizey){
-    for(int x = cornerx; x < cornerx + sizex; x++){
-        for(int y = cornery; y < cornery + sizey; y++){
-            setFloor(x, y, '#');
+void Floor::makeFloor(Room room){
+    for(int x = room.x; x < room.x + room.sizex; x++){
+        for(int y = room.y; y < room.y + room.sizey; y++){
+            setFloor(new Point(x, y), '#');
         }
     }
 }
 
-void Floor::setFloor(int x, int y, char val){
-    floor[x + 100 * y] = val;
+Floor::Point Floor::pickWall(){
+    
 }
 
-Floor::~Floor() {
+bool Floor::isSpace(Point check){
+    
 }
+
+void Floor::setFloor(Point p, char val){
+    floor[p.x + width * p.y] = val;
+}
+
+char Floor::getFloor(Point p){
+    return floor[p.x + width * p.y];
+}
+
+Floor::~Floor() {}
 
