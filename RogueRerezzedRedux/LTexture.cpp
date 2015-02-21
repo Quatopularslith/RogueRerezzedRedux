@@ -11,10 +11,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <string>
-LTexture::LTexture(std::string texture) {
-    rTexture = NULL;
-    rWidth = 0; 
-    rHeight = 0;
+LTexture::LTexture(std::string texture):rTexture(NULL), rWidth(0), rHeight(0) {
     loadTexture(texture);
 }
 
@@ -83,6 +80,7 @@ void LTexture::render(int x, int y, SDL_Rect* clip, double angle, SDL_Point* cen
     Main m;
     SDL_Rect renderQuad = {x, y, rWidth, rHeight};
     if(clip != NULL){
+
         renderQuad.w = clip->w;
         renderQuad.h = clip->h;
     }

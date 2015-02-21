@@ -17,8 +17,8 @@
 #include "Player.h"
 #include "LTexture.h"
 
-const int WINDOW_WIDTH = 640;
-const int WINDOW_HEIGHT = 480;
+const int WINDOW_WIDTH = 100;
+const int WINDOW_HEIGHT = 100;
 using namespace std;
 
 bool Main::init(){
