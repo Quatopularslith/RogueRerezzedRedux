@@ -19,6 +19,10 @@ LTexture::~LTexture() {
     freeTexture();
 }
 
+LTexture::getTexture(){
+    return rTexture;
+}
+
 bool LTexture::loadTexture(std::string texture){
     Main m;
     freeTexture();
