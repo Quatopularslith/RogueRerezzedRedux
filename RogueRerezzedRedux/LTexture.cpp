@@ -11,6 +11,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <string>
+using namespace std;
 LTexture::LTexture(std::string texture):rTexture(NULL), rWidth(0), rHeight(0) {
     loadTexture(texture);
 }
@@ -19,7 +20,7 @@ LTexture::~LTexture() {
     freeTexture();
 }
 
-LTexture::getTexturePath(){
+string LTexture::getTexturePath(){
     return texturePath;
 }
 
