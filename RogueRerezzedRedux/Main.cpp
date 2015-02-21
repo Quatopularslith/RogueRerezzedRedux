@@ -32,7 +32,7 @@ bool Main::init(){
         window = SDL_CreateWindow("RogueRerezzedRedux", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_SHOWN);
         if(window == NULL){printf("Window Creation: %s\n", SDL_GetError());return false;
         }else{
-            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
             if(renderer == NULL){printf("Renderer creation failed: %s\n", SDL_GetError()); return false;
             }else{
                 SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -73,8 +73,8 @@ int main(int argc, char* args[]){
             
             SDL_RenderPresent(m.renderer);
         }
-        floorTexture.freeTexture();
-        playerTexture.freeTexture();
+       // floorTexture.freeTexture();
+       // playerTexture.freeTexture();
         SDL_DestroyRenderer(m.renderer);
         SDL_DestroyWindow(m.window);
         m.window = NULL;

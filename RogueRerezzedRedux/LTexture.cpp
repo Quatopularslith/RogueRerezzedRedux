@@ -19,13 +19,14 @@ LTexture::~LTexture() {
     freeTexture();
 }
 
-LTexture::getTexture(){
-    return rTexture;
+LTexture::getTexturePath(){
+    return texturePath;
 }
 
 bool LTexture::loadTexture(std::string texture){
     Main m;
     freeTexture();
+    texturePath = texture;
     SDL_Texture* newTexture = NULL;
     SDL_Surface* loadedSurface = IMG_Load(texture.c_str());
     if(loadedSurface == NULL) printf("Unable to load %s. SDL_image error: %s\n", texture.c_str(), IMG_GetError());
