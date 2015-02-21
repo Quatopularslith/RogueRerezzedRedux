@@ -35,5 +35,10 @@ void Entity::loadTex(string path){
 void Entity::render(){
     if(textures[tpath] != NULL){
         (*textures[tpath]).render(x, y);
-    }else{printf("Texture %s is null\n", (*textures[tpath]).getPath());}
+    }else{printf("Texture %s is null\n", (*textures[tpath]).getTexturePath());}
+}
+
+void Entity::moveTo(int newX, int newY){
+    x = newX;
+    y = newY;
 }

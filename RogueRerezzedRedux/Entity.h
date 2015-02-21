@@ -19,6 +19,7 @@ public:
     Entity(int, int, string);
     ~Entity();
     void render();
+    void moveTo(int, int);
     static void loadTex(string);
     int x;
     int y;
