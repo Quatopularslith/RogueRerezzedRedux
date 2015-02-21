@@ -19,7 +19,7 @@ public:
     bool loadText(std:string text, SDL_Color textColor);
 #endif
     void freeTexture();
-    void getTexture();
+    void getTexturePath();
     void setColor(Uint8 red, Uint8 green, Uint8 blue);
     void setBlendMode(SDL_BlendMode blending);
     void setAlpha(Uint8 alpha);
@@ -31,6 +31,7 @@ private:
     SDL_Texture* rTexture;
     int rWidth;
     int rHeight;
+    string texturePath;
 };
 
 #endif	/* LTEXTURE_H */
