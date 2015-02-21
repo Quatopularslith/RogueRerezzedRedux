@@ -47,7 +47,6 @@ bool Main::init(){
 int main(int argc, char* args[]){
     Main m;
     Media me;
-    FloorGen f;
     if(!m.init()){ printf("Initialization failed");
     }else{
         bool quit = false;

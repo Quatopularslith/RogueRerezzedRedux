@@ -8,7 +8,7 @@
 #include "Media.h"
 #include "Main.h"
 #include "Main.h"
-#include "FloorGen.h"
+#include "Floor.h"
 #include <SDL_image.h>
 #include <SDL.h>
 #include <iostream>

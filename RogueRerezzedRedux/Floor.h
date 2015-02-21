@@ -11,16 +11,19 @@
 class Floor {
 public:
     Floor();
-    char floor[100][100];
+    void setFloor(int,int,char);
+    virtual ~Floor();
+private:
+    void makeFloor(int,int,int,int);
     /**
      * # = floor
      * D = door
      * T = trap
      * S = secret door
+     * @ = player spawn
+     * * = enemy spawn
      */
-    virtual ~Floor();
-private:
-
+    char floor[100 + 100 * 100];
 };
 
 #endif	/* FLOOR_H */
