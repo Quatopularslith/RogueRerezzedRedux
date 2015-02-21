@@ -8,6 +8,7 @@
 #ifndef ENTITY_H
 #define	ENTITY_H
 #include "LTexture.h"
+#include <string>
 class Entity {
 public:
     Entity(int, int, LTexture*);

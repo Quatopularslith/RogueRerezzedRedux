@@ -31,7 +31,7 @@ private:
     SDL_Texture* rTexture;
     int rWidth;
     int rHeight;
-    string texturePath;
+    std::string texturePath;
 };
 
 #endif	/* LTEXTURE_H */
