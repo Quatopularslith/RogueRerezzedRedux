@@ -11,6 +11,7 @@
 #include <string>
 
 using namespace std;
+map<string, LTexture*> Entity::textures;
 
 Entity::Entity(int _x, int _y, string path) {
     x = _x;
@@ -19,22 +20,23 @@ Entity::Entity(int _x, int _y, string path) {
     loadTex(path);
 }
 
+Entity::Entity(int _x, int _y){
+    x = _x;
+    y = _y;
+}
+
 Entity::~Entity(){
-    //tpath = NULL;
 }
 
 void Entity::loadTex(string path){
-    /*if(path == NULL){
-        return;
-    }*/
-    /*if(!textures[path]){
-        textures.insert(std::make_pair(path, *LTexture(path)));
-    }*/
+    if(!textures[path] && path != ""){
+        textures.insert(std::make_pair(path, new LTexture(path)));
+    }
 }
 
 void Entity::render(){
-    if(!(Entity::textures[tpath])){
-        (Entity::textures[tpath])->render(x, y);
+    if(!textures[tpath]){
+        textures[tpath]->render(x, y);
     }else{
         printf("Texture is null\n");
     }

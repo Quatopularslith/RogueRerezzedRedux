@@ -17,6 +17,7 @@ using namespace std;
 class Entity {
 public:
     Entity(int, int, string);
+    Entity(int, int);
     ~Entity();
     void render();
     void moveTo(int, int);
