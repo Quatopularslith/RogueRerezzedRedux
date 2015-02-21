@@ -10,10 +10,10 @@
 
 class Main{
 public:
-    SDL_Window *window;
-    SDL_Renderer *renderer;
-    SDL_Surface *screenSurface;
-    bool init();
+    static SDL_Window *window;
+    static SDL_Renderer *renderer;
+    static SDL_Surface *screenSurface;
+    static bool init();
 private:
 };
 

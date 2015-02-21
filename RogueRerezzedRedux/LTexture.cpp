@@ -26,6 +26,7 @@ string LTexture::getTexturePath(){
 
 bool LTexture::loadTexture(std::string texture){
     Main m;
+    m.init();
     freeTexture();
     texturePath = texture;
     SDL_Texture* newTexture = NULL;

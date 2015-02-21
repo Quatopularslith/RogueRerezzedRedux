@@ -1,6 +1,6 @@
 /* 
  * File:   Player.h
- * Author: Razim
+ * Author: Mnenmenth
  *
  * Created on February 20, 2015, 3:45 PM
  */

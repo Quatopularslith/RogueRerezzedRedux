@@ -1,6 +1,6 @@
 /* 
  * File:   loadMedia.h
- * Author: Razim Zavac
+ * Author: Mnenmenth
  *
  * Created on February 18, 2015, 4:00 PM
  */

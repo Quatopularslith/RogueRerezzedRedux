@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: Razim Zavac & Torri
+ * Author: Mnenmenth & Torri
  *
  * Created on February 17, 2015, 6:20 PM
  */
@@ -20,7 +20,7 @@ const int WINDOW_WIDTH = 640;
 const int WINDOW_HEIGHT = 580;
 using namespace std;
 
-bool Main::init(){
+static bool Main::init(){
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
         printf("SDL_Init: %s\n", SDL_GetError());
         return false;
