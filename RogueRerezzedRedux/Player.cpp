@@ -11,7 +11,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 
-Player::Player(int hp, int _x, int _y) : Entity (_x, _y, NULL){
+Player::Player(int hp, int _x, int _y) : Entity (_x, _y, "player.png"){
     health = hp;
     maxHealth = hp;
 }

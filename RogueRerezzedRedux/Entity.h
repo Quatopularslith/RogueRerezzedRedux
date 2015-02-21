@@ -8,14 +8,22 @@
 #ifndef ENTITY_H
 #define	ENTITY_H
 #include "LTexture.h"
+#include <stdio.h>
+#include <string>
+#include <map>
+
+using namespace std;
+
 class Entity {
 public:
-    Entity(int, int, LTexture*);
+    Entity(int, int, string);
     ~Entity();
     void render();
+    static void loadTex(string);
     int x;
     int y;
-    LTexture* texture;
+    static map<string, *LTexture> textures;
+    string tpath;
 private:
 
 };

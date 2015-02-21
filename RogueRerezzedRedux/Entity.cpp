@@ -8,19 +8,32 @@
 #include "Entity.h"
 #include "LTexture.h"
 #include <stdio.h>
+#include <string>
 
-Entity::Entity(int _x, int _y, LTexture* tex) {
+using namespace std;
+
+Entity::Entity(int _x, int _y, string path) {
     x = _x;
     y = _y;
-    texture = tex;
+    tpath = path;
+    loadTex(path);
 }
 
 Entity::~Entity(){
-    texture = NULL;
+    tpath = NULL;
+}
+
+void Entity::loadTex(string path){
+    if(path == NULL){
+        return;
+    }
+    if(!textures[path]){
+        textures.insert(std::make_pair(path, *LTexture(path)));
+    }
 }
 
 void Entity::render(){
-    if(texture != NULL){
-        (*texture).render(x, y);
-    }else{printf("Texture is null\n");}
+    if(textures[tpath] != NULL){
+        (*textures[tpath]).render(x, y);
+    }else{printf("Texture %s is null\n", (*textures[tpath]).getPath());}
 }
