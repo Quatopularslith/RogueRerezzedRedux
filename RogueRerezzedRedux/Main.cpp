@@ -55,10 +55,8 @@ int main(int argc, char* args[]){
         SDL_Event e;
         
         LTexture floorTexture("floor.png");
-        LTexture playerTexture("player.png");
         
         Player player1(100, 0, 0);
-        Entity.textures[player1.tpath] = &playerTexture;
         
         while(!quit){
             while(SDL_PollEvent(&e) != 0){
