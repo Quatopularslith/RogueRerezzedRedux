@@ -32,7 +32,7 @@ bool LTexture::loadTexture(std::string texture){
     SDL_Surface* loadedSurface = IMG_Load(texture.c_str());
     if(loadedSurface == NULL) printf("Unable to load %s. SDL_image error: %s\n", texture.c_str(), IMG_GetError());
     else{
-        //SDL_SetColorKey(loadedSurface, SDL_TRUE, SDL_MapRGB(loadedSurface->format, 0, 0xFF, 0xFF));
+        SDL_SetColorKey(loadedSurface, SDL_TRUE, SDL_MapRGB(loadedSurface->format, 0, 0xFF, 0xFF));
         newTexture = SDL_CreateTextureFromSurface(m.renderer, loadedSurface);
         if(newTexture == NULL) printf("Unable to make texture from %s. SDL Error: %s\n", texture.c_str(), SDL_GetError());
         else{
@@ -82,26 +82,15 @@ void LTexture::setAlpha(Uint8 alpha){
     SDL_SetTextureAlphaMod(rTexture, alpha);
 }
 
-void LTexture::render(int x, int y/*, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip*/){
+void LTexture::render(int x, int y, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip){
     Main m;
-    //SDL_Rect renderQuad = {x, y, rWidth, rHeight};
-    SDL_Rect SrcR = {x, y, rWidth, rHeight};
-    SDL_Rect DestR;
-    //if(clip != NULL){
-    SrcR.x = x;
-    SrcR.y = y;
-    SrcR.w = 16;
-    SrcR.h = 16;
-    
-    DestR.x = 640/2 - 16 /2;
-    DestR.y = 580/2 - 16 /2;
-    DestR.w = 16;
-    DestR.h = 16;
-        //renderQuad.w = clip->w;
-        //renderQuad.h = clip->h;
-    //}
-    //SDL_RenderCopyEx(m.renderer, rTexture, clip, &renderQuad, angle, center, flip);
-    SDL_RenderCopy(m.renderer, rTexture, &SrcR, &DestR);
+    SDL_Rect renderQuad = {x, y, rWidth, rHeight};
+    if(clip != NULL){
+
+        renderQuad.w = clip->w;
+        renderQuad.h = clip->h;
+    }
+    SDL_RenderCopyEx(m.renderer, rTexture, clip, &renderQuad, angle, center, flip);
 }
 
 int LTexture::getWidth(){
