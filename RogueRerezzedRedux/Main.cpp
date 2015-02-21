@@ -16,8 +16,8 @@
 #include "Player.h"
 #include "LTexture.h"
 
-const int WINDOW_WIDTH = 100;
-const int WINDOW_HEIGHT = 100;
+const int WINDOW_WIDTH = 640;
+const int WINDOW_HEIGHT = 580;
 using namespace std;
 
 bool Main::init(){
@@ -28,10 +28,10 @@ bool Main::init(){
         if(!SDL_SetHint(SDL_HINT_RENDER_VSYNC, "1")) printf("Vsync Not Enabled");
         if(!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")) printf("Linear texture filtering not enabled\n");
     }
-        window = SDL_CreateWindow("RogueRerezzedRedux", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOW_SHOWN);
+        window = SDL_CreateWindow("RogueRerezzedRedux", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 0);
         if(window == NULL){printf("Window Creation: %s\n", SDL_GetError());return false;
         }else{
-            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
+            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
             if(renderer == NULL){printf("Renderer creation failed: %s\n", SDL_GetError()); return false;
             }else{
                 SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -54,7 +54,7 @@ int main(int argc, char* args[]){
         
         LTexture floorTexture("floor.png");
         
-        Player player1(100, 0, 0);
+        //Player player1(100, 0, 0);
         
         while(!quit){
             while(SDL_PollEvent(&e) != 0){
@@ -65,7 +65,7 @@ int main(int argc, char* args[]){
             SDL_SetRenderDrawColor(m.renderer, 0, 0, 0, 255);
             SDL_RenderClear(m.renderer);
             
-            player1.render();
+            //player1.render();
             
             SDL_RenderPresent(m.renderer);
         }
