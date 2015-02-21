@@ -23,7 +23,7 @@ public:
     static void loadTex(string);
     int x;
     int y;
-    static map<string, LTexture> textures;
+    static map<string, LTexture*> textures;
     string tpath;
 private:
 

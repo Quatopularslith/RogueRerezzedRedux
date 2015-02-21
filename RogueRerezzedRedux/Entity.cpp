@@ -33,9 +33,11 @@ void Entity::loadTex(string path){
 }
 
 void Entity::render(){
-    /*if(!textures[tpath]){
-        textures[tpath].render(x, y);
-    }else{printf("Texture %s is null\n", textures[tpath].getTexturePath());}*/
+    if(!(Entity::textures[tpath])){
+        (Entity::textures[tpath])->render(x, y);
+    }else{
+        printf("Texture is null\n");
+    }
 }
 
 void Entity::moveTo(int newX, int newY){
