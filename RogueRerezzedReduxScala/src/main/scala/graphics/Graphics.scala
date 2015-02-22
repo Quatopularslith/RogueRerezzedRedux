@@ -5,12 +5,15 @@ import scala.swing._
 
 class loadGraphics(image:String) extends Component{
   var img = ImageIO.read(getClass.getResourceAsStream(image))
+  println("test1")
   if (img == null) {
     println(image + "not found")
   }
-  val panel = new Panel {
+  val draw = new Panel {
+    println("test2")
     override def paint(g: Graphics2D) {
       g.drawImage(img, img.getWidth(), img.getHeight(), null)
+      println("test3")
     }
   }
 }

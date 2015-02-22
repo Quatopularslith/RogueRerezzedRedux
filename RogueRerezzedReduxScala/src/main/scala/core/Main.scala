@@ -12,7 +12,6 @@ object Main {
 object Window extends SimpleSwingApplication{
 
   def top = new MainFrame {
-    def graph(img:String) = new loadGraphics(img)
     title = "RogueRerezzedRedux"
     preferredSize = new Dimension(1024, 700)
     //contents = new Button {
