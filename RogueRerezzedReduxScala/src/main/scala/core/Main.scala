@@ -2,7 +2,7 @@ package core
 
 import graphics.loadGraphics
 
-import scala.swing.{Action, _}
+import scala.swing._
 object Main {
   def main(args: Array[String]) {
     Window.top
@@ -15,11 +15,11 @@ object Window extends SimpleSwingApplication{
     def graph(img:String) = new loadGraphics(img)
     title = "RogueRerezzedRedux"
     preferredSize = new Dimension(1024, 700)
-    contents = new Button {
-      action = Action("Click") {
-        println("hi")
-      }
-    }
+    //contents = new Button {
+    //  action = Action("Click") {
+    //    println("hi")
+    //  }
+    //}
     contents = new loadGraphics("/foot.png")
     centerOnScreen
   }
