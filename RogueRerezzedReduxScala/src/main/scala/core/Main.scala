@@ -1,16 +1,25 @@
 package core
 
-import javax.swing.{ImageIcon, JFrame, JLabel}
-import javax.imageio.ImageIO
-
+import scala.swing.{Action, _}
+import graphics.loadGraphics
 object Main {
   def main(args: Array[String]) {
-    val window = new JFrame("RogueRerezzedRedux")
-    window.setVisible(true)
-    window.setSize(1280, 720)
-    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
-    window.add(new JLabel(new ImageIcon(ImageIO.read(getClass.getResourceAsStream("/foot.png")))))
-    window.revalidate()
+    Window.top
+  }
+}
+
+object Window extends SimpleSwingApplication{
+
+  def top = new MainFrame {
+    def graph(img:String) = new loadGraphics(img)
+    title = "RogueRerezzedRedux"
+    preferredSize = new Dimension(1024, 700)
+    contents = new Button {
+      action = Action("Click") {
+        println("hi")
+      }
+    }
+    centerOnScreen
   }
 }
 
