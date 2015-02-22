@@ -1,7 +1,8 @@
 package core
 
-import scala.swing.{Action, _}
 import graphics.loadGraphics
+
+import scala.swing.{Action, _}
 object Main {
   def main(args: Array[String]) {
     Window.top
@@ -19,6 +20,7 @@ object Window extends SimpleSwingApplication{
         println("hi")
       }
     }
+    contents = new loadGraphics("/foot.png")
     centerOnScreen
   }
 }

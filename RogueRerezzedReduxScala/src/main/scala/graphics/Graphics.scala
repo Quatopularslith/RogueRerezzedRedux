@@ -1,15 +1,17 @@
 package graphics
-import java.awt.image.BufferedImage
-import java.io.File
 import javax.imageio.ImageIO
 
-import swing._
+import scala.swing._
 
 class loadGraphics(image:String) extends Component{
-  var bufferedImage:BufferedImage = null
-  def draw(g:Graphics2D){
-    bufferedImage = ImageIO.read(getClass.getResourceAsStream(image))
-    g.drawImage(bufferedImage, 0, 0, null)
+  var img = ImageIO.read(getClass.getResourceAsStream(image))
+  if (img == null) {
+    println(image + "not found")
+  }
+  val panel = new Panel {
+    override def paint(g: Graphics2D) {
+      g.drawImage(img, img.getWidth(), img.getHeight(), null)
+    }
   }
 }
 
