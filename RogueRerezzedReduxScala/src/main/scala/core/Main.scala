@@ -1,15 +1,10 @@
 package core
 
-import graphics.loadGraphics
+import graphics.LoadGraphics
 
 import scala.swing._
-object Main {
-  def main(args: Array[String]) {
-    Window.top
-  }
-}
 
-object Window extends SimpleSwingApplication{
+object Main extends SimpleSwingApplication {
 
   def top = new MainFrame {
     title = "RogueRerezzedRedux"
@@ -19,7 +14,7 @@ object Window extends SimpleSwingApplication{
     //    println("hi")
     //  }
     //}
-    contents = new loadGraphics("/foot.png")
+    contents = new LoadGraphics("/foot.png")
     centerOnScreen
   }
 }

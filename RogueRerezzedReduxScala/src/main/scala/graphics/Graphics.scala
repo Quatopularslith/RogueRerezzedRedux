@@ -3,7 +3,7 @@ import javax.imageio.ImageIO
 
 import scala.swing._
 
-class loadGraphics(image:String) extends Component{
+class LoadGraphics(image: String) extends Component {
   var img = ImageIO.read(getClass.getResourceAsStream(image))
   println("test1")
   if (img == null) {
