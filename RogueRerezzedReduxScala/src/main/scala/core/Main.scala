@@ -1,7 +1,5 @@
 package core
 
-import graphics.LoadGraphics
-
 import scala.swing._
 
 object Main extends SimpleSwingApplication {
@@ -14,7 +12,6 @@ object Main extends SimpleSwingApplication {
     //    println("hi")
     //  }
     //}
-    contents = new LoadGraphics("/foot.png")
     centerOnScreen
   }
 }
