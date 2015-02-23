@@ -1,19 +1,22 @@
 package core
 
+import graphics.GamePanel
+import graphics.Sprites._
+
 import scala.swing._
 
 object Main extends SimpleSwingApplication {
+  val gamePanel = new GamePanel
+  gamePanel.addSprite(potato)
 
   def top = new MainFrame {
     title = "RogueRerezzedRedux"
-    preferredSize = new Dimension(1024, 700)
-    //contents = new Button {
-    //  action = Action("Click") {
-    //    println("hi")
-    //  }
-    //}
+    preferredSize = new Dimension(1600, 900)
+    contents = gamePanel
     centerOnScreen
+
   }
+
 }
 
 //**//
