@@ -7,8 +7,20 @@
 		revision="1.0"
 		conf="default"
 		confs="default"
-		date="20150222161116"/>
+		date="20150222211616"/>
 	<dependencies>
+		<module organisation="com.eed3si9n" name="sbt-assembly">
+			<revision name="0.11.2" status="release" pubdate="20140319165202" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="45">
+				<license name="MIT License" url="https://github.com/sbt/sbt-assembly/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="1566" time="0" location="C:\Users\Razim\.ivy2\cache\scala_2.10\sbt_0.13\com.eed3si9n\sbt-assembly\ivy-0.11.2.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.11.2/ivys/ivy.xml"/>
+				<caller organisation="roguererezzedreduxscala" name="roguererezzedreduxscala$sbt_2.11" conf="default" rev="0.11.2" rev-constraint-default="0.11.2" rev-constraint-dynamic="0.11.2" callerrev="1.0" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="sbt-assembly" type="jar" ext="jar" status="no" details="" size="153282" time="0" location="C:\Users\Razim\.ivy2\cache\scala_2.10\sbt_0.13\com.eed3si9n\sbt-assembly\jars\sbt-assembly-0.11.2.jar">
+						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.11.2/jars/sbt-assembly.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-sbt" name="sbt">
 			<revision name="0.13.5" status="release" pubdate="20140527094603" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
 				<metadata-artifact status="no" details="" size="1793" time="0" location="C:\Users\Razim\.ivy2\cache\org.scala-sbt\sbt\ivy-0.13.5.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/ivys/ivy.xml"/>

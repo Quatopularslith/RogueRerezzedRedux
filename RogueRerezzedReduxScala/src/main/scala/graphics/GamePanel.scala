@@ -9,7 +9,7 @@ import scala.Predef.{tuple2ToZippedOps => _}
 import scala.collection.mutable.ListBuffer
 import scala.swing._
 
-class GamePanel extends Panel {
+object GamePanel extends Panel {
   val sprites = ListBuffer.empty[Sprite]
 
   def addSprite(s: Sprite) = sprites += s
@@ -17,6 +17,10 @@ class GamePanel extends Panel {
   var viewport = new Rectangle(0, 0, 1600, 900)
 
   preferredSize = new Dimension(viewport.width, viewport.height)
+
+  listenTo(keys)
+  focusable = true
+  requestFocus
 
   var currentTick = 0
   val timer = new Timer

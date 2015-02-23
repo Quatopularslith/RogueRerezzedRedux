@@ -563,9 +563,17 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)]
+[debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sbt_2.11;1.0->com.eed3si9n#sbt-assembly;0.11.2 [default->default(compile)]
+[info] Resolving com.eed3si9n#sbt-assembly;0.11.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.eed3si9n#sbt-assembly;0.11.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.eed3si9n#sbt-assembly;0.11.2
+[debug] 	typesafe-ivy-releases: revision in cache: com.eed3si9n#sbt-assembly;0.11.2
+[debug] 	found com.eed3si9n#sbt-assembly;0.11.2 in sbt-chain
+[debug] 	[0.11.2] com.eed3si9n#sbt-assembly;0.11.2
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.5!sbt.jar
+[debug] 	[NOT REQUIRED] com.eed3si9n#sbt-assembly;0.11.2!sbt-assembly.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#main;0.13.5!main.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-bin.jar
@@ -611,9 +619,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 666ms :: artifacts dl 26ms
+[debug] :: resolution report :: resolve 627ms :: artifacts dl 31ms
 [debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sbt_2.11;1.0 default produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sbt_2.11-default.xml
-[debug] 	resolve done (666ms resolve - 26ms download)
+[debug] 	resolve done (627ms resolve - 31ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: roguererezzedreduxscala#roguererezzedreduxscala$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -909,6 +917,13 @@
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#precompiled-2_9_3;0.13.5
 [debug] 	typesafe-ivy-releases: revision in cache: org.scala-sbt#precompiled-2_9_3;0.13.5
 [debug] 	found org.scala-sbt#precompiled-2_9_3;0.13.5 in sbt-chain
+[debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sources_2.11;1.0->com.eed3si9n#sbt-assembly;0.11.2 [default->default(compile)]
+[info] Resolving com.eed3si9n#sbt-assembly;0.11.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.eed3si9n#sbt-assembly;0.11.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.eed3si9n#sbt-assembly;0.11.2
+[debug] 	typesafe-ivy-releases: revision in cache: com.eed3si9n#sbt-assembly;0.11.2
+[debug] 	found com.eed3si9n#sbt-assembly;0.11.2 in sbt-chain
+[debug] 	[0.11.2] com.eed3si9n#sbt-assembly;0.11.2
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.5!sbt.jar(src)
@@ -955,6 +970,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 126ms :: artifacts dl 30ms
+[debug] 	[NOT REQUIRED] com.eed3si9n#sbt-assembly;0.11.2!sbt-assembly.jar(src)
+[debug] :: resolution report :: resolve 157ms :: artifacts dl 28ms
 [debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_2.11;1.0 default produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_2.11-default.xml
-[debug] 	resolve done (126ms resolve - 30ms download)
+[debug] 	resolve done (157ms resolve - 28ms download)
