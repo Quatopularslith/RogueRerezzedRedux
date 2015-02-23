@@ -2,13 +2,14 @@ package core
 
 import graphics.GamePanel
 import graphics.Sprites._
-import input.SpriteMov
+import input._
 
 import scala.swing._
 
 object Main extends SimpleSwingApplication {
   GamePanel.addSprite(potato)
-  SpriteMov
+  GamePanel.addSprite(player)
+  KeyboardInput
 
   def top = new MainFrame {
     title = "RogueRerezzedRedux"

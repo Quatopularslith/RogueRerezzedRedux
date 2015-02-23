@@ -11,6 +11,7 @@ import scala.collection.mutable
 
 object Sprites {
   val potato = new GenericSprite("/foot.png", pos = (100, 100), scale = 0.5)
+  val player = new GenericSprite("/foot.png", pos = (200, 200), scale = 0.5)
 }
 
 trait Sprite {

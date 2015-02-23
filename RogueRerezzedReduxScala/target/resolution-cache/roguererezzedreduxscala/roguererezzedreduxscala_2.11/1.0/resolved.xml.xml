@@ -4,7 +4,7 @@
 		module="roguererezzedreduxscala_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150222211646"
+		publication="20150222222530"
 	>
 		<description>
 		RogueRerezzedReduxScala
@@ -27,9 +27,7 @@
 	</configurations>
 	<publications>
 		<artifact name="roguererezzedreduxscala_2.11" type="pom" ext="pom" conf="pom"/>
-		<artifact name="roguererezzedreduxscala_2.11" type="jar" ext="jar" conf="compile"/>
-		<artifact name="roguererezzedreduxscala_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		<artifact name="roguererezzedreduxscala_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<artifact name="roguererezzedreduxscala_2.11" type="jar" ext="jar" conf="optional" e:classifier="download, resolveClassifiers, resolveSbtClassifiers"/>
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.5" conf="scala-tool->default,optional(default)"/>
