@@ -3,6 +3,8 @@ package core
 import graphics.GamePanel
 import graphics.Sprites._
 import input._
+import ui.MainScreen
+
 
 import scala.swing._
 
