@@ -11,9 +11,7 @@ import scala.swing._
 
 object GamePanel extends Panel {
   val sprites = ListBuffer.empty[Sprite]
-
   def addSprite(s: Sprite) = sprites += s
-
   var viewport = new Rectangle(0, 0, 1600, 900)
 
   preferredSize = new Dimension(viewport.width, viewport.height)

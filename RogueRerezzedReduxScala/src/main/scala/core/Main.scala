@@ -7,6 +7,7 @@ import input._
 import scala.swing._
 
 object Main extends SimpleSwingApplication {
+  GamePanel.addSprite(backgrnd)
   GamePanel.addSprite(potato)
   GamePanel.addSprite(player)
   KeyboardInput
