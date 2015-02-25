@@ -12,14 +12,16 @@ object MainScreen extends Panel {
   }
   val bs = new ImageIcon("")
   val button = new Button {
-    icon =
+   // icon =
   }
 }
 
 object MouseTest extends Panel {
-  listenTo(MouseTest.mouse.clicks)
+  listenTo(mouse.clicks)
   MouseTest.reactions += {
-    case MouseClicked(MouseTest, _, _, _, _) => println("asdgd")
+    case e: MouseClicked => {
+      println(e.point + "\n");
+    }
   }
   focusable = true
   requestFocus
