@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14184f61-de56-4494-af69-3f5d6e47f0c1" name="Default" comment="MButton workings">
-      <change type="DELETED" beforePath="C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\scala-2.11\classes\input\MButton.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\scala-2.11\classes\ui\MainScreen$$anon$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\scala-2.11\classes\ui\MainScreen$$anon$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\scala-2.11\classes\ui\MouseTest$$anonfun$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\scala-2.11\classes\ui\MouseTest$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\scala-2.11\classes\ui\MouseTest.class" afterPath="" />
+    <list default="true" id="14184f61-de56-4494-af69-3f5d6e47f0c1" name="Default" comment="Buttons">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/Main$$anon$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/Main$$anon$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/Main$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/Main$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/core/Main.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/core/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ui/MainScreen$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ui/MainScreen$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/ui/MainScreen.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/ui/MainScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/input/MButton.scala" afterPath="$PROJECT_DIR$/src/main/scala/input/MButton.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/Main.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/Main.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/ui/MainScreen.scala" afterPath="$PROJECT_DIR$/src/main/scala/ui/MainScreen.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sbt_2.11/1.0/resolved.xml.properties" />
@@ -39,7 +30,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-sources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test-internal.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/roguererezzedreduxscala.iml" afterPath="$PROJECT_DIR$/.idea/modules/roguererezzedreduxscala.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RogueRerezzedReduxScala.iws" />
@@ -76,10 +66,10 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/core/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
-                <element signature="e#14#50#0" expanded="true" />
+                <element signature="e#14#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,8 +78,8 @@
       <file leaf-file-name="MButton.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/input/MButton.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5104712" vertical-offset="171" max-vertical-offset="1139">
-              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.7329843" vertical-offset="154" max-vertical-offset="1139">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
               <folding>
                 <element signature="e#15#51#0" expanded="true" />
               </folding>
@@ -100,9 +90,11 @@
       <file leaf-file-name="MainScreen.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ui/MainScreen.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <folding>
+                <element signature="e#12#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -906,7 +898,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424902771458</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Buttons">
+      <created>1424919126830</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1424919126830</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -924,7 +922,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16367476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16367476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -955,6 +953,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
@@ -966,7 +965,8 @@
     <MESSAGE value="Graphics are almost working" />
     <MESSAGE value="GRAPHICS!!!!!!!" />
     <MESSAGE value="MButton workings" />
-    <option name="LAST_COMMIT_MESSAGE" value="MButton workings" />
+    <MESSAGE value="Buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Buttons" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1014,7 +1014,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="527">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1023,7 +1023,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="527">
           <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#12#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,7 +1062,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="748">
           <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1069,7 +1071,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#12#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1106,7 +1110,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1144,7 +1148,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="765">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1182,7 +1186,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1220,7 +1224,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1258,7 +1262,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="731">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1295,7 +1299,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1340,7 +1344,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="731">
           <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1350,7 +1354,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="731">
           <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1360,7 +1364,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1423,26 +1427,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/core/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
-            <element signature="e#14#50#0" expanded="true" />
+            <element signature="e#14#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ui/MainScreen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#12#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/input/MButton.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5104712" vertical-offset="171" max-vertical-offset="1139">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.7329843" vertical-offset="154" max-vertical-offset="1139">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding>
             <element signature="e#15#51#0" expanded="true" />
           </folding>
