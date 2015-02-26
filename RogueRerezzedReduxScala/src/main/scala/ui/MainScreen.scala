@@ -1,28 +1,24 @@
 package ui
 
-import javax.swing.ImageIcon
+import graphics.Implicits.SuperTuple
+import input.Button
 
+import scala.Predef.{tuple2ToZippedOps => _}
+import scala.collection.mutable.ListBuffer
 import scala.swing._
-import scala.swing.event.MouseClicked
 
 
 object MainScreen extends Panel {
-  val titleLabel = new Label {
-    text = "RogueRerezzedRedux"
-  }
-  val bs = new ImageIcon("")
-  val button = new Button {
-   // icon =
-  }
-}
+  val buttons = ListBuffer.empty[Button]
 
-object MouseTest extends Panel {
+  def addButton(b: Button) = buttons += b
+
   listenTo(mouse.clicks)
-  MouseTest.reactions += {
-    case e: MouseClicked => {
-      println(e.point + "\n");
-    }
-  }
   focusable = true
   requestFocus
+
+  override def paintComponent(g: Graphics2D) = {
+    super.paintComponent(g)
+    for (button <- buttons) g.drawImage(button.image, button.position.x, button.position.y, null)
+  }
 }
