@@ -1,5 +1,6 @@
 package generators
 
+import entity.{Monster, Item}
 import generators.Tile._
 import generators.Shape._
 import scala.collection.mutable.{ArrayBuffer, Map}
@@ -28,7 +29,7 @@ object Dungeon {
   def chooseShape(pos: (Int, Int)): Shape = {
     val check = rand.nextDouble()
     if(check < 0.4){
-      Rect(pos, (rand.nextInt() % maxSize, rand.nextInt() % maxSize))
+      new Rect(pos, (rand.nextInt() % maxSize, rand.nextInt() % maxSize))
     }else{
       Hallway(pos, rand.nextInt() % maxSize)
     }
@@ -38,11 +39,11 @@ object Dungeon {
     var chosen = rand.shuffle(getEdges(floor).keys).head
     for(i <- 0 to (rand.nextInt() % 100) + 1){
       chosen = rand.shuffle(getEdges(floor).keys).head
-      floor(chosen) = RandChest()
+      floor(chosen) = Chest(Item.randItems())
     }
     for(i <- 0 to (rand.nextInt() % 100) + 1){
       chosen = rand.shuffle(getEdges(floor).keys).head
-      floor(chosen) = RandMonsterSpawn()
+      floor(chosen) = MonsterSpawn(Monster.pickRand())
     }
     chosen = rand.shuffle(getEdges(floor).keys).head
     floor(chosen) = Spawn
