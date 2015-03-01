@@ -28,9 +28,9 @@ object Dungeon {
   def chooseShape(pos: (Int, Int)): Shape = {
     val check = rand.nextDouble()
     if(check < 0.4){
-      new Rect(pos, (rand.nextInt() % maxSize, rand.nextInt() % maxSize))
+      Rect(pos, (rand.nextInt() % maxSize, rand.nextInt() % maxSize))
     }else{
-      new Hallway(pos, rand.nextInt() % maxSize)
+      Hallway(pos, rand.nextInt() % maxSize)
     }
   }
 
@@ -38,11 +38,11 @@ object Dungeon {
     var chosen = rand.shuffle(getEdges(floor).keys).head
     for(i <- 0 to (rand.nextInt() % 100) + 1){
       chosen = rand.shuffle(getEdges(floor).keys).head
-      floor(chosen) = new RandChest()
+      floor(chosen) = RandChest()
     }
     for(i <- 0 to (rand.nextInt() % 100) + 1){
       chosen = rand.shuffle(getEdges(floor).keys).head
-      floor(chosen) = new RandMonsterSpawn()
+      floor(chosen) = RandMonsterSpawn()
     }
     chosen = rand.shuffle(getEdges(floor).keys).head
     floor(chosen) = Spawn
