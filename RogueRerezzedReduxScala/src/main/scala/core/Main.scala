@@ -4,8 +4,9 @@ import java.awt.Dimension
 
 import graphics.GamePanel
 import graphics.Sprites._
-import input.Buttons._
 import input._
+import timeOut.Buttons._
+import timeOut.{ButtonInput, Buttons, MButton}
 import ui._
 
 import scala.swing._
