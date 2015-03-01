@@ -8,6 +8,7 @@ import generators.Dungeon._
 object Test {
   def main(args: Array[String]) {
     val dungeon = genDungeon((100,100))
+    val grouped = dungeon.groupBy(_._1._1)
     println(dungeon.toString())
   }
 }
