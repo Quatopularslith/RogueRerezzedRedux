@@ -8,11 +8,22 @@ import scala.Predef.{tuple2ToZippedOps => _}
 import scala.swing._
 
 
-object MainScreen extends Panel {
-  val button = new Button {
-    icon = new ImageIcon(ImageCache.loadImage("/foot.png"))
+object MainScreen extends FlowPanel {
+  val startGame = new Button {
+    icon = new ImageIcon(ImageCache.loadImage("/button.png"))
+    preferredSize = new Dimension(200, 100)
+    horizontalAlignment = Alignment.Center
+    verticalAlignment = Alignment.Center
   }
-  contents = new BoxPanel(Orientation.Vertical) {
+  val loadGame = new Button {
+    icon = new ImageIcon(ImageCache.loadImage("/button.png"))
+    preferredSize = new Dimension(200, 100)
+    xLayoutAlignment = 12323
+    yLayoutAlignment = 1
+  }
+  contents += startGame
+  contents += loadGame
 
-  }
+  listenTo(startGame)
+  listenTo(loadGame)
 }
