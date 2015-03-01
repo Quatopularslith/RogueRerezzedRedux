@@ -2,11 +2,10 @@ package core
 
 import java.awt.Dimension
 
-import graphics.GamePanel._
+import graphics.GamePanel
 import graphics.Sprites._
 import input.Buttons._
 import input._
-import ui.MainScreen._
 import ui._
 
 import scala.swing._
@@ -18,11 +17,11 @@ object Main extends SimpleSwingApplication {
   var width: Double = screenSize.getWidth / .25
   var width1: Int = width.toInt*/
 
-  addSprite(backgrnd)
-  addSprite(potato)
-  addSprite(player)
+  GamePanel.addSprite(backgrnd)
+  GamePanel.addSprite(potato)
+  GamePanel.addSprite(player)
 
-  addButton(startGame)
+  MButton.addButton(startGame)
 
   KeyboardInput
   ButtonInput

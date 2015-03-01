@@ -4,6 +4,7 @@ import java.awt.geom.AffineTransform
 import java.awt.image.{AffineTransformOp, BufferedImage}
 
 import graphics.ImageCache
+import graphics.Implicits.SuperTuple
 
 import scala.Predef.{tuple2ToZippedOps => _}
 import scala.collection.mutable.ListBuffer
