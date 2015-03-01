@@ -34,17 +34,20 @@ object MButton extends Panel {
 trait ButtonTrait {
   protected var pos: (Int, Int)
   protected var scale: Double
+  protected var action: Unit
 
   def position: (Int, Int) = pos
 
   def image: BufferedImage
 
   def rescale(sc: Double) = scale = sc
+
+  def buttonAction(a: Unit) = action = a
 }
 
 class GenericButton(var imagePath: String, var pos: (Int, Int), var scale: Double = 1.0, var action: Unit) extends ButtonTrait {
   var image_ = image
-
+  var bAction: Unit = buttonAction
   private def loadImage = {
     val image = ImageCache.loadImage(imagePath)
     val transform = new AffineTransformOp(AffineTransform.getScaleInstance(scale, scale), AffineTransformOp.TYPE_BICUBIC)
@@ -55,6 +58,8 @@ class GenericButton(var imagePath: String, var pos: (Int, Int), var scale: Doubl
   private def reload = image_ = loadImage
 
   def image = image_
+
+  def buttonAction = bAction
 
   override def rescale(sc: Double) = {
     super.rescale(sc)
