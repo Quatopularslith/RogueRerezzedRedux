@@ -10,13 +10,12 @@ import scala.util.Random
 object Dungeon {
   val spawnRoomSize = 5
   val edges = ArrayBuffer.empty[(Int, Int)]
-  val percents = Array(0.6, 0.4)
+  val chance = Array(0.6,0.4) //[0]=Hallway, [1]=Square
   private val rand = new Random()
 
+  def fits(shape: Shape, floor: Map[(Int, Int), Tile]) = shape.footprint.forall(t => !floor.contains(t))
+
   def addShape(feature: Shape, floor: Map[(Int, Int), Tile]): Unit ={
-    if(!feature.footprint.forall(t => !floor.contains(t))){
-      return
-    }
     def floorify(pos: (Int, Int)): Unit ={
       floor += (pos -> Floor)
     }
@@ -28,10 +27,11 @@ object Dungeon {
   def genDungeon(size: (Int, Int)):Map[(Int, Int), Tile] = {
     val floor = Map.empty[(Int, Int), Tile]
     addShape(new Square((size._1 / 2,size._2 / 2), spawnRoomSize), floor)
-
-    while(true){
+    var stop = false
+    var noSpace = 0
+    while(!stop){
       val chosen = rand.shuffle(getEdges(floor).keys).head
-
+      
     }
 
     return null
