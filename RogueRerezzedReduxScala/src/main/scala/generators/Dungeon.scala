@@ -1,6 +1,6 @@
 package generators
 
-import generators.Shape._
+import generators.Tiles._
 import scala.collection.mutable.{ArrayBuffer, Map}
 import scala.util.Random
 
@@ -10,10 +10,11 @@ import scala.util.Random
 object Dungeon {
   val spawnRoomSize = 5
   val edges = ArrayBuffer.empty[(Int, Int)]
+  val percents = Array(0.6, 0.4)
   private val rand = new Random()
 
-  def addShape(feature: Feature, floor: Map[(Int, Int), Tile]): Unit ={
-    if(feature.footprint.forall(t => floor.contains(t))){
+  def addShape(feature: Shape, floor: Map[(Int, Int), Tile]): Unit ={
+    if(!feature.footprint.forall(t => !floor.contains(t))){
       return
     }
     def floorify(pos: (Int, Int)): Unit ={
@@ -26,10 +27,11 @@ object Dungeon {
 
   def genDungeon(size: (Int, Int)):Map[(Int, Int), Tile] = {
     val floor = Map.empty[(Int, Int), Tile]
-    addShape(new SquareRoom((size._1 / 2,size._2 / 2), spawnRoomSize), floor)
+    addShape(new Square((size._1 / 2,size._2 / 2), spawnRoomSize), floor)
 
     while(true){
       val chosen = rand.shuffle(getEdges(floor).keys).head
+
     }
 
     return null
