@@ -28,15 +28,24 @@ object Dungeon {
   def chooseShape(pos: (Int, Int)): Shape = {
     val check = rand.nextDouble()
     if(check < 0.4){
-      return new Rect(pos, (rand.nextInt() % maxSize, rand.nextInt() % maxSize))
+      new Rect(pos, (rand.nextInt() % maxSize, rand.nextInt() % maxSize))
     }else{
-      return new Hallway(pos, rand.nextInt() % maxSize)
+      new Hallway(pos, rand.nextInt() % maxSize)
     }
   }
 
   def populate(floor: Map[(Int, Int), Tile]): Unit = {
-    val chosen = rand.shuffle(getEdges(floor).keys).head
-
+    var chosen = rand.shuffle(getEdges(floor).keys).head
+    for(i <- 0 to (rand.nextInt() % 100) + 1){
+      chosen = rand.shuffle(getEdges(floor).keys).head
+      floor(chosen) = new RandChest()
+    }
+    for(i <- 0 to (rand.nextInt() % 100) + 1){
+      chosen = rand.shuffle(getEdges(floor).keys).head
+      floor(chosen) = new RandMonsterSpawn()
+    }
+    chosen = rand.shuffle(getEdges(floor).keys).head
+    floor(chosen) = Spawn
   }
 
   def genDungeon(size: (Int, Int)):Map[(Int, Int), Tile] = {
@@ -59,6 +68,6 @@ object Dungeon {
       }
     }
     populate(floor)
-    return floor
+    floor
   }
 }

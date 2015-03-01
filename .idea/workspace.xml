@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95a5a8a8-2cc2-4124-9df1-50d49988e4bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Shape.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MOVED" beforePath="C:\Users\Torri\IdeaProjects\RogueRerezzedRedux\RogueRerezzedReduxScala\src\main\scala\generators\Tiles.scala" afterPath="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Tile.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Dungeon.scala" afterPath="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Dungeon.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/entity/Entity.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RogueRerezzedRedux.iws" />
@@ -35,31 +31,11 @@
       <file leaf-file-name="Dungeon.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Dungeon.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7185762" vertical-offset="204" max-vertical-offset="1173">
-              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.4516129" vertical-offset="427" max-vertical-offset="1326">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="e#20#44#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tile.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Tile.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shape.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Shape.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="15" column="94" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -70,8 +46,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Tiles.scala" />
-        <option value="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Tile.scala" />
         <option value="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Shape.scala" />
+        <option value="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Tile.scala" />
+        <option value="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/entity/Monster.scala" />
+        <option value="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/entity/Item.scala" />
         <option value="$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Dungeon.scala" />
       </list>
     </option>
@@ -135,24 +113,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RogueRerezzedRedux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generators" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,14 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Tile.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Shape.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
@@ -573,10 +525,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/entity/Entity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0945495" vertical-offset="0" max-vertical-offset="899">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/entity/Monster.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0945495" vertical-offset="0" max-vertical-offset="899">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/entity/Item.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0945495" vertical-offset="0" max-vertical-offset="899">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Tile.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3025584" vertical-offset="0" max-vertical-offset="899">
+          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RogueRerezzedReduxScala/src/main/scala/generators/Dungeon.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7185762" vertical-offset="204" max-vertical-offset="1173">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.4516129" vertical-offset="427" max-vertical-offset="1326">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="e#20#44#0" expanded="true" />
           </folding>
