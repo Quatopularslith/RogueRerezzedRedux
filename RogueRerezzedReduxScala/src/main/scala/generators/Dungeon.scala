@@ -1,6 +1,7 @@
 package generators
 
-import generators.Tiles._
+import generators.Tile._
+import generators.Shape._
 import scala.collection.mutable.{ArrayBuffer, Map}
 import scala.util.Random
 
@@ -33,6 +34,11 @@ object Dungeon {
     }
   }
 
+  def populate(floor: Map[(Int, Int), Tile]): Unit = {
+    val chosen = rand.shuffle(getEdges(floor).keys).head
+
+  }
+
   def genDungeon(size: (Int, Int)):Map[(Int, Int), Tile] = {
     val floor = Map.empty[(Int, Int), Tile]
     addShape(new Square((size._1 / 2,size._2 / 2), spawnRoomSize), floor)
@@ -52,6 +58,7 @@ object Dungeon {
         stop = true
       }
     }
+    populate(floor)
     return floor
   }
 }
