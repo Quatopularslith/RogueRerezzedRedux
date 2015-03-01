@@ -1,27 +1,64 @@
 package generators
 
-import scala.collection.mutable.Map
+import generators.Tile._
+import generators.Shape._
+import scala.collection.mutable.{ArrayBuffer, Map}
+import scala.util.Random
 
 /**
  * Created by Torri on 3/1/2015.
  */
 object Dungeon {
-  val ground = '#'
-  val door = 'D'
-  val secretDoor = 'S'
-  val spawn = '$'
-  val mobSpawn = 'M'
-  val chest = 'C'
+  val spawnRoomSize = 5
+  val maxSize = 10
+  val edges = ArrayBuffer.empty[(Int, Int)]
+  private val rand = new Random()
 
-  def genDungeon(size: (Int, Int)):scala.collection.mutable.Map[(Int, Int), Char] = {
-    var floor = scala.collection.mutable.Map[(Int, Int), Char]()
-    def addRec(topLeft:(Int, Int), size:(Int, Int)): Unit ={
-      for(xx <- topLeft._1 to (topLeft._1 + size._1)){
-        for(yy <- topLeft._2 to (topLeft._2 + size._2)){
+  def fits(shape: Shape, floor: Map[(Int, Int), Tile]) = shape.footprint.forall(t => !floor.contains(t))
 
-        }
+  def addShape(feature: Shape, floor: Map[(Int, Int), Tile]): Unit ={
+    def floorify(pos: (Int, Int)): Unit ={
+      floor += (pos -> Floor)
+    }
+    feature.footprint.foreach(floorify(_))
+  }
+
+  def getEdges(floor: Map[(Int, Int), Tile]) = floor.filterKeys(t => (for (dx <- List(-1, 1); dy <- List(-1, 1)) yield floor.contains((t._1 + dx, t._2 + dy))).contains(false))
+
+  def chooseShape(pos: (Int, Int)): Shape = {
+    val check = rand.nextDouble()
+    if(check < 0.4){
+      return new Rect(pos, (rand.nextInt() % maxSize, rand.nextInt() % maxSize))
+    }else{
+      return new Hallway(pos, rand.nextInt() % maxSize)
+    }
+  }
+
+  def populate(floor: Map[(Int, Int), Tile]): Unit = {
+    val chosen = rand.shuffle(getEdges(floor).keys).head
+
+  }
+
+  def genDungeon(size: (Int, Int)):Map[(Int, Int), Tile] = {
+    val floor = Map.empty[(Int, Int), Tile]
+    addShape(new Square((size._1 / 2,size._2 / 2), spawnRoomSize), floor)
+    var stop = false
+    var noSpace = 0
+    var chosen = rand.shuffle(getEdges(floor).keys).head
+    var shape = chooseShape((0,0))
+    while(!stop){
+      chosen = rand.shuffle(getEdges(floor).keys).head
+      shape = chooseShape(chosen)
+      if(fits(shape, floor)){
+        addShape(shape, floor)
+      }else{
+        noSpace += 1
+      }
+      if(noSpace > 10){
+        stop = true
       }
     }
-    return null
+    populate(floor)
+    return floor
   }
 }
