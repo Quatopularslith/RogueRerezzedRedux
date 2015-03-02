@@ -11,7 +11,7 @@ import scala.Predef.{tuple2ToZippedOps => _}
 import scala.swing._
 
 
-object MainScreen extends GridPanel(1, 1) {
+object MainScreen extends GridPanel(3, 1) {
   val startGame = new Button {
     icon = new ImageIcon(ImageCache.loadImage("/button.png"))
     preferredSize = new Dimension(200, 100)
@@ -25,4 +25,6 @@ object MainScreen extends GridPanel(1, 1) {
 
   listenTo(startGame)
   listenTo(loadGame)
+  focusable = true
+  requestFocus()
 }
