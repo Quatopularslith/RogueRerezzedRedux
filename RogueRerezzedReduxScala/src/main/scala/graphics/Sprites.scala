@@ -34,7 +34,8 @@ trait Sprite {
 
   def rescale(sc: Double) = scale = sc
 }
- class GenericSprite(imagePath: String, var pos: (Int, Int) = (0, 0), var scale: Double = 1.0) extends Sprite {
+
+class GenericSprite(imagePath: String, var pos: (Int, Int) = (0, 0), var scale: Double = 1.0) extends Sprite {
   var image_ = loadImage
 
   private def loadImage = {
