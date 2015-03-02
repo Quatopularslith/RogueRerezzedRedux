@@ -1,9 +1,13 @@
 package graphics
 
+/*
+* Created by Mnenmenth
+*/
+
 import java.awt.{Dimension, Rectangle}
 import java.util.{Timer, TimerTask}
 
-import graphics.Implicits.SuperTuple
+import core.Implicits.SuperTuple
 
 import scala.Predef.{tuple2ToZippedOps => _}
 import scala.collection.mutable.ListBuffer

@@ -1,13 +1,16 @@
 package graphics
 
+/*
+* Created by Mnenmenth
+*/
+
 import java.awt.geom.AffineTransform
 import java.awt.image.{AffineTransformOp, BufferedImage}
-import javax.imageio.ImageIO
 
-import graphics.Implicits.SuperTuple
+import core.ImageCache
+import core.Implicits.SuperTuple
 
 import scala.Predef.{tuple2ToZippedOps => _}
-import scala.collection.mutable
 
 object Sprites {
   val backgrnd = new GenericSprite("/background.png", pos = (0, 0), scale = 2.71)
@@ -49,22 +52,4 @@ trait Sprite {
     super.rescale(sc)
     reload
   }
-}
-
-object ImageCache {
-  val imageCache = mutable.HashMap.empty[String, BufferedImage]
-
-  def loadImage(path: String) = {
-    imageCache.getOrElseUpdate(path, ImageIO.read(getClass.getResourceAsStream(path)))
-  }
-}
-
-object Implicits {
-
-  implicit class SuperTuple[A, B](t: (A, B)) {
-    def x = t._1
-
-    def y = t._2
-  }
-
 }
