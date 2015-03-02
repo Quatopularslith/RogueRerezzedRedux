@@ -4,7 +4,7 @@ package core
 * Created by Mnenmenth
 */
 
-import java.awt.Dimension
+import java.awt.{Dimension, Toolkit}
 
 import graphics.GamePanel
 import graphics.Sprites._
@@ -16,12 +16,13 @@ import ui._
 import scala.swing._
 
 object Main extends SimpleSwingApplication {
-  /*var screenSize = Toolkit.getDefaultToolkit().getScreenSize()
-  var height: Double = screenSize.getHeight / .25
+  var screenSize = Toolkit.getDefaultToolkit().getScreenSize()
+  var height: Double = screenSize.getHeight * .75
   var height1: Int = height.toInt
-  var width: Double = screenSize.getWidth / .25
-  var width1: Int = width.toInt*/
-
+  var width: Double = screenSize.getWidth * .75
+  var width1: Int = width.toInt
+  println(height1)
+  println(width1)
   GamePanel.addSprite(backgrnd)
   GamePanel.addSprite(potato)
   GamePanel.addSprite(player)
@@ -33,7 +34,7 @@ object Main extends SimpleSwingApplication {
 
   def top = new MainFrame {
     title = "RogueRerezzedRedux"
-    preferredSize = new Dimension(1280, 720)
+    preferredSize = new Dimension(width1, height1)
     contents = MainScreen
     centerOnScreen
 
