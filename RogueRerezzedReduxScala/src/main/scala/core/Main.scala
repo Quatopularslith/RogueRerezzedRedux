@@ -17,12 +17,10 @@ import scala.swing._
 
 object Main extends SimpleSwingApplication {
   var screenSize = Toolkit.getDefaultToolkit().getScreenSize()
-  var height: Double = screenSize.getHeight * .75
-  var height1: Int = height.toInt
-  var width: Double = screenSize.getWidth * .75
-  var width1: Int = width.toInt
-  println(height1)
-  println(width1)
+  var height = (screenSize.getHeight * .75).toInt
+  var width = (screenSize.getWidth * .75).toInt
+  println(height)
+  println(width)
   GamePanel.addSprite(backgrnd)
   GamePanel.addSprite(potato)
   GamePanel.addSprite(player)
@@ -34,7 +32,7 @@ object Main extends SimpleSwingApplication {
 
   def top = new MainFrame {
     title = "RogueRerezzedRedux"
-    preferredSize = new Dimension(width1, height1)
+    preferredSize = new Dimension(width, height)
     contents = MainScreen
     centerOnScreen
 
