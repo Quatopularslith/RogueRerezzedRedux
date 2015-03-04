@@ -19,24 +19,10 @@ object Dungeon {
 
   def addShape(feature: Shape, floor: Map[(Int, Int), Tile]): Unit ={
     val dir = for (dx <- List(-1, 1); dy <- List(-1, 1)) yield floor.contains((feature.pos._1 + dx, feature.pos._2 + dy))
-    var rot = false
-    var dd = (0,0)
-    if (dir(0)) {
-    } else if (dir(1)) {
-      //isDefault
-      println("Right side")
-    } else if (dir(2)) {
-    } else {
-      rot = true
-    }
     def floorify(pos: (Int, Int)): Unit ={
       floor += (pos -> Floor)
     }
-    if(rot){
-      feature.verticalFoot.foreach(floorify(_))
-    }else{
-      feature.footprint.foreach(floorify(_))
-    }
+    feature.footprint.foreach(floorify(_))
   }
 
   def getEdges(floor: Map[(Int, Int), Tile]) = floor.filterKeys(t => (for (dx <- List(-1, 1); dy <- List(-1, 1)) yield floor.contains((t._1 + dx, t._2 + dy))).contains(false))
@@ -77,6 +63,7 @@ object Dungeon {
       shape = chooseShape(chosen)
       if(fits(shape, floor)){
         addShape(shape, floor)
+        n += 1
         if (noSpace > 0) noSpace -= 1
       }else{
         noSpace += 1
@@ -85,6 +72,7 @@ object Dungeon {
         stop = true
       }
     }
+    println(n)
     populate(floor)
     floor
   }

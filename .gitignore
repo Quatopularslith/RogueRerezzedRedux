@@ -2,3 +2,7 @@
 *.iml
 .idea/scala_compiler.xml
 .idea/modules.xml
+*.iml
+*.xml
+*.cache
+*.xml
