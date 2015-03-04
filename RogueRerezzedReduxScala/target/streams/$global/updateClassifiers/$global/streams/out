@@ -6,7 +6,7 @@
 [debug] == resolving dependencies for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 [compile]
 [debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.5 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.5 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1ef1e852
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3882c6be
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.5
 [debug] 	local: revision in cache: org.scala-lang#scala-library;2.11.5
 [debug] 	found org.scala-lang#scala-library;2.11.5 in sbt-chain
@@ -16,7 +16,7 @@
 [debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.5 [compile->master]
 [debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@519227b5
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@105ada67
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.3
 [debug] 	local: revision in cache: org.scala-lang.modules#scala-xml_2.11;1.0.3
 [debug] 	found org.scala-lang.modules#scala-xml_2.11;1.0.3 in sbt-chain
@@ -25,7 +25,7 @@
 [debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->master]
 [debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 [compile->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2b2e6993
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5c8184a6
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3
 [debug] 	local: revision in cache: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3
 [debug] 	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 in sbt-chain
@@ -34,7 +34,7 @@
 [debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 [compile->master]
 [debug] == resolving dependencies roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-swing_2.11;1.0.1 [compile->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-swing_2.11;1.0.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@237702a
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1d252d10
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-swing_2.11;1.0.1
 [debug] 	local: revision in cache: org.scala-lang.modules#scala-swing_2.11;1.0.1
 [debug] 	found org.scala-lang.modules#scala-swing_2.11;1.0.1 in sbt-chain
@@ -346,137 +346,35 @@
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.11.5!scala-library.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang/scala-library/2.11.5/docs/scala-library-javadoc.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang/scala-library/2.11.5/srcs/scala-library-sources.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-javadoc.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-javadoc.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-javadoc.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-javadoc.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-javadoc.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.5!scala-library.jar(doc) (15751ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-sources.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-sources.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-sources.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-sources.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.5!scala-library.jar(src) (1079ms)
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-xml_2.11/1.0.3/jars/scala-xml_2.11.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-xml_2.11/1.0.3/docs/scala-xml_2.11-javadoc.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-xml_2.11/1.0.3/srcs/scala-xml_2.11-sources.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar (611ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-javadoc.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-javadoc.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-javadoc.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-javadoc.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-javadoc.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(doc) (954ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-sources.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-sources.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-sources.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-sources.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(src) (233ms)
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-parser-combinators_2.11/1.0.3/docs/scala-parser-combinators_2.11-javadoc.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-parser-combinators_2.11/1.0.3/srcs/scala-parser-combinators_2.11-sources.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-parser-combinators_2.11/1.0.3/jars/scala-parser-combinators_2.11.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-javadoc.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-javadoc.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-javadoc.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-javadoc.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-javadoc.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(doc) (689ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-sources.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-sources.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-sources.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-sources.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(src) (185ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar (475ms)
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-swing_2.11/1.0.1/docs/scala-swing_2.11-javadoc.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-swing_2.11/1.0.1/srcs/scala-swing_2.11-sources.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang.modules/scala-swing_2.11/1.0.1/jars/scala-swing_2.11.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-javadoc.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-javadoc.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-javadoc.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-javadoc.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-javadoc.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-swing_2.11;1.0.1!scala-swing_2.11.jar(doc) (1264ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-sources.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-sources.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-sources.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-sources.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-swing_2.11;1.0.1!scala-swing_2.11.jar(src) (255ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-swing_2.11;1.0.1!scala-swing_2.11.jar (841ms)
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang/scala-compiler/2.11.5/srcs/scala-compiler-sources.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang/scala-compiler/2.11.5/docs/scala-compiler-javadoc.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-sources.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-sources.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-sources.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-sources.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.5!scala-compiler.jar(src) (1696ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-javadoc.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-javadoc.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-javadoc.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-javadoc.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.5/scala-compiler-2.11.5-javadoc.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.5!scala-compiler.jar(doc) (8378ms)
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang/scala-reflect/2.11.5/srcs/scala-reflect-sources.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/org.scala-lang/scala-reflect/2.11.5/docs/scala-reflect-javadoc.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-sources.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-sources.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-sources.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-sources.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.5!scala-reflect.jar(src) (531ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-javadoc.jar
-[info] downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-javadoc.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-javadoc.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-javadoc.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5-javadoc.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.5!scala-reflect.jar(doc) (3159ms)
-[debug] 		tried /home/mnenmenth/.ivy2/local/jline/jline/2.12/docs/jline-javadoc.jar
-[debug] 		tried /home/mnenmenth/.ivy2/local/jline/jline/2.12/srcs/jline-sources.jar
-[debug] 		tried http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-javadoc.jar
-[info] downloading http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-javadoc.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-javadoc.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-javadoc.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-javadoc.jar
-[info] 	[SUCCESSFUL ] jline#jline;2.12!jline.jar(doc) (530ms)
-[debug] 		tried http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-sources.jar
-[info] downloading http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-sources.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-sources.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-sources.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/jline/jline/2.12/jline-2.12-sources.jar
-[info] 	[SUCCESSFUL ] jline#jline;2.12!jline.jar(src) (250ms)
-[debug] :: resolution report :: resolve 168ms :: artifacts dl 36924ms
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 compile produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-compile.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 runtime produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-runtime.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 test produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 provided produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-provided.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 optional produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-optional.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 compile-internal produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-compile-internal.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 runtime-internal produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-runtime-internal.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 test-internal produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test-internal.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 plugin produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-plugin.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 sources produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-sources.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 docs produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-docs.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 pom produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-pom.xml
-[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 scala-tool produced in /home/mnenmenth/Documents/Coding/RogueRerezzedRedux/RogueRerezzedReduxScala/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-scala-tool.xml
-[debug] 	resolve done (168ms resolve - 36924ms download)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.11.5!scala-library.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.11.5!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-swing_2.11;1.0.1!scala-swing_2.11.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-swing_2.11;1.0.1!scala-swing_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-swing_2.11;1.0.1!scala-swing_2.11.jar
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.5!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.5!scala-compiler.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.5!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.5!scala-reflect.jar(doc)
+[debug] 	[NOT REQUIRED] jline#jline;2.12!jline.jar(doc)
+[debug] 	[NOT REQUIRED] jline#jline;2.12!jline.jar(src)
+[debug] :: resolution report :: resolve 106ms :: artifacts dl 20ms
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 compile produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-compile.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 runtime produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-runtime.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 test produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 provided produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-provided.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 optional produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-optional.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 compile-internal produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-compile-internal.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 runtime-internal produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-runtime-internal.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 test-internal produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test-internal.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 plugin produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-plugin.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 sources produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-sources.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 docs produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-docs.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 pom produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-pom.xml
+[debug] 	report for roguererezzedreduxscala#roguererezzedreduxscala$sources_javadoc_2.11;1.0 scala-tool produced in C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\target\resolution-cache\reports\roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-scala-tool.xml
+[debug] 	resolve done (106ms resolve - 20ms download)
