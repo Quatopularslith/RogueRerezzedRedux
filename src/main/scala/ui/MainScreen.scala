@@ -22,7 +22,7 @@ object MainScreen extends FlowPanel {
     icon = new ImageIcon(ImageCache.loadImage("/button.png"))
     preferredSize = new Dimension(bHeight, bWidth)
   }
-  contents += Buttons.startGame
+  MButton.addButton(Buttons.startGame)
   contents += loadGame
   listenTo(startGame)
   listenTo(loadGame)
