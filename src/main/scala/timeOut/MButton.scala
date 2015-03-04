@@ -45,7 +45,7 @@ trait ButtonTrait {
   def buttonAction(a: Unit) = action = a
 }
 
-class GenericButton(var imagePath: String, var pos: (Int, Int), var scale: Double = 1.0, var action: Unit) extends ButtonTrait{
+class GenericButton(var imagePath: String, var pos: (Int, Int), var scale: Double = 1.0, var action: Unit) extends Component with ButtonTrait{
   var image_ = image
   var bAction: Unit = buttonAction
   private def loadImage = {

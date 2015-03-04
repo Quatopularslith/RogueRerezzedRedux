@@ -22,7 +22,8 @@ object MainScreen extends FlowPanel {
     icon = new ImageIcon(ImageCache.loadImage("/button.png"))
     preferredSize = new Dimension(bHeight, bWidth)
   }
-  //MButton.addButton(Buttons.startGame)
+  contents += Buttons.startGame
+  contents += loadGame
   listenTo(startGame)
   listenTo(loadGame)
   focusable = true
