@@ -12,7 +12,7 @@ import scala.swing._
 import scala.swing.event.MouseClicked
 
 
-object Buttons {
+object Buttons extends Component{
   val startGame = new GenericButton("/button.png", pos = (500, 500), action = StartGameButton)
 }
 
@@ -45,7 +45,7 @@ trait ButtonTrait {
   def buttonAction(a: Unit) = action = a
 }
 
-class GenericButton(var imagePath: String, var pos: (Int, Int), var scale: Double = 1.0, var action: Unit) extends ButtonTrait {
+class GenericButton(var imagePath: String, var pos: (Int, Int), var scale: Double = 1.0, var action: Unit) extends ButtonTrait{
   var image_ = image
   var bAction: Unit = buttonAction
   private def loadImage = {

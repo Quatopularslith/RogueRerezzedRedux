@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/roguererezzedredux.iml" filepath="$PROJECT_DIR$/.idea/modules/roguererezzedredux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/roguererezzedredux-build.iml" filepath="$PROJECT_DIR$/.idea/modules/roguererezzedredux-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/roguererezzedreduxscala.iml" filepath="$PROJECT_DIR$/.idea/modules/roguererezzedreduxscala.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/roguererezzedreduxscala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/roguererezzedreduxscala-build.iml" />
     </modules>
