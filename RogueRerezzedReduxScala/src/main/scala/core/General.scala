@@ -23,7 +23,6 @@ object Implicits {
 
   implicit class SuperTuple[A, B](t: (A, B)) {
     def x = t._1
-
     def y = t._2
   }
 

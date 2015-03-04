@@ -6,7 +6,7 @@ package generators
 trait Shape {
   val pos: (Int, Int)
   def footprint: List[(Int, Int)]
-  def flipFoot = footprint.map(_.swap)
+  def vertFoot = footprint.map(_.swap)
 }
 object Shape {
   class Rect(override val pos: (Int, Int), size: (Int, Int)) extends Shape {

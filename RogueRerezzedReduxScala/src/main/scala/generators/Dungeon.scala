@@ -3,7 +3,6 @@ package generators
 import entity.{Item, Monster}
 import generators.Shape._
 import generators.Tile._
-
 import scala.collection.mutable.{ArrayBuffer, Map}
 import scala.util.Random
 
@@ -19,20 +18,25 @@ object Dungeon {
   def fits(shape: Shape, floor: Map[(Int, Int), Tile]) = shape.footprint.forall(t => !floor.contains(t))
 
   def addShape(feature: Shape, floor: Map[(Int, Int), Tile]): Unit ={
+    val dir = for (dx <- List(-1, 1); dy <- List(-1, 1)) yield floor.contains((feature.pos._1 + dx, feature.pos._2 + dy))
+    var rot = false
+    var dd = (0,0)
+    if (!dir(0)) {
+    } else if (!dir(1)) {
+      //isDefault
+      println("Right side")
+    } else if (!dir(2)) {
+    } else {
+      rot = true
+    }
     def floorify(pos: (Int, Int)): Unit ={
       floor += (pos -> Floor)
     }
-    val dir = for (dx <- List(-1, 1); dy <- List(-1, 1)) yield floor.contains((feature.pos._1 + dx, feature.pos._2 + dy))
-    if (!dir(0)) {
-
-    } else if (!dir(1)) {
-
-    } else if (!dir(2)) {
-
-    } else {
-
+    if(rot){
+      feature.vertFoot.foreach(floorify(_))
+    }else{
+      feature.footprint.foreach(floorify(_))
     }
-    feature.footprint.foreach(floorify(_))
   }
 
   def getEdges(floor: Map[(Int, Int), Tile]) = floor.filterKeys(t => (for (dx <- List(-1, 1); dy <- List(-1, 1)) yield floor.contains((t._1 + dx, t._2 + dy))).contains(false))
@@ -62,6 +66,7 @@ object Dungeon {
 
   def genDungeon(): Map[(Int, Int), Tile] = {
     val floor = Map.empty[(Int, Int), Tile]
+    var n = 0
     addShape(new Square((0, 0), spawnRoomSize), floor)
     var stop = false
     var noSpace = 0
