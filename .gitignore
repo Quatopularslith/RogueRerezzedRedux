@@ -227,3 +227,5 @@ pip-log.txt
 out/production/main/core/Main$$anon$1.class
 *.class
 .idea/workspace.xml
+.idea/workspace.xml
+*.class

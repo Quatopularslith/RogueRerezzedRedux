@@ -21,11 +21,11 @@ object Dungeon {
     val dir = for (dx <- List(-1, 1); dy <- List(-1, 1)) yield floor.contains((feature.pos._1 + dx, feature.pos._2 + dy))
     var rot = false
     var dd = (0,0)
-    if (!dir(0)) {
-    } else if (!dir(1)) {
+    if (dir(0)) {
+    } else if (dir(1)) {
       //isDefault
       println("Right side")
-    } else if (!dir(2)) {
+    } else if (dir(2)) {
     } else {
       rot = true
     }
@@ -33,7 +33,7 @@ object Dungeon {
       floor += (pos -> Floor)
     }
     if(rot){
-      feature.vertFoot.foreach(floorify(_))
+      feature.verticalFoot.foreach(floorify(_))
     }else{
       feature.footprint.foreach(floorify(_))
     }
