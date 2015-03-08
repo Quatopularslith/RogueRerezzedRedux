@@ -2,7 +2,7 @@ name := "RogueRerezzedReduxScala"
 
 version := "1.0"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.6"
 
 // add scala-xml dependency when needed (for Scala 2.11 and newer) in a robust way
 // this mechanism supports cross-version publishing

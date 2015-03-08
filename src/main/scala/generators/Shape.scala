@@ -1,17 +1,36 @@
 package generators
 
+import core.Implicits._
+
 /**
  * Created by Torri on 3/1/2015.
  */
 trait Shape {
   val pos: (Int, Int)
-  def footprintF: List[(Int, Int)]
-  var footprint = footprintF
+
+  def footprint: List[(Int, Int)]
+
+  def transpose = Shape(pos, footprint.map(_.swap))
 }
+
 object Shape {
-  class Rect(override val pos: (Int, Int), size: (Int, Int)) extends Shape {
-    def footprintF = (for (x <- pos._1 until (pos._1 + size._1); y <- pos._2 until (pos._2 + size._2)) yield (x, y)).toList
+
+  case class Rect(override val pos: (Int, Int), size: (Int, Int)) extends Shape {
+    override def footprint = (for (x <- 0 until size._1; y <- 0 until size._2) yield (x, y) + pos).toList
   }
-  case class Square(override val pos: (Int, Int), width: Int) extends Rect(pos, (width, width))
-  case class Hallway(override val pos: (Int, Int), length: Int) extends Rect(pos, (1, length))
+
+  def apply(p: (Int, Int), fp: List[(Int, Int)]): Shape = new Shape {
+    override val pos = p
+
+    override def footprint = fp
+  }
+
+  def Square(pos: (Int, Int), width: Int) = Rect(pos, (width, width))
+
+  def Hallway(pos: (Int, Int), length: Int) = Rect(pos, (1, length))
+
+  case class Circle(override val pos: (Int, Int), radius: Int) extends Shape {
+    override def footprint = (for (x <- -radius to radius; y <- -radius to radius if x * x + y * y <= radius * radius) yield (x, y) + pos).toList
+  }
+
 }

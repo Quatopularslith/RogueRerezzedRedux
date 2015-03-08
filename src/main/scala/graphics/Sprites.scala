@@ -38,19 +38,19 @@ trait Sprite {
 class GenericSprite(imagePath: String, var pos: (Int, Int) = (0, 0), var scale: Double = 1.0) extends Sprite {
   var image_ = loadImage
 
-  private def loadImage = {
-    val img = ImageCache.loadImage(imagePath)
-    val transform = new AffineTransformOp(AffineTransform.getScaleInstance(scale, scale), AffineTransformOp.TYPE_BICUBIC)
-    val result = transform.createCompatibleDestImage(img, null)
-    transform.filter(img, result)
-  }
-
-  private def reload = image_ = loadImage
-
   def image = image_
 
   override def rescale(sc: Double) = {
     super.rescale(sc)
     reload
+  }
+
+  private def reload = image_ = loadImage
+
+  private def loadImage = {
+    val img = ImageCache.loadImage(imagePath)
+    val transform = new AffineTransformOp(AffineTransform.getScaleInstance(scale, scale), AffineTransformOp.TYPE_BICUBIC)
+    val result = transform.createCompatibleDestImage(img, null)
+    transform.filter(img, result)
   }
 }

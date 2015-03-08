@@ -15,7 +15,7 @@ import scala.swing._
 
 object GamePanel extends Panel {
   val sprites = ListBuffer.empty[Sprite]
-  def addSprite(s: Sprite) = sprites += s
+  val timer = new Timer
   var viewport = new Rectangle(0, 0, 1600, 900)
 
   preferredSize = new Dimension(viewport.width, viewport.height)
@@ -25,7 +25,8 @@ object GamePanel extends Panel {
   requestFocus
 
   var currentTick = 0
-  val timer = new Timer
+
+  def addSprite(s: Sprite) = sprites += s
   timer.scheduleAtFixedRate(new TimerTask {
     override def run() = {
       sprites.foreach(_.tick(currentTick))
