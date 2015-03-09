@@ -4,7 +4,7 @@
 		module="roguererezzedreduxscala_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150303204104"
+		publication="20150308165311"
 	>
 		<description>
 		RogueRerezzedReduxScala
@@ -30,8 +30,8 @@
 		<artifact name="roguererezzedreduxscala_2.11" type="jar" ext="jar" conf="optional" e:classifier="download, resolveClassifiers, resolveSbtClassifiers"/>
 	</publications>
 	<dependencies>
-		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.5" conf="scala-tool->default,optional(default)"/>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.11.5" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.6" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.6" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.scala-lang.modules" name="scala-xml_2.11" rev="1.0.3" conf="compile->default(compile)"/>
 		<dependency org="org.scala-lang.modules" name="scala-parser-combinators_2.11" rev="1.0.3" conf="compile->default(compile)"/>
 		<dependency org="org.scala-lang.modules" name="scala-swing_2.11" rev="1.0.1" conf="compile->default(compile)"/>

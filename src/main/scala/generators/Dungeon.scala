@@ -15,14 +15,12 @@ import scala.util.Random
  */
 class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
   override def toString: String = {
-    var out = ""
     val xs = floor.keys.map(_._1)
     val bounds = xs.min to xs.max
     floor.groupBy(_._1.y).mapValues(_.map({ case (pos, tile) => (pos._1, tile)})).mapValues(row => {
       val missing = bounds.filter(x => !row.keySet.contains(x)).map((_, Blank))
       (row ++ missing).toList.sortBy(_._1).map(_._2.toChar).mkString(" ")
-    }).toList.sortBy(_._1).map(_._2).foreach(out += "\n" + _)
-    out
+    }).toList.sortBy(_._1).map(_._2).mkString("\n")
   }
 }
 
@@ -31,42 +29,29 @@ object Dungeon {
   val maxSize = 20
   val edges = ArrayBuffer.empty[(Int, Int)]
   val EdgeOffsets = Set((1, 0), (0, 1), (-1, 0), (0, -1))
-  private val rand = new Random()
+  val rand = new Random(100)
 
   def genDungeon(roomCount: Int): Dungeon = {
+    println(s"Num Rooms: $roomCount")
     val floor = mutable.Map.empty[(Int, Int), Tile]
     var n = 0
     addShape(Circle((0, 0), spawnRoomSize), floor)
-    //var noSpace = 0
     while (n < roomCount) {
       val chosen = rand.shuffle(getEdges(floor)).head
       val shape = chooseShape(chosen._2)
       val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
-      accepted match {
-        case Some(fitShape) => {
-          val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
-          floor += (chosen._1 -> doorType)
-          addShape(fitShape, floor)
-          n += 1
-          //if (noSpace > 0) noSpace -= 1
-        }
-        case None => //noSpace += 1
-      }
-      /*if(fits(shape, floor)){
-        addShape(shape, floor)
+      accepted.map(fitShape => {
+        val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
+        floor += (chosen._1 -> doorType)
+        addShape(fitShape, floor)
         n += 1
-        if (noSpace > 0) noSpace -= 1
-      }else{
-        noSpace += 1
-      }*/
+      })
     }
-    println(s"Num Rooms: $n")
     populate(floor, roomCount)
     new Dungeon(floor)
   }
 
   def addShape(feature: Shape, floor: mutable.Map[(Int, Int), Tile]): Unit = {
-    //val dir = for (dx <- List(-1, 1); dy <- List(-1, 1)) yield floor.contains((feature.pos._1 + dx, feature.pos._2 + dy))
     feature.footprint.foreach(pos => floor += (pos -> Floor))
   }
 
@@ -76,7 +61,7 @@ object Dungeon {
 
   def chooseShape(pos: (Int, Int)): Shape = {
     rand.nextDouble() match {
-      case x if x > 0.5 => Hallway(pos, rand.nextInt(maxSize) + 1)
+      case x if x > 0.5 => Hallway(pos, rand.nextInt(maxSize) + maxSize / 5)
       case y if y > 0.4 => Circle(pos, rand.nextInt(maxSize / 2))
       case _ => Rect(pos, (rand.nextInt(maxSize) + 1, rand.nextInt(maxSize) + 1))
     }

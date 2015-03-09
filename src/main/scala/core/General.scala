@@ -36,5 +36,4 @@ object Implicits {
       (numa.minus(t._1, that._1), numb.minus(t._2, that._2))
     }
   }
-
 }
