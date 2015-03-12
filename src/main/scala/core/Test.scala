@@ -1,7 +1,5 @@
 package core
 
-import java.nio.file.{Files, Paths}
-
 import generators.Dungeon
 import generators.Dungeon._
 
@@ -17,7 +15,8 @@ object Test {
     for (x <- 1 to 5) {
       val roomCount = Dungeon.rand.nextInt(100) + 150
       val dungeon = genDungeon(roomCount)
-      Files.write(Paths.get(s"dungeon$x.txt"), dungeon.toString)
+      println(dungeon.toString)
+      //Files.write(Paths.get(s"dungeon$x.txt"), dungeon.toString)
     }
     println("DONE")
   }

@@ -26,17 +26,18 @@ class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
 
 object Dungeon {
   val spawnRoomSize = 5
+  Thread
   val maxSize = 20
   val edges = ArrayBuffer.empty[(Int, Int)]
   val EdgeOffsets = Set((1, 0), (0, 1), (-1, 0), (0, -1))
   val rand = new Random(100)
 
   def genDungeon(roomCount: Int): Dungeon = {
-    println(s"Num Rooms: $roomCount")
+    var noroom = 0.0
     val floor = mutable.Map.empty[(Int, Int), Tile]
     var n = 0
     addShape(Circle((0, 0), spawnRoomSize), floor)
-    while (n < roomCount) {
+    while (n < roomCount || noroom > 10) {
       val chosen = rand.shuffle(getEdges(floor)).head
       val shape = chooseShape(chosen._2)
       val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
@@ -45,8 +46,13 @@ object Dungeon {
         floor += (chosen._1 -> doorType)
         addShape(fitShape, floor)
         n += 1
+        if (noroom > 0) noroom -= 1
       })
+      if (accepted.toList.isEmpty) {
+        noroom += 1
+      }
     }
+    println(s"Input Rooms: $roomCount \nActual Rooms: $n")
     populate(floor, roomCount)
     new Dungeon(floor)
   }
@@ -61,9 +67,9 @@ object Dungeon {
 
   def chooseShape(pos: (Int, Int)): Shape = {
     rand.nextDouble() match {
-      case x if x > 0.5 => Hallway(pos, rand.nextInt(maxSize) + maxSize / 5)
-      case y if y > 0.4 => Circle(pos, rand.nextInt(maxSize / 2))
-      case _ => Rect(pos, (rand.nextInt(maxSize) + 1, rand.nextInt(maxSize) + 1))
+      case x if x > 0.60 => Rect(pos, (rand.nextInt(maxSize) + 1, rand.nextInt(maxSize) + 1))
+      case y if y > 0.55 => Circle(pos, rand.nextInt(maxSize / 2))
+      case _ => Hallway(pos, rand.nextInt(maxSize) + maxSize / 5)
     }
   }
 
