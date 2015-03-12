@@ -2,6 +2,8 @@ package generators
 
 import core.Implicits._
 
+import scala.collection.mutable.ArrayBuffer
+
 /**
  * Created by Torri on 3/1/2015.
  */
@@ -11,6 +13,8 @@ trait Shape {
   def footprint: List[(Int, Int)]
 
   def transpose = Shape(pos, footprint.map(_.swap))
+
+  def test = Shape(pos, Shape.getTestFoot(pos, footprint))
 }
 
 object Shape {
@@ -24,6 +28,19 @@ object Shape {
 
     override def footprint = fp
   }
+
+  def getTestFoot(p: (Int, Int), fp: List[(Int, Int)]) = {
+    val EdgeOffsets = Set((1, 0), (0, 1), (-1, 0), (0, -1))
+    val edges = fp.flatMap(t => EdgeOffsets.map(off => t + off)).toList.distinct
+    var m: ArrayBuffer[(Int, Int)] = new ArrayBuffer(1)
+    edges.foreach(m += _)
+    fp.foreach(m += _)
+    m.sortBy(_._1)
+    m.sortBy(_._2)
+    m.toList
+  }
+
+
 
   def Square(pos: (Int, Int), width: Int) = Rect(pos, (width, width))
 

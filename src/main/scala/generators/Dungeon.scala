@@ -26,18 +26,23 @@ class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
 
 object Dungeon {
   val spawnRoomSize = 5
-  Thread
   val maxSize = 20
   val edges = ArrayBuffer.empty[(Int, Int)]
   val EdgeOffsets = Set((1, 0), (0, 1), (-1, 0), (0, -1))
-  val rand = new Random(100)
+  val rand = new Random()
+
+  def roundTo(d: Double, decPlace: Int): Double = {
+    val sto = d * math.pow(10, decPlace)
+    math.round(sto).toDouble / math.pow(10, decPlace)
+  }
 
   def genDungeon(roomCount: Int): Dungeon = {
-    var noroom = 0.0
     val floor = mutable.Map.empty[(Int, Int), Tile]
     var n = 0
     addShape(Circle((0, 0), spawnRoomSize), floor)
-    while (n < roomCount || noroom > 10) {
+    while (n < roomCount) {
+      val percent = roundTo(n.toDouble / roomCount.toDouble, 1)
+      println(s"$percent% loaded")
       val chosen = rand.shuffle(getEdges(floor)).head
       val shape = chooseShape(chosen._2)
       val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
@@ -46,14 +51,10 @@ object Dungeon {
         floor += (chosen._1 -> doorType)
         addShape(fitShape, floor)
         n += 1
-        if (noroom > 0) noroom -= 1
       })
-      if (accepted.toList.isEmpty) {
-        noroom += 1
-      }
     }
-    println(s"Input Rooms: $roomCount \nActual Rooms: $n")
-    populate(floor, roomCount)
+    println(s"Actual Rooms: $n")
+    populate(floor, n)
     new Dungeon(floor)
   }
 
@@ -67,8 +68,8 @@ object Dungeon {
 
   def chooseShape(pos: (Int, Int)): Shape = {
     rand.nextDouble() match {
-      case x if x > 0.60 => Rect(pos, (rand.nextInt(maxSize) + 1, rand.nextInt(maxSize) + 1))
-      case y if y > 0.55 => Circle(pos, rand.nextInt(maxSize / 2))
+      case x if x > 0.60 => Rect(pos, (rand.nextInt(maxSize) + 2, rand.nextInt(maxSize) + 2))
+      case y if y > 0.55 => Circle(pos, rand.nextInt(maxSize / 2) + 1)
       case _ => Hallway(pos, rand.nextInt(maxSize) + maxSize / 5)
     }
   }
@@ -98,7 +99,8 @@ object Dungeon {
     val shiftedFootprint = rand.shuffle(shape.footprint.map(_ -(minX, minY)))
     val fit = Stream.apply(shiftedFootprint: _*).map(off => {
       val test = shiftedFootprint.map(_ + pos - off)
-      if (fits(Shape(pos, test), floor)) Some(Shape(pos - off, test)) else None
+      val testShape = Shape(pos, test)
+      if (fits(Shape(pos, testShape.test.footprint), floor)) Some(Shape(pos - off, test)) else None
     }).dropWhile(!_.isDefined)
     if (fit.nonEmpty) fit.head else None
   }
