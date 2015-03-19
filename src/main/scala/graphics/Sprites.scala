@@ -7,7 +7,6 @@ package graphics
 import java.awt.geom.AffineTransform
 import java.awt.image.{AffineTransformOp, BufferedImage}
 
-import core.ImageCache
 import core.Implicits.SuperTuple
 
 import scala.Predef.{tuple2ToZippedOps => _}

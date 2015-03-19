@@ -6,7 +6,8 @@ package ui
 
 import javax.swing.ImageIcon
 
-import core.{ImageCache, Main}
+import core.Main
+import graphics.ImageCache
 import timeOut.{Buttons, MButton}
 
 import scala.Predef.{tuple2ToZippedOps => _}

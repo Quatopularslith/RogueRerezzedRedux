@@ -11,17 +11,17 @@ import ui.MainScreen
 import scala.swing.event.{ButtonClicked, Key, KeyPressed}
 
 object KeyboardInput {
-  potatoMov
+  moveScreen
   playerMov
   startGameButton
   loadGameButton
 
-  def potatoMov {
+  def moveScreen {
     GamePanel.reactions += {
-      case KeyPressed(_, Key.Left, _, _) => potato.translate(-10, 0)
-      case KeyPressed(_, Key.Right, _, _) => potato.translate(10, 0)
-      case KeyPressed(_, Key.Up, _, _) => potato.translate(0, -10)
-      case KeyPressed(_, Key.Down, _, _) => potato.translate(0, 10)
+      case KeyPressed(_, Key.Left, _, _) => GamePanel.offx -= 64
+      case KeyPressed(_, Key.Right, _, _) => GamePanel.offx += 64
+      case KeyPressed(_, Key.Up, _, _) => GamePanel.offy += 64
+      case KeyPressed(_, Key.Down, _, _) => GamePanel.offy -= 64
     }
   }
 

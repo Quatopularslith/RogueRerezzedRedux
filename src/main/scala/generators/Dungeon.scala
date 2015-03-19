@@ -32,8 +32,8 @@ object Dungeon {
   val rand = new Random()
 
   def roundTo(d: Double, decPlace: Int): Double = {
-    val sto = d * math.pow(10, decPlace)
-    math.round(sto).toDouble / math.pow(10, decPlace)
+    val sto = d * math.pow(10, decPlace.toDouble)
+    math.round(sto).toDouble / math.pow(10, decPlace.toDouble)
   }
 
   def genDungeon(roomCount: Int): Dungeon = {
@@ -41,8 +41,8 @@ object Dungeon {
     var n = 0
     addShape(Circle((0, 0), spawnRoomSize), floor)
     while (n < roomCount) {
-      val percent = roundTo(n.toDouble / roomCount.toDouble, 1)
-      println(s"$percent% loaded")
+      //val percent = 100 * roundTo(n.toDouble / roomCount.toDouble, 2)
+      //println(s"$percent%")
       val chosen = rand.shuffle(getEdges(floor)).head
       val shape = chooseShape(chosen._2)
       val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
@@ -77,20 +77,21 @@ object Dungeon {
   def populate(floor: mutable.Map[(Int, Int), Tile], roomCount: Int): Unit = {
     val chestCount = rand.nextInt(roomCount / 2) + 1
     for (i <- 0 to chestCount) {
-      setRandom(floor, Chest(Item.randItems()))
+      floor += setRandom(floor) -> Chest(Item.randItems())
     }
     val tileCount = floor.keys.size
     val monsterCount = rand.nextInt(tileCount / 25) + tileCount / 50
     for (i <- 0 to monsterCount) {
-      setRandom(floor, MonsterSpawn(Monster.pickRand()))
+      val pos = setRandom(floor)
+      floor += pos -> MonsterSpawn(Monster.pickRand(pos))
     }
-    setRandom(floor, Spawn)
-    setRandom(floor, Exit)
+    floor += setRandom(floor) -> Spawn
+    floor += setRandom(floor) -> Exit
   }
 
-  def setRandom(floor: mutable.Map[(Int, Int), Tile], tile: Tile) = {
+  def setRandom(floor: mutable.Map[(Int, Int), Tile]) = {
     val floorTiles = floor.filter(_._2 == Floor).keys.toList
-    floor(rand.shuffle(floorTiles).head) = tile
+    rand.shuffle(floorTiles).head
   }
 
   def jiggle(floor: mutable.Map[(Int, Int), Tile], pos: (Int, Int), shape: Shape) = {
