@@ -4,7 +4,7 @@
 		module="roguererezzedreduxscala$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150319101955"
+		publication="20150412201940"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
