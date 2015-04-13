@@ -3,6 +3,8 @@ package graphics
 import java.awt.image.BufferedImage
 import javax.imageio.ImageIO
 
+import org.newdawn.slick.Image
+
 import scala.collection.mutable
 
 /**
@@ -18,8 +20,13 @@ class Spritesheet(path: String) {
 
 object ImageCache {
   val imageCache = mutable.HashMap.empty[String, BufferedImage]
+  val slickImgCache = mutable.HashMap.empty[String, Image]
 
   def loadImage(path: String) = {
     imageCache.getOrElseUpdate(path, ImageIO.read(getClass.getResourceAsStream(path)))
+  }
+
+  def loadSlickImg(path: String) = {
+    slickImgCache.getOrElseUpdate(path, new Image(path))
   }
 }
