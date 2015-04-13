@@ -4,17 +4,17 @@ package core
 * Created by Mnenmenth
 */
 
-import graphics.{GamePanel, ImageCache}
+import graphics.{Player, Sprites, GamePanel, ImageCache}
 import input._
-import org.newdawn.slick.Image
+import org.newdawn.slick.{GameContainer, AppGameContainer, Image}
 import timeOut.ButtonInput
 
 object Main {
-  val game = JMain.game
-  var floor: Image = ImageCache.loadSlickImg("null")
+  val game = new AppGameContainer(new JMain("Hi"))
+  def floor: Image = ImageCache.loadSlickImg("foot.png")
 
   def main(): Unit = {
-    game.setDisplayMode(height, width, false)
+    game.setDisplayMode(width, height, false)
     game.setShowFPS(true)
     game.start()
   }
@@ -30,16 +30,18 @@ object Main {
   }
 
   def init(): Unit = {
-    floor = ImageCache.loadSlickImg("foot.png")
+    floor
   }
 
   def render(): Unit = {
-    floor.draw(0, 0)
+    //floor.draw(0, 0)
+    Player.init
+    KeyboardInput
   }
 
-  def update(): Unit = {
+  def update(container: GameContainer, delta: Int): Unit = {
+    //https://thejavablog.wordpress.com/2008/06/08/using-slick-2d-to-write-a-game/
     KeyboardInput
-    ButtonInput
   }
 
   //GamePanel.addSprite(backgrnd)

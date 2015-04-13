@@ -8,6 +8,7 @@ import java.awt.geom.AffineTransform
 import java.awt.image.{AffineTransformOp, BufferedImage}
 
 import core.Implicits.SuperTuple
+import org.newdawn.slick.{Animation, Image}
 
 import scala.Predef.{tuple2ToZippedOps => _}
 
@@ -52,4 +53,22 @@ class GenericSprite(imagePath: String, var pos: (Int, Int) = (0, 0), var scale: 
     val result = transform.createCompatibleDestImage(img, null)
     transform.filter(img, result)
   }
+}
+
+
+object Player{
+  def init() {
+    val movementUp: Array[Image] = Array(new Image("foot.png"), new Image("foot.png"))
+    val movementDown: Array[Image] = Array(new Image("foot.png"), new Image("foot.png"))
+    val movementLeft: Array[Image] = Array(new Image("foot.png"), new Image("foot.png"))
+    val movementRight: Array[Image] = Array(new Image("foot.png"), new Image("foot.png"))
+    val duration: Array[Int] = Array(300, 300)
+
+    val up = new Animation(movementUp, duration, false)
+    val down = new Animation(movementDown, duration, false)
+    val left = new Animation(movementLeft, duration, false)
+    val right = new Animation(movementRight, duration, false)
+    val sprite = right
+  }
+
 }
