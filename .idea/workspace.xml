@@ -2,569 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14184f61-de56-4494-af69-3f5d6e47f0c1" name="Default" comment="Adding Slick">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/AbstractComponent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/class-use/AbstractComponent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/AiffData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/AiffData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/AlphaMapTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/AlphaMapTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/AngelCodeFont.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/AngelCodeFont.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Animation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Animation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/AnimationTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/AnimationTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/AntiAliasTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/AntiAliasTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/AppGameContainer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/AppGameContainer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/AppletGameContainer.ConsolePanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/AppletGameContainer.ConsolePanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/AppletGameContainer.Container.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/AppletGameContainer.Container.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/AppletGameContainer.ContainerPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/AppletGameContainer.ContainerPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/AppletGameContainer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/AppletGameContainer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/Audio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/Audio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/AudioImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/AudioImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/AudioLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/AudioLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/BasicCommand.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/BasicCommand.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/BasicComponent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/class-use/BasicComponent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/BasicGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/BasicGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/BasicGameState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/class-use/BasicGameState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/BasicTriangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/BasicTriangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/BigImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/BigImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/BigImageTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/BigImageTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/BigSpriteSheetTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/BigSpriteSheetTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/BlobbyTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/BlobbyTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/CachedRender.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/CachedRender.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/CachedRenderTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/CachedRenderTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/CanvasContainerTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/CanvasContainerTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/CanvasGameContainer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/CanvasGameContainer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/CanvasSizeTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/CanvasSizeTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Circle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Circle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/ClipTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Color.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Color.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/ColorEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/ColorEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/CombinedTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/CombinedTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/Command.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/Command.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/ComponentListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/class-use/ComponentListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/CompositeIOException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/CompositeIOException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/CompositeImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/CompositeImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/ConfigurableEffect.Value.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/ConfigurableEffect.Value.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/ConfigurableEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/ConfigurableEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ConfigurableEmitter.ColorRecord.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ConfigurableEmitter.ColorRecord.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ConfigurableEmitter.LinearInterpolator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ConfigurableEmitter.LinearInterpolator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ConfigurableEmitter.RandomValue.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ConfigurableEmitter.RandomValue.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ConfigurableEmitter.Range.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ConfigurableEmitter.Range.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ConfigurableEmitter.SimpleValue.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ConfigurableEmitter.SimpleValue.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ConfigurableEmitter.Value.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ConfigurableEmitter.Value.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ConfigurableEmitter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ConfigurableEmitter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ConfigurableEmitterFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ConfigurableEmitterFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/Control.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/Control.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/ControlledInputReciever.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/ControlledInputReciever.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/ControllerButtonControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/ControllerButtonControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/ControllerDirectionControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/ControllerDirectionControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/ControllerListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/ControllerListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/CopyAreaAlphaTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/CrossStateTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/CrossStateTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/CursorLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/CursorLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Curve.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Curve.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/CurveTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/DefaultLineStripRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/class-use/DefaultLineStripRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/DeferredLoadingTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/loading/DeferredResource.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/loading/class-use/DeferredResource.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/DeferredSound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/DeferredSound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/DeferredTexture.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/DeferredTexture.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/DefsProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/DefsProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/Diagram.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/Diagram.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/DistanceFieldTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/DoubleClickTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/DuplicateEmitterTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/Effect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/Effect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/EffectUtil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/EffectUtil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/ElementProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/ElementProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Ellipse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Ellipse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/EllipseProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/EllipseProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/EmptyImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/EmptyImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/EmptyTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/EmptyTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/FBOGraphics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/class-use/FBOGraphics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/FadeInTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/FadeInTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/FadeOutTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/FadeOutTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/Figure.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/Figure.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/FileMuffin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/class-use/FileMuffin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/FilterEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/FilterEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/effects/FireEmitter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/effects/class-use/FireEmitter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/FlashTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Font.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Font.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/FontPerformanceTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/FontTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/GLUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/GLUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/GUIContext.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/class-use/GUIContext.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Game.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Game.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/GameContainer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/GameContainer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/GameState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/class-use/GameState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/tests/class-use/GeomAccuracyTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/GeomUtil.HitResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/GeomUtil.HitResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/GeomUtil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/GeomUtil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/GeomUtilListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/GeomUtilListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/Glyph.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/class-use/Glyph.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/GlyphPage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/class-use/GlyphPage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/Gradient.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/Gradient.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/GradientEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/GradientEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/fills/GradientFill.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/fills/class-use/GradientFill.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Graphics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Graphics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/GraphicsFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/class-use/GraphicsFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/GroupProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/GroupProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/HieroSettings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/class-use/HieroSettings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/HorizontalSplitTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/HorizontalSplitTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/ImageBuffer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/ImageBuffer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/ImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/ImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/ImageDataFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/ImageDataFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/ImageIOImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/ImageIOImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/ImageIOWriter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/class-use/ImageIOWriter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/ImageOut.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/class-use/ImageOut.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/ImageWriter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/class-use/ImageWriter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/ImageWriterFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/class-use/ImageWriterFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/ImmediateModeOGLRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/class-use/ImmediateModeOGLRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/InkscapeLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/InkscapeLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/InkscapeNonGeometricData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/InkscapeNonGeometricData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Input.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Input.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/InputListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/InputListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/InputProvider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/InputProvider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/InputProviderListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/InputProviderListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/InternalTextureLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/InternalTextureLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/KeyControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/KeyControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/KeyListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/KeyListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Line.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Line.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/LineProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/LineProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/LineStripRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/class-use/LineStripRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/LinearGradientFill.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/LinearGradientFill.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/LoadableImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/LoadableImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/Loader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/Loader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/loading/LoadingList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/loading/class-use/LoadingList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/MODSound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/MODSound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/MannTriangulator.PointBag.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/MannTriangulator.PointBag.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/MannTriangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/MannTriangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/MorphShape.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/MorphShape.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/MouseButtonControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/class-use/MouseButtonControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/MouseListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/MouseListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/MouseOverArea.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/class-use/MouseOverArea.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/Muffin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/class-use/Muffin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Music.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Music.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/MusicListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/MusicListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/NeatTriangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/NeatTriangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/NonGeometricData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/NonGeometricData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/NullAudio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/NullAudio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/OggData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/OggData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/OggDecoder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/OggDecoder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/OggInputStream.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/OggInputStream.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/OpenALStreamPlayer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/OpenALStreamPlayer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/OutlineEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/OutlineEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/OutlineWobbleEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/OutlineWobbleEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/OutlineZigzagEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/OutlineZigzagEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/OverTriangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/OverTriangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/PBufferGraphics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/class-use/PBufferGraphics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/PBufferUniqueGraphics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/class-use/PBufferUniqueGraphics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/PNGDecoder.Format.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/PNGDecoder.Format.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/PNGDecoder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/PNGDecoder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/PNGImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/PNGImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/PackedSpriteSheet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/PackedSpriteSheet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/ParsingException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/ParsingException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/Particle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/Particle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ParticleEmitter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ParticleEmitter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ParticleIO.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ParticleIO.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/ParticleSystem.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/class-use/ParticleSystem.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Path.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Path.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/PathProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/PathProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Point.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Point.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Polygon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Polygon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/PolygonProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/PolygonProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/QuadBasedLineStripRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/class-use/QuadBasedLineStripRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/RadialGradientFill.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/RadialGradientFill.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/RectProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/RectProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Rectangle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Rectangle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Renderable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Renderable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/Renderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/class-use/Renderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/RotateTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/RotateTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/RoundedRectangle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/RoundedRectangle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/SGL.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/class-use/SGL.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/SVGMorph.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/SVGMorph.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/SavedState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/SavedState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/ScalableGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/ScalableGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/SelectTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/SelectTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/ShadowEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/class-use/ShadowEffect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Shape.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Shape.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/ShapeFill.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/ShapeFill.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/ShapeRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/ShapeRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/SimpleDiagramRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/class-use/SimpleDiagramRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/SlickCallable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/SlickCallable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/SlickException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/SlickException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/Sound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/Sound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/SoundStore.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/SoundStore.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/SpriteSheet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/SpriteSheet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/SpriteSheetFont.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/SpriteSheetFont.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/StateBasedGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/class-use/StateBasedGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/StreamSound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/StreamSound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/TGAImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/TGAImageData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/TGAWriter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/class-use/TGAWriter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/TexCoordGenerator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/TexCoordGenerator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/TextField.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/class-use/TextField.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/Texture.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/Texture.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/TextureImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/TextureImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/TextureLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/class-use/TextureLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Transform.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Transform.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/Transition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/Transition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Triangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Triangulator.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/TrueTypeFont.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/UnicodeFont.DisplayList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/UnicodeFont.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/UseProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/UseProcessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/Util.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/class-use/Util.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/VAOGLRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/class-use/VAOGLRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/Vector2f.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/class-use/Vector2f.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/VerticalSplitTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/class-use/VerticalSplitTransition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/WaveData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/class-use/WaveData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/WebstartMuffin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/class-use/WebstartMuffin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/class-use/XMLPackedSheet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/allclasses-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/allclasses-noframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/constant-values.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/deprecated-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/help-doc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/index-all.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/fills/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/loading/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/effects/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/fills/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/loading/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/effects/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/fills/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/loading/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/effects/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/command/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/fills/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/font/effects/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/geom/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/gui/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/imageout/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/loading/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/muffin/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/openal/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/pbuffer/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/opengl/renderer/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/particles/effects/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/state/transition/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extLibs/slick/javadoc/org/newdawn/slick/svg/inkscape/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-roguererezzedredux-build-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sbt_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sources_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sources_javadoc_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sources_javadoc_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sbt_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sbt_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sources_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sources_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sources_javadoc_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala$sources_javadoc_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/roguererezzedreduxscala/roguererezzedreduxscala_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sbt_2.11-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_2.11-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala$sources_javadoc_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/roguererezzedreduxscala-roguererezzedreduxscala_2.11-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/JMain.java" afterPath="$PROJECT_DIR$/src/main/java/core/JMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/core/Main.scala" afterPath="$PROJECT_DIR$/src/main/scala/core/Main.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/graphics/Sprites.scala" afterPath="$PROJECT_DIR$/src/main/scala/graphics/Sprites.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/roguererezzedredux.iml" afterPath="$PROJECT_DIR$/.idea/modules/roguererezzedredux.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RogueRerezzedReduxScala.iws" />
@@ -595,14 +36,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="GamePanel.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/graphics/GamePanel.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sprites.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/graphics/Sprites.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="71" column="3" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
+              <folding>
+                <element signature="e#48#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/core/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9161677">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.39361703">
+              <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
               <folding>
-                <element signature="e#44#83#0" expanded="true" />
+                <element signature="e#44#100#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/extLibs/slick/lib/slick.jar!/org/newdawn/slick/Image.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.96">
+              <caret line="312" column="16" selection-start-line="312" selection-start-column="16" selection-end-line="312" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -611,11 +84,21 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/core/JMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
               <folding>
-                <element signature="e#366#367#0" expanded="true" />
-                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyboardInput.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/input/KeyboardInput.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -665,7 +148,6 @@
         <option value="$PROJECT_DIR$/src/main/scala/generators/Shape.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/Test.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/core/General.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/graphics/Sprites.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/timeOut/MButton.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ui/MainScreen.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/generators/Dungeon.scala" />
@@ -677,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/entity/Entity.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/graphics/GamePanel.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/graphics/Assets.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/graphics/Sprites.scala" />
         <option value="$PROJECT_DIR$/src/main/java/core/JMain.java" />
         <option value="$PROJECT_DIR$/src/main/scala/core/Main.scala" />
       </list>
@@ -831,6 +314,36 @@
               <option name="myItemId" value="graphics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sprites.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RogueRerezzedReduxScala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RogueRerezzedRedux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graphics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -922,11 +435,11 @@
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/extLibs/slick/javadoc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/extLibs/glapp/glapp.jar!/" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="LayoutCode.rearrangeEntriesScala" value="false" />
@@ -963,16 +476,7 @@
       <recent name="C:\Users\Razim\Documents\Coding\RogueRerezzedRedux\RogueRerezzedReduxScala\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
-      <module name="roguererezzedreduxscala" />
-      <setting name="vmparams4" value="-Djline.terminal=NONE" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="consoleArgs" value="-usejavacp" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.JMain">
     <configuration default="false" name="LoadTextureJ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1067,6 +571,26 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="JMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="core.JMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="roguererezzedredux" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1274,18 +798,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
-      <item index="1" class="java.lang.String" itemvalue="Application.LoadTextureJ" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Window" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="0" class="java.lang.String" itemvalue="Application.LoadTextureJ" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Window" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="4" class="java.lang.String" itemvalue="Application.JMain" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Window" />
-        <item index="3" class="java.lang.String" itemvalue="Application.LoadTextureJ" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.JMain" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Window" />
+        <item index="4" class="java.lang.String" itemvalue="Application.LoadTextureJ" />
       </list>
     </recent_temporary>
   </component>
@@ -1522,7 +1047,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1533,7 +1058,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12765957" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26504752" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="31" y="15" width="1320" height="708" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.374868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="31" y="15" width="1320" height="708" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1600,22 +1125,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/generators/Dungeon.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/input/KeyboardInput.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1850,21 +1359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/input/KeyboardInput.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/graphics/Sprites.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2013575">
-          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spritesheet.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1934,14 +1428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/graphics/GamePanel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/entity/Monster/Player.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1950,23 +1436,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/extLibs/slick/lib/slick.jar!/org/newdawn/slick/Image.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.96">
+          <caret line="312" column="16" selection-start-line="312" selection-start-column="16" selection-end-line="312" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/input/KeyboardInput.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/graphics/GamePanel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/extLibs/slick/lib/slick.jar!/org/newdawn/slick/Animation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34292865">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding>
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/graphics/Sprites.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="3" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
+          <folding>
+            <element signature="e#48#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/JMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
           <folding>
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/core/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9161677">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.39361703">
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
           <folding>
-            <element signature="e#44#83#0" expanded="true" />
+            <element signature="e#44#100#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2037,7 +1568,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>slick</last-edited>
+          <last-edited>Slick&amp;LWJGL&amp;glapp</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
