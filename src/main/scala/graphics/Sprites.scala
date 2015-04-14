@@ -14,8 +14,8 @@ import scala.Predef.{tuple2ToZippedOps => _}
 
 object Sprites {
   val backgrnd = new GenericSprite("/background.png", pos = (0, 0), scale = 2.71)
-  val potato = new GenericSprite("/foot.png", pos = (100, 100), scale = 0.5)
-  val player = new GenericSprite("/foot.png", pos = (200, 200), scale = 0.5)
+  val potato = new GenericSprite("/spritesheet.png", pos = (100, 100), scale = 0.5)
+  val player = new GenericSprite("/spritesheet.png", pos = (200, 200), scale = 0.5)
 }
 
 trait Sprite {
@@ -57,18 +57,29 @@ class GenericSprite(imagePath: String, var pos: (Int, Int) = (0, 0), var scale: 
 
 
 object Player{
-  def init() {
-    val movementUp: Array[Image] = Array(new Image("foot.png"), new Image("foot.png"))
-    val movementDown: Array[Image] = Array(new Image("foot.png"), new Image("foot.png"))
-    val movementLeft: Array[Image] = Array(new Image("foot.png"), new Image("foot.png"))
-    val movementRight: Array[Image] = Array(new Image("foot.png"), new Image("foot.png"))
-    val duration: Array[Int] = Array(300, 300)
+  val movementUp: Array[Image] = Array(new Image("spritesheet.png").getSubImage(0, 0, 64, 64), new Image("spritesheet.png").getSubImage(0, 0, 64, 64))
+  val movementDown: Array[Image] = Array(new Image("spritesheet.png").getSubImage(0, 0, 64, 64), new Image("spritesheet.png").getSubImage(0, 0, 64, 64))
+  val movementLeft: Array[Image] = Array(new Image("spritesheet.png").getSubImage(0, 0, 64, 64), new Image("spritesheet.png").getSubImage(0, 0, 64, 64))
+  val movementRight: Array[Image] = Array(new Image("spritesheet.png").getSubImage(0, 0, 64, 64), new Image("spritesheet.png").getSubImage(0, 0, 64, 64))
+  val duration: Array[Int] = Array(300, 300)
 
-    val up = new Animation(movementUp, duration, false)
-    val down = new Animation(movementDown, duration, false)
-    val left = new Animation(movementLeft, duration, false)
-    val right = new Animation(movementRight, duration, false)
-    val sprite = right
+  val up = new Animation(movementUp, duration, false)
+  val down = new Animation(movementDown, duration, false)
+  val left = new Animation(movementLeft, duration, false)
+  val right = new Animation(movementRight, duration, false)
+  var sprite = right
+  def init() {
+    movementUp
+    movementDown
+    movementLeft
+    movementRight
+    duration
+
+    up
+    down
+    left
+    right
+    sprite
   }
 
 }

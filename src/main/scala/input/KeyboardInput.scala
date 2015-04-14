@@ -4,8 +4,10 @@ package input
 * Created by Mnenmenth
 */
 
-import graphics.GamePanel
+import core.Main
+import graphics.{Player, GamePanel}
 import graphics.Sprites._
+import org.newdawn.slick.{Input, GameContainer}
 import ui.MainScreen
 
 import scala.swing.event.{ButtonClicked, Key, KeyPressed}
@@ -15,6 +17,27 @@ object KeyboardInput {
   playerMov
   startGameButton
   loadGameButton
+
+  def slickPlayerMov(container: GameContainer, delta: Int): Unit = {
+    val input: Input = container.getInput
+    if (input.isKeyDown(Input.KEY_W)) {
+      Player.sprite = Player.up
+      Player.sprite.update(delta)
+      Main.y -= delta * 0.1f
+    } else if (input.isKeyDown(Input.KEY_S)) {
+      Player.sprite = Player.down
+      Player.sprite.update(delta)
+      Main.y += delta * 0.1f
+    } else if (input.isKeyDown(Input.KEY_A)) {
+      Player.sprite = Player.left
+      Player.sprite.update(delta)
+      Main.x -= delta * 0.1f
+    } else if (input.isKeyDown(Input.KEY_D)) {
+      Player.sprite = Player.right
+      Player.sprite.update(delta)
+      Main.x += delta * 0.1f
+    }
+  }
 
   def moveScreen {
     GamePanel.reactions += {

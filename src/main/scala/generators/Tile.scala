@@ -22,7 +22,7 @@ object Tile {
     override val img = sprite.get(0, 0, 64, 64)
   }
 
-  case class MonsterSpawn(val monster: Entity) extends Tile {
+  case class MonsterSpawn(monster: Entity) extends Tile {
     override val toChar = 'M'
     override val img = monster.getImage
   }

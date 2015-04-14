@@ -11,6 +11,8 @@ import timeOut.ButtonInput
 
 object Main {
   val game = new AppGameContainer(new JMain("Hi"))
+  var x: Float = 34f
+  var y: Float = 34f
   def floor: Image = ImageCache.loadSlickImg("foot.png")
 
   def main(): Unit = {
@@ -31,17 +33,18 @@ object Main {
 
   def init(): Unit = {
     floor
+    Player.init()
   }
 
   def render(): Unit = {
     //floor.draw(0, 0)
-    Player.init
-    KeyboardInput
+    //KeyboardInput
+    Player.sprite.draw(x.toInt, y.toInt)
   }
 
   def update(container: GameContainer, delta: Int): Unit = {
     //https://thejavablog.wordpress.com/2008/06/08/using-slick-2d-to-write-a-game/
-    KeyboardInput
+    KeyboardInput.slickPlayerMov(container, delta)
   }
 
   //GamePanel.addSprite(backgrnd)
