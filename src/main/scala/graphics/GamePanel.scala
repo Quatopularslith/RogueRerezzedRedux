@@ -4,55 +4,34 @@ package graphics
 * Created by Mnenmenth
 */
 
-import java.awt.{Color, Dimension, Rectangle}
+import java.awt.Graphics2D
+import java.awt.image.BufferedImage
+import java.util
 import java.util.{Timer, TimerTask}
 
 import core.Implicits.SuperTuple
 import core.Main
 import generators.{Dungeon, Tile}
+import org.newdawn.slick.Image
 
 import scala.Predef.{tuple2ToZippedOps => _}
-import scala.collection.mutable.ListBuffer
-import scala.swing._
+import scala.collection.mutable.{ArrayBuffer, ListBuffer}
+import scala.swing.Panel
 
-object GamePanel extends Panel {
-  val sprites = ListBuffer.empty[Sprite]
-  val timer = new Timer
-  val dungeon = Dungeon.genDungeon(100)
-  var viewport = new Rectangle(0, 0, 1600, 900)
+object GamePanel{
 
-  preferredSize = new Dimension(viewport.width, viewport.height)
+  var renderQueue:ArrayBuffer[QueueItem] = ArrayBuffer.empty[QueueItem]
 
-  listenTo(keys)
-  focusable = true
-  requestFocus
-  var currentTick = 0
-  var offx = 0
-  timer.scheduleAtFixedRate(new TimerTask {
-    override def run() = {
-      sprites.foreach(_.tick(currentTick))
-      currentTick += 1
-    }
-  }, 0, 10)
-  timer.scheduleAtFixedRate(new TimerTask {
-    override def run() = repaint
-  }, 0, 17)
-  var offy = 0
-  var tileSize = 64
+  def addToQueue(img: Image, pos:(Int,Int),args: Array[Int]) = renderQueue.+=(new QueueItem(img, pos))
+  def addToQueue(img: Image, pos:(Int,Int)) = renderQueue.+=(new QueueItem(img, pos))
 
-  def addSprite(s: Sprite) = sprites += s
+  def paint {
+    renderQueue.foreach(qi => qi.getImg.draw(qi.getPos._1, qi.getPos._2))
+    renderQueue = ArrayBuffer.empty[QueueItem]
+  }
 
-  override def paintComponent(g: Graphics2D) = {
-    super.paintComponent(g)
-    g.setColor(Color.BLACK)
-    g.fillRect(0, 0, peer.getWidth, peer.getHeight)
-    val xRange = Range.apply(offx / tileSize - 1, (Main.width + offx) / tileSize + 1)
-    val yRange = Range.apply(-(offy / tileSize) - 1, (Main.height - offy) / tileSize + 1)
-    dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach(t => {
-      g.drawImage(Tile.Floor.img, t._1.x * tileSize - offx, t._1.y * tileSize + offy, null)
-      g.drawImage(t._2.img, t._1.x * tileSize - offx, t._1.y * tileSize + offy, null)
-    })
-    g.translate(viewport.x, viewport.y)
-    for (sprite <- sprites) g.drawImage(sprite.image, sprite.position.x, sprite.position.y, null)
+  class QueueItem(img: Image, pos: (Int, Int)){
+    def getImg = img
+    def getPos = pos
   }
 }
