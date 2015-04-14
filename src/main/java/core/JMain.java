@@ -1,5 +1,6 @@
 package core;
 
+import input.KeyboardInput;
 import org.newdawn.slick.*;
 
 /**
@@ -32,5 +33,9 @@ public class JMain extends BasicGame {
 
     public void update(GameContainer arg0, int arg1) throws SlickException {
         Main.update(arg0, arg1);
+    }
+
+    public void keyReleased(int key, char c){
+        KeyboardInput.keyReleased();
     }
 }

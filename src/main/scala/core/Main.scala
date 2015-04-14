@@ -33,12 +33,9 @@ object Main {
 
   def init(): Unit = {
     floor
-    Player.init()
   }
 
   def render(): Unit = {
-    //floor.draw(0, 0)
-    //KeyboardInput
     Player.sprite.draw(x.toInt, y.toInt)
   }
 
@@ -46,18 +43,5 @@ object Main {
     //https://thejavablog.wordpress.com/2008/06/08/using-slick-2d-to-write-a-game/
     KeyboardInput.slickPlayerMov(container, delta)
   }
-
-  //GamePanel.addSprite(backgrnd)
-  //GamePanel.addSprite(potato)
-  //GamePanel.addSprite(player)
-
-  //MButton.addButton(startGame)
-
-  /*def top = new MainFrame {
-    title = "RogueRerezzedRedux"
-    preferredSize = new Dimension(width, height)
-    contents = GamePanel
-    centerOnScreen
-  }*/
 
 }
