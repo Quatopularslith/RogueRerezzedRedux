@@ -10,7 +10,7 @@ import org.newdawn.slick.{GameContainer, AppGameContainer, Image}
 import timeOut.ButtonInput
 
 object Main {
-  val game = new AppGameContainer(new JMain("Hi"))
+  val game = new AppGameContainer(new JMain("RogueRerezzedRedux"))
   var x: Float = 34f
   var y: Float = 34f
   def floor: Image = ImageCache.loadSlickImg("foot.png")
