@@ -14,7 +14,6 @@ import scala.Predef.{tuple2ToZippedOps => _}
 import core.Implicits.SuperTuple
 
 object Main {
-  val game = new AppGameContainer(new JMain("RogueRerezzedRedux"))
   var x: Float = 34f
   var y: Float = 34f
 
@@ -28,43 +27,28 @@ object Main {
   val dungeon = Dungeon.genDungeon(100)
   var viewport = new Rectangle(0, 0, 1600, 900)
 
-  def floor: Image = ImageCache.loadSlickImg("foot.png")
-
-  def main(): Unit = {
-    game.setDisplayMode(width, height, false)
-    game.setShowFPS(true)
-    game.start()
-  }
-
-  /*def height = GamePanel.peer.getHeight match {
-    case 0 => 500
-    case n => n
-  }
-
-  def width = GamePanel.peer.getWidth match {
-    case 0 => 750
-    case n => n
-  }*/
+  def sprite = ImageCache.loadSlickImg("spritesheet.png")
 
   def height = (java.awt.Toolkit.getDefaultToolkit.getScreenSize.getHeight.toInt * .75).toInt
   def width = (java.awt.Toolkit.getDefaultToolkit.getScreenSize.getWidth.toInt * .75).toInt
 
-  def init(): Unit = {
+  def init(){
+    sprite
   }
 
   def render(): Unit = {
-    //Player.sprite.draw(x.toInt, y.toInt)
+    Player.sprite.draw(x.toInt, y.toInt)
+    GamePanel.render
 
   }
 
   def update(container: GameContainer, delta: Int): Unit = {
     //https://thejavablog.wordpress.com/2008/06/08/using-slick-2d-to-write-a-game/
-    //KeyboardInput.slickPlayerMov(container, delta)
+    KeyboardInput.slickPlayerMov(container, delta)
     dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach(t => {
-      GamePanel.addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy))
-      GamePanel.addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy))
+      GamePanel.addToQueue(Tile.Floor.img, ((t._1.x * tileSize - offx).toInt, t._1.y * tileSize + offy))
+      GamePanel.addToQueue(t._2.img, ((t._1.x * tileSize - offx).toInt, t._1.y * tileSize + offy))
     })
-    GamePanel.repaint()
   }
 
 }

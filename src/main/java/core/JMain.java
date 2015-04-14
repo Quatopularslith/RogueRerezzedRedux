@@ -14,13 +14,16 @@ import org.newdawn.slick.*;
 
 public class JMain extends BasicGame {
 
+    public static AppGameContainer game;
     public JMain(String title) {
         super(title);
     }
 
     public static void main(String args[]) throws SlickException {
-        //game = new AppGameContainer(new JMain("RogueRerezzedRedux"));
-        Main.main();
+        game = new AppGameContainer(new JMain("RogueRerezzedRedux"));
+        game.setDisplayMode(Main.width(), Main.height(), false);
+        game.setShowFPS(true);
+        game.start();
     }
 
     public void init(GameContainer arg0) throws SlickException {
