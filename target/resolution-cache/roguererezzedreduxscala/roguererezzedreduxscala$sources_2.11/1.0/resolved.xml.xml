@@ -4,7 +4,7 @@
 		module="roguererezzedreduxscala$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150414184130"
+		publication="20150414202610"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
