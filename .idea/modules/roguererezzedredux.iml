@@ -25,5 +25,6 @@
     <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.3:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.11.6:jar" level="project" />
     <orderEntry type="library" name="extLibs" level="project" />
+    <orderEntry type="library" name="LWJGL&amp;Slick&amp;GLAPP" level="project" />
   </component>
 </module>

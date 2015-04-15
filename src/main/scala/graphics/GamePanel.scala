@@ -25,7 +25,7 @@ object GamePanel{
   def addToQueue(img: Image, pos:(Int,Int),args: Array[Int]) = renderQueue.+=(new QueueItem(img, pos))
   def addToQueue(img: Image, pos:(Int,Int)) = renderQueue.+=(new QueueItem(img, pos))
 
-  def render {
+  def render() {
     renderQueue.foreach(qi => qi.getImg.draw(qi.getPos._1, qi.getPos._2))
     renderQueue = ArrayBuffer.empty[QueueItem]
   }

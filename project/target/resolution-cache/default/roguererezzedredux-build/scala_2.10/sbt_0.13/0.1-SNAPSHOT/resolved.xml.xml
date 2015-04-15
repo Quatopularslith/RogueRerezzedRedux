@@ -4,7 +4,7 @@
 		module="roguererezzedredux-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150414080013"
+		publication="20150414184118"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
