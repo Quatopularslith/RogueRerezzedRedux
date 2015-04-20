@@ -1,7 +1,10 @@
 package core;
 
+import generators.Dungeon;
+import graphics.GamePanel;
 import input.KeyboardInput;
 import org.newdawn.slick.*;
+import java.awt.Font;
 
 /**
  * Created by Mnenmenth Alkaborin
@@ -18,6 +21,8 @@ public class JMain extends BasicGame {
     public JMain(String title) {
         super(title);
     }
+    public static Font font = new Font("Verdana", Font.BOLD, 20);
+    public static TrueTypeFont ttf;
 
     public static void main(String args[]) throws SlickException {
         game = new AppGameContainer(new JMain("RogueRerezzedRedux"));
@@ -27,10 +32,13 @@ public class JMain extends BasicGame {
     }
 
     public void init(GameContainer arg0) throws SlickException {
+        ttf = new TrueTypeFont(font, true);
         Main.init();
     }
 
     public void render(GameContainer arg0, Graphics arg1) throws SlickException {
+        //Integer p = Dungeon.percentComplete();
+        //ttf.drawString(50.0f, 50.0f, p.toString(), Color.white);
         Main.render();
     }
 

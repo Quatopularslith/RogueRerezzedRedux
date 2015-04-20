@@ -5,7 +5,8 @@ import entity.Item
 import entity.Monster.Monster
 import generators.Shape._
 import generators.Tile._
-
+import core.{JMain, Main}
+import org.newdawn.slick.Color
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
@@ -25,6 +26,11 @@ class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
 }
 
 object Dungeon {
+
+  def percentComplete = 100*comP / numR
+  var numR: Int = 1
+  var comP: Int = 0
+
   val spawnRoomSize = 5
   val maxSize = 20
   val edges = ArrayBuffer.empty[(Int, Int)]
@@ -37,12 +43,15 @@ object Dungeon {
   }
 
   def genDungeon(roomCount: Int): Dungeon = {
+    numR = roomCount
     val floor = mutable.Map.empty[(Int, Int), Tile]
     var n = 0
     addShape(Circle((0, 0), spawnRoomSize), floor)
     while (n < roomCount) {
-      //val percent = 100 * roundTo(n.toDouble / roomCount.toDouble, 2)
-      //println(s"$percent%")
+      comP = n
+      println(percentComplete)
+      JMain.ttf.drawString(50.0f, 50.0f, percentComplete.toString, Color.white)
+
       val chosen = rand.shuffle(getEdges(floor)).head
       val shape = chooseShape(chosen._2)
       val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
@@ -53,7 +62,7 @@ object Dungeon {
         n += 1
       })
     }
-    println(s"Actual Rooms: $n")
+    //println(s"Actual Rooms: $n")
     populate(floor, n)
     new Dungeon(floor)
   }

@@ -24,7 +24,7 @@ object Player{
   val movementDownRight: Array[Image] = Array(new Image("spritesheet.png").getSubImage(201, 124, 64, 64), new Image("spritesheet.png").getSubImage(101, 224, 64, 64))
   var duration: Array[Int] = Array(300, 300)
 
-  val idle= new Animation(movementIdle, duration, true)
+  val idle = new Animation(movementIdle, duration, true)
   val up = new Animation(movementUp, duration, false)
   val down = new Animation(movementDown, duration, false)
   val left = new Animation(movementLeft, duration, false)
@@ -35,4 +35,8 @@ object Player{
   val downRight = new Animation(movementDownRight, duration, false)
 
   var sprite = idle
+}
+
+object LoadingScreen{
+
 }

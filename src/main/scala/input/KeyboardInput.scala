@@ -27,32 +27,33 @@ object KeyboardInput {
     if (input.isKeyDown(Input.KEY_W)) {
       Player.sprite = Player.up
       Player.sprite.update(delta)
-      Main.y -= delta * mod
-      Main.offy -= (delta*mod).toInt
+      //Main.y -= delta * mod
+      GamePanel.offy += (delta*mod).toInt
     }
 
     //Down
     if (input.isKeyDown(Input.KEY_S)) {
       Player.sprite = Player.down
       Player.sprite.update(delta)
-      Main.y += delta * mod
-      Main.offy += (delta*mod).toInt
+      //Main.y += delta * mod
+      GamePanel.offy -= (delta*mod).toInt
+
     }
 
     //Left
     if (input.isKeyDown(Input.KEY_A)) {
       Player.sprite = Player.left
       Player.sprite.update(delta)
-      Main.x -= delta * mod
-      Main.offx -= (delta*mod).toInt
+      //Main.x -= delta * mod
+      GamePanel.offx -= (delta*mod).toInt
     }
 
     //Right
     if (input.isKeyDown(Input.KEY_D)) {
       Player.sprite = Player.right
       Player.sprite.update(delta)
-      Main.x += delta * mod
-      Main.offx += (delta*mod).toInt
+      //Main.x += delta * mod
+      GamePanel.offx += (delta*mod).toInt
     }
   }
 
