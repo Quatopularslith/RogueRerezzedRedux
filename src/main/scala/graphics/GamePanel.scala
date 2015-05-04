@@ -24,14 +24,15 @@ object GamePanel{
   var offy = 0
   var tileSize = 64
 
+
   def xRange = Range.apply(offx / tileSize - 1, (Main.width + offx) / tileSize + 1)
   def yRange = Range.apply(-(offy / tileSize) - 1, (Main.height - offy) / tileSize + 1)
 
   var viewport = new Rectangle(0, 0, 1600, 900)
 
-  var renderQueue:ArrayBuffer[QueueItem] = ArrayBuffer.empty[QueueItem]
-
   val dungeon = Dungeon.genDungeon(100)
+
+  var renderQueue:ArrayBuffer[QueueItem] = ArrayBuffer.empty[QueueItem]
 
   def addToQueue(img: Image, pos:(Int,Int)) = renderQueue.+=(new QueueItem(img, pos))
   //def addToQueue(img: Image, pos:(Int,Int)) = renderQueue.+=(new QueueItem(img, pos))
@@ -42,10 +43,11 @@ object GamePanel{
   }
 
   def floorQueue(): Unit ={
-    GamePanel.dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach(t => {
-      GamePanel.addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy))
-      GamePanel.addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy))
-    })
+        dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach(t => {
+          GamePanel.addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy))
+          GamePanel.addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy))
+        })
+
   }
 
   class QueueItem(img: Image, pos: (Int, Int)){

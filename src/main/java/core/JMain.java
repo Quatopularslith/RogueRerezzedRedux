@@ -21,25 +21,27 @@ public class JMain extends BasicGame {
     public JMain(String title) {
         super(title);
     }
-    public static Font font = new Font("Verdana", Font.BOLD, 20);
+    public static Font font = new Font("Verdana", Font.BOLD, 40);
     public static TrueTypeFont ttf;
 
     public static void main(String args[]) throws SlickException {
-        game = new AppGameContainer(new JMain("RogueRerezzedRedux"));
+        game = new AppGameContainer(new JMain("Rogue Rerezzed Redux"));
         game.setDisplayMode(Main.width(), Main.height(), false);
         game.setShowFPS(true);
         game.start();
     }
 
     public void init(GameContainer arg0) throws SlickException {
-        ttf = new TrueTypeFont(font, true);
+        ttf = new TrueTypeFont(font, false);
         Main.init();
     }
 
     public void render(GameContainer arg0, Graphics arg1) throws SlickException {
-        //Integer p = Dungeon.percentComplete();
-        //ttf.drawString(50.0f, 50.0f, p.toString(), Color.white);
         Main.render();
+        if(!Dungeon.percentComplete().equals("99")){
+            ttf.drawString(game.getScreenWidth()/4, game.getScreenHeight()/4, "Loading... " + Dungeon.percentComplete() + "%", Color.red);
+        }
+
     }
 
     public void update(GameContainer arg0, int arg1) throws SlickException {

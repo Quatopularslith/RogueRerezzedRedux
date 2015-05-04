@@ -5,8 +5,7 @@ import entity.Item
 import entity.Monster.Monster
 import generators.Shape._
 import generators.Tile._
-import core.{JMain, Main}
-import org.newdawn.slick.Color
+
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
@@ -18,7 +17,7 @@ class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
   override def toString: String = {
     val xs = floor.keys.map(_._1)
     val bounds = xs.min to xs.max
-    floor.groupBy(_._1.y).mapValues(_.map({ case (pos, tile) => (pos._1, tile)})).mapValues(row => {
+    floor.groupBy(_._1.y).mapValues(_.map({ case (pos, tile) => (pos._1, tile) })).mapValues(row => {
       val missing = bounds.filter(x => !row.keySet.contains(x)).map((_, Blank))
       (row ++ missing).toList.sortBy(_._1).map(_._2.toChar).mkString(" ")
     }).toList.sortBy(_._1).map(_._2).mkString("\n")
@@ -26,10 +25,12 @@ class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
 }
 
 object Dungeon {
+  def percentComplete = (100 * comP / numR).toString
 
-  def percentComplete = 100*comP / numR
   var numR: Int = 1
   var comP: Int = 0
+
+  var doneYet = false
 
   val spawnRoomSize = 5
   val maxSize = 20
@@ -43,28 +44,34 @@ object Dungeon {
   }
 
   def genDungeon(roomCount: Int): Dungeon = {
-    numR = roomCount
-    val floor = mutable.Map.empty[(Int, Int), Tile]
-    var n = 0
-    addShape(Circle((0, 0), spawnRoomSize), floor)
-    while (n < roomCount) {
-      comP = n
-      println(percentComplete)
-      JMain.ttf.drawString(50.0f, 50.0f, percentComplete.toString, Color.white)
+    val thread = new Thread {
+      numR = roomCount
+      val floor = mutable.Map.empty[(Int, Int), Tile]
+      var n = 0
 
-      val chosen = rand.shuffle(getEdges(floor)).head
-      val shape = chooseShape(chosen._2)
-      val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
-      accepted.map(fitShape => {
-        val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
-        floor += (chosen._1 -> doorType)
-        addShape(fitShape, floor)
-        n += 1
-      })
+      override def run() {
+        addShape(Circle((0, 0), spawnRoomSize), floor)
+        while (n < roomCount) {
+          comP = n
+          println(percentComplete)
+          val chosen = rand.shuffle(getEdges(floor)).head
+          val shape = chooseShape(chosen._2)
+          val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
+          accepted.map(fitShape => {
+            val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
+            floor += (chosen._1 -> doorType)
+            addShape(fitShape, floor)
+            n += 1
+          })
+        }
+        //println(s"Actual Rooms: $n")
+        populate(floor, n)
+        join();
+      }
     }
-    //println(s"Actual Rooms: $n")
-    populate(floor, n)
-    new Dungeon(floor)
+    thread.start()
+    doneYet = true
+    new Dungeon(thread.floor)
   }
 
   def addShape(feature: Shape, floor: mutable.Map[(Int, Int), Tile]): Unit = {

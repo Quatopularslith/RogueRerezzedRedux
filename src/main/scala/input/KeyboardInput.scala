@@ -12,13 +12,13 @@ import ui.MainScreen
 import scala.swing.event.{ButtonClicked, Key, KeyPressed}
 
 object KeyboardInput {
-  def slickPlayerMov(container: GameContainer, delta: Int): Unit = {
+  def mapUpdate(container: GameContainer, delta: Int): Unit = {
     //Get input from window
     val input: Input = container.getInput
     var mod: Float = 0.1f
 
     //Speed mod
-    if(input.isKeyDown(Input.KEY_LSHIFT) || input.isKeyDown(Input.KEY_RSHIFT)){
+    if (input.isKeyDown(Input.KEY_LSHIFT) || input.isKeyDown(Input.KEY_RSHIFT)) {
       mod = 0.2f
       Player.duration = Array(50, 50)
     }
@@ -28,7 +28,7 @@ object KeyboardInput {
       Player.sprite = Player.up
       Player.sprite.update(delta)
       //Main.y -= delta * mod
-      GamePanel.offy += (delta*mod).toInt
+      GamePanel.offy += (delta * mod).toInt
     }
 
     //Down
@@ -36,7 +36,7 @@ object KeyboardInput {
       Player.sprite = Player.down
       Player.sprite.update(delta)
       //Main.y += delta * mod
-      GamePanel.offy -= (delta*mod).toInt
+      GamePanel.offy -= (delta * mod).toInt
 
     }
 
@@ -45,7 +45,7 @@ object KeyboardInput {
       Player.sprite = Player.left
       Player.sprite.update(delta)
       //Main.x -= delta * mod
-      GamePanel.offx -= (delta*mod).toInt
+      GamePanel.offx -= (delta * mod).toInt
     }
 
     //Right
@@ -53,11 +53,11 @@ object KeyboardInput {
       Player.sprite = Player.right
       Player.sprite.update(delta)
       //Main.x += delta * mod
-      GamePanel.offx += (delta*mod).toInt
+      GamePanel.offx += (delta * mod).toInt
     }
   }
 
-  def keyReleased: Unit ={
+  def keyReleased: Unit = {
     Player.sprite = Player.idle
     Player.duration = Array(300, 300)
   }

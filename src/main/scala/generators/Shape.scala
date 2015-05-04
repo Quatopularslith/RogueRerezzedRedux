@@ -41,7 +41,6 @@ object Shape {
   }
 
 
-
   def Square(pos: (Int, Int), width: Int) = Rect(pos, (width, width))
 
   def Hallway(pos: (Int, Int), length: Int) = Rect(pos, (1, length))

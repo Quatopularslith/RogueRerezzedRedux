@@ -1,12 +1,8 @@
 package generators
 
-import java.awt.image.BufferedImage
-
 import core.Main
 import entity._
-import graphics.Spritesheet
 import org.newdawn.slick.Image
-import graphics.ImageCache
 
 /**
  * Created by Torri on 3/1/2015.
@@ -59,4 +55,5 @@ object Tile {
     override val toChar = ' '
     override val img = null
   }
+
 }
