@@ -25,8 +25,8 @@ object GamePanel{
   var tileSize = 64
 
 
-  def xRange = Range.apply(offx / tileSize - 1, (Main.width + offx) / tileSize + 1)
-  def yRange = Range.apply(-(offy / tileSize) - 1, (Main.height - offy) / tileSize + 1)
+  def xRange = Range.apply(offx / tileSize - 1, (Main.WINDOW_WIDTH + offx) / tileSize + 1)
+  def yRange = Range.apply(-(offy / tileSize) - 1, (Main.WINDOW_HEIGHT - offy) / tileSize + 1)
 
   var viewport = new Rectangle(0, 0, 1600, 900)
 

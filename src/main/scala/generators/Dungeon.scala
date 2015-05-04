@@ -14,6 +14,10 @@ import scala.util.Random
  * Created by Torri on 3/1/2015.
  */
 class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
+  def getSpawn(): (Int, Int) ={
+    val thing = floor.filter(t => t._2 == Tile.Spawn).toList
+    thing(0)._1
+  }
   override def toString: String = {
     val xs = floor.keys.map(_._1)
     val bounds = xs.min to xs.max
@@ -25,7 +29,7 @@ class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
 }
 
 object Dungeon {
-  def percentComplete = (100 * comP / numR).toString
+  def percentComplete = (100 * comP / numR + 1).toString
 
   var numR: Int = 1
   var comP: Int = 0
@@ -66,7 +70,7 @@ object Dungeon {
         }
         //println(s"Actual Rooms: $n")
         populate(floor, n)
-        join();
+        join()
       }
     }
     thread.start()

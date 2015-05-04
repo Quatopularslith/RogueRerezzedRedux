@@ -26,7 +26,7 @@ public class JMain extends BasicGame {
 
     public static void main(String args[]) throws SlickException {
         game = new AppGameContainer(new JMain("Rogue Rerezzed Redux"));
-        game.setDisplayMode(Main.width(), Main.height(), false);
+        game.setDisplayMode(Main.SCREEN_WIDTH(), Main.SCREEN_HEIGHT(), false);
         game.setShowFPS(true);
         game.start();
     }
@@ -38,8 +38,8 @@ public class JMain extends BasicGame {
 
     public void render(GameContainer arg0, Graphics arg1) throws SlickException {
         Main.render();
-        if(!Dungeon.percentComplete().equals("99")){
-            ttf.drawString(game.getScreenWidth()/4, game.getScreenHeight()/4, "Loading... " + Dungeon.percentComplete() + "%", Color.red);
+        if(!Dungeon.percentComplete().equals("100")){
+            ttf.drawString(Main.CENTER_WIDTH(), Main.CENTER_HEIGHT(), "Loading... " + Dungeon.percentComplete() + "%", Color.red);
         }
 
     }
