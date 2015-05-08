@@ -29,6 +29,7 @@ object Main {
   var y = CENTER_HEIGHT
 
   var no = false
+  var mov = true
 
   def init(){
     sprite
@@ -38,14 +39,26 @@ object Main {
 
   def render(): Unit = {
     GamePanel.render()
-    //if(x < WINDOW_WIDTH && y < WINDOW_HEIGHT) {
-      Player.sprite.draw(x, y)
-    //}
+    Player.sprite.draw(x, y)
   }
 
   def update(container: GameContainer, delta: Int): Unit = {
+    System.out.println((x,y))
+    System.out.println(x)
         GamePanel.floorQueue()
-        KeyboardInput.mapUpdate(container, delta)
+
+    //Attempting to compare this to player's position. However, x and y are only relative to the drawing on the screen.
+    //Now that I think of it, this would be the same problem with the setSpawn thing. Offx and Offy would need to be set first
+    //to set the screen over the right area, then the player position would need to be set to place them on the correct spawn pos
+    GamePanel.edges.foreach(e => if(e._1 != (x,y) || e._2 != (x,y)){
+      mov = true
+    }else{
+      mov = false
+    })
+
+    if(mov) KeyboardInput.mapUpdate(container, delta)
+
+
     if (Dungeon.percentComplete.equals("100") && !no) {
       try {
         KeyboardInput.lockCam = false

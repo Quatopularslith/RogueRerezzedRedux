@@ -31,8 +31,8 @@ object GamePanel{
   var tileSize = 64
 
   def setFocus(pos:(Int, Int)): Unit ={
-    offx = (pos._1 + Main.WINDOW_WIDTH)*64
-    offy = (pos._2 - Main.WINDOW_HEIGHT)*64
+    offx = (pos._1 + Main.WINDOW_WIDTH)
+    offy = (pos._2 - Main.WINDOW_HEIGHT)
   }
 
   def xRange = Range.apply(offx / tileSize - 1, (Main.WINDOW_WIDTH + offx) / tileSize + 1)
@@ -42,7 +42,8 @@ object GamePanel{
   var renderQueue:ArrayBuffer[QueueItem] = ArrayBuffer.empty[QueueItem]
 
   def addToQueue(img: Image, pos:(Int,Int)) = renderQueue.+=(new QueueItem(img, pos))
-  //def addToQueue(img: Image, pos:(Int,Int)) = renderQueue.+=(new QueueItem(img, pos))
+
+  def edges = Dungeon.getEdges(dungeon.floor)
 
   def render() {
     renderQueue.foreach(qi => qi.getImg.draw(qi.getPos._1, qi.getPos._2))
