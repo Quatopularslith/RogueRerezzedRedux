@@ -62,6 +62,7 @@ object Dungeon {
             val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
             floor += (chosen._1 -> doorType)
             addShape(fitShape, floor)
+            println(n)
             n += 1
           })
         }
@@ -71,11 +72,6 @@ object Dungeon {
       }
     }
     thread.start()
-    comP = 100
-    numR = 100
-    //Thread.sleep(30)
-    comP = 99
-    numR = 100
     new Dungeon(thread.floor)
   }
 

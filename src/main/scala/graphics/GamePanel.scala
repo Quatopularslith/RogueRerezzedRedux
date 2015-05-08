@@ -23,7 +23,7 @@ object GamePanel{
 
   var viewport = new Rectangle(0, 0, 1600, 900)
 
-  val dungeon = Dungeon.genDungeon(11)
+  val dungeon = Dungeon.genDungeon(20)
 
 
   var offx = 0
