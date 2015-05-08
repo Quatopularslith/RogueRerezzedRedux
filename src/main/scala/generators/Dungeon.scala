@@ -33,9 +33,6 @@ object Dungeon {
 
   var numR: Int = 1
   var comP: Int = 0
-
-  var doneYet = false
-
   val spawnRoomSize = 5
   val maxSize = 20
   val edges = ArrayBuffer.empty[(Int, Int)]
@@ -74,7 +71,11 @@ object Dungeon {
       }
     }
     thread.start()
-    doneYet = true
+    comP = 100
+    numR = 100
+    //Thread.sleep(30)
+    comP = 99
+    numR = 100
     new Dungeon(thread.floor)
   }
 

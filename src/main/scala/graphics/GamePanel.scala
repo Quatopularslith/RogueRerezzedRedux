@@ -20,17 +20,24 @@ import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import scala.swing.Panel
 
 object GamePanel{
+
+  var viewport = new Rectangle(0, 0, 1600, 900)
+
+  val dungeon = Dungeon.genDungeon(11)
+
+
   var offx = 0
   var offy = 0
   var tileSize = 64
 
+  def setFocus(pos:(Int, Int)): Unit ={
+    offx = (pos._1 + Main.WINDOW_WIDTH)*64
+    offy = (pos._2 - Main.WINDOW_HEIGHT)*64
+  }
 
   def xRange = Range.apply(offx / tileSize - 1, (Main.WINDOW_WIDTH + offx) / tileSize + 1)
   def yRange = Range.apply(-(offy / tileSize) - 1, (Main.WINDOW_HEIGHT - offy) / tileSize + 1)
 
-  var viewport = new Rectangle(0, 0, 1600, 900)
-
-  val dungeon = Dungeon.genDungeon(100)
 
   var renderQueue:ArrayBuffer[QueueItem] = ArrayBuffer.empty[QueueItem]
 

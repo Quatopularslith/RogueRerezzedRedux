@@ -2,6 +2,7 @@ package core;
 
 import generators.Dungeon;
 import graphics.GamePanel;
+import graphics.Player;
 import input.KeyboardInput;
 import org.newdawn.slick.*;
 import java.awt.Font;
@@ -41,7 +42,6 @@ public class JMain extends BasicGame {
         if(!Dungeon.percentComplete().equals("100")){
             ttf.drawString(Main.CENTER_WIDTH(), Main.CENTER_HEIGHT(), "Loading... " + Dungeon.percentComplete() + "%", Color.red);
         }
-
     }
 
     public void update(GameContainer arg0, int arg1) throws SlickException {

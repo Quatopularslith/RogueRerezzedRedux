@@ -8,11 +8,15 @@ import java.awt.geom.AffineTransform
 import java.awt.image.{AffineTransformOp, BufferedImage}
 
 import core.Implicits.SuperTuple
+import generators.Dungeon
 import org.newdawn.slick.{Animation, Image}
 
 import scala.Predef.{tuple2ToZippedOps => _}
 
 object Player{
+
+  def spawnPoint: (Int, Int) = GamePanel.dungeon.getSpawn()
+
   val movementIdle: Array[Image] = Array(new Image("spritesheet.png").getSubImage(0, 1, 64, 64), new Image("spritesheet.png").getSubImage(0, 20, 64, 64))
   val movementUp: Array[Image] = Array(new Image("spritesheet.png").getSubImage(192, 0, 64, 64), new Image("spritesheet.png").getSubImage(212, 0, 64, 64))
   val movementDown: Array[Image] = Array(new Image("spritesheet.png").getSubImage(0, 128, 64, 64), new Image("spritesheet.png").getSubImage(0, 148, 64, 64))
