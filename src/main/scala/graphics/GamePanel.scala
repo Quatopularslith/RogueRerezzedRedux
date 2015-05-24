@@ -4,20 +4,14 @@ package graphics
 * Created by Mnenmenth
 */
 
-import java.awt.{Font, Rectangle, Graphics2D}
-import java.awt.image.BufferedImage
-import java.util
-import java.util.{Timer, TimerTask}
+import java.awt.Rectangle
 
 import core.Implicits.SuperTuple
 import core.Main
 import generators.{Dungeon, Tile}
-import org.newdawn.slick.{TrueTypeFont, Image}
-import org.newdawn.slick.tiled.TiledMap
 
 import scala.Predef.{tuple2ToZippedOps => _}
-import scala.collection.mutable.{ArrayBuffer, ListBuffer}
-import scala.swing.Panel
+import scala.collection.mutable.ArrayBuffer
 
 object GamePanel{
 
@@ -31,8 +25,8 @@ object GamePanel{
   var tileSize = 64
 
   def setFocus(pos:(Int, Int)): Unit ={
-    offx = (pos._1 + Main.WINDOW_WIDTH)
-    offy = (pos._2 - Main.WINDOW_HEIGHT)
+    offx = pos._1 + Main.WINDOW_WIDTH
+    offy = pos._2 - Main.WINDOW_HEIGHT
   }
 
   def xRange = Range.apply(offx / tileSize - 1, (Main.WINDOW_WIDTH + offx) / tileSize + 1)
@@ -41,25 +35,30 @@ object GamePanel{
 
   var renderQueue:ArrayBuffer[QueueItem] = ArrayBuffer.empty[QueueItem]
 
-  def addToQueue(img: Image, pos:(Int,Int)) = renderQueue.+=(new QueueItem(img, pos))
+  def addToQueue(img: Int, pos:(Int,Int), width: Int, height: Int) = renderQueue.+=(new QueueItem(img, pos, width, height))
 
   def edges = Dungeon.getEdges(dungeon.floor)
 
   def render() {
-    renderQueue.foreach(qi => qi.getImg.draw(qi.getPos._1, qi.getPos._2))
+    renderQueue.foreach{qi =>
+      var id = qi.getImg
+      var img = new BuffImg(id, qi.getPos._1, qi.getPos._2, qi.getWidth, qi.getHeight).draw
+    }
     renderQueue = ArrayBuffer.empty[QueueItem]
   }
 
   def floorQueue(): Unit ={
         dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach(t => {
-          GamePanel.addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy))
-          GamePanel.addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy))
+          GamePanel.addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight)
+          GamePanel.addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight)
         })
 
   }
 
-  class QueueItem(img: Image, pos: (Int, Int)){
+  class QueueItem(img: Int, pos: (Int, Int), width: Int, height: Int){
     def getImg = img
     def getPos = pos
+    def getWidth = width
+    def getHeight = height
   }
 }

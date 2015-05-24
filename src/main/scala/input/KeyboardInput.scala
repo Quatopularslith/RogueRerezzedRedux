@@ -5,11 +5,10 @@ package input
 */
 
 import core.Main
-import graphics.{GamePanel, Player}
-import org.newdawn.slick.{GameContainer, Input}
+import graphics.{GamePanel}
 
 object KeyboardInput {
-  var lockCam = true
+/*  var lockCam = true
   def mapUpdate(container: GameContainer, delta: Int): Unit = {
     //Get input from window
     val input: Input = container.getInput
@@ -134,5 +133,5 @@ object KeyboardInput {
     Player.sprite = Player.idle
     Player.duration = Array(300, 300)
   }
-
+*/
 }
