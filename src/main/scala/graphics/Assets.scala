@@ -43,21 +43,19 @@ object ImageCache {
       val pixels: Array[Int] = new Array(image.getWidth * image.getHeight)
       image.getRGB(0, 0, image.getWidth, image.getHeight, pixels, 0, image.getWidth)
       val buffer: ByteBuffer = BufferUtils.createByteBuffer(image.getWidth * image.getHeight * BYTES_PER_PIXEL)
-      var y = 0
-      var x = 0
-      while(y < image.getHeight){
-        while(x < image.getWidth){
-          val pixel = pixels(y * image.getWidth + x)
-          buffer.put(((pixel >> 16) & 0xFF).toByte)
-          buffer.put(((pixel >> 8) & 0xFF).toByte)
-          buffer.put((pixel & 0xFF).toByte)
-          buffer.put(((pixel >> 24) & 0xFF).toByte)
-          x+=1
-        }
-        y+=1
+
+      pixels.foreach{pixel =>
+        buffer.put(((pixel >> 16) & 0xFF).toByte)
+        buffer.put(((pixel >> 8) & 0xFF).toByte)
+        buffer.put((pixel & 0xFF).toByte)
+        buffer.put(((pixel >> 24) & 0xFF).toByte)
       }
+//buffer.asIntBuffer().put(pixels.map(p => Integer.rotateRight(p, 24)))
+
 
       buffer.flip()
+
+      println(buffer)
 
       val textureId =glGenTextures()
       glBindTexture(GL_TEXTURE_2D, textureId)

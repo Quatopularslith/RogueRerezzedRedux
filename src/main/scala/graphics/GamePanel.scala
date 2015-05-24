@@ -42,8 +42,8 @@ object GamePanel{
   def render() {
     renderQueue.foreach{qi =>
       val id = qi.getImg
-      val img = new BuffImg(id, qi.getPos._1, qi.getPos._2, qi.getWidth, qi.getHeight)
-      img.draw
+      val img = new BuffImg(id, qi.getPos._1, qi.getPos._2, qi.getWidth, qi.getHeight).draw
+      System.out.println("hello?")
     }
     renderQueue = ArrayBuffer.empty[QueueItem]
   }

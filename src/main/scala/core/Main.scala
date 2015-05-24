@@ -43,6 +43,7 @@ object Main {
     glEnable(GL_TEXTURE_2D)
 
     while (!Display.isCloseRequested) {
+      GamePanel.render()
       GamePanel.floorQueue()
       Display.update()
       Display.sync(60)
