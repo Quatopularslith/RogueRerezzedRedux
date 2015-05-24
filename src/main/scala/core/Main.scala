@@ -4,7 +4,7 @@ package core
 * Created by Mnenmenth
 */
 
-import graphics.GamePanel
+import graphics.{ImageCache, GamePanel}
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
 import org.lwjgl.opengl.{Display, DisplayMode}

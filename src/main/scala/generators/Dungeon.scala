@@ -45,12 +45,12 @@ object Dungeon {
   }
 
   def genDungeon(roomCount: Int): Dungeon = {
-    val thread = new Thread {
+   // val thread = new Thread {
       numR = roomCount
       val floor = mutable.Map.empty[(Int, Int), Tile]
       var n = 0
 
-      override def run() {
+      //override def run() {
         addShape(Circle((0, 0), spawnRoomSize), floor)
         while (n < roomCount) {
           comP = n
@@ -68,11 +68,11 @@ object Dungeon {
         }
         //println(s"Actual Rooms: $n")
         populate(floor, n)
-        join()
-      }
-    }
-    thread.start()
-    new Dungeon(thread.floor)
+        //join()
+      //}
+    //}
+    //thread.start()
+    new Dungeon(/*thread.*/floor)
   }
 
   def addShape(feature: Shape, floor: mutable.Map[(Int, Int), Tile]): Unit = {
