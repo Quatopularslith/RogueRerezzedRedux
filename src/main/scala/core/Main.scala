@@ -4,10 +4,11 @@ package core
 * Created by Mnenmenth
 */
 
-import graphics.{Image, ImageCache, GamePanel}
+import graphics.DungeonRender
+import input.KeyboardInput
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
-import org.lwjgl.opengl.{GL11, Display, DisplayMode}
+import org.lwjgl.opengl.{Display, DisplayMode}
 
 import scala.Predef.{tuple2ToZippedOps => _}
 
@@ -58,14 +59,18 @@ object Main {
     glOrtho(0, WINDOW_WIDTH, WINDOW_HEIGHT, 0, 1, -1)
     glMatrixMode(GL_MODELVIEW)
     glEnable(GL_TEXTURE_2D)
+    glEnable(GL_BLEND)
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+    glClearColor(0f, 0f, 0f, 0f)
   }
 
   def render: Unit ={
-    GamePanel.render()
+    glClear(GL_COLOR_BUFFER_BIT)
+    DungeonRender.render()
   }
 
   def update: Unit ={
-    GamePanel.floorQueue()
+    KeyboardInput.mapCam
+    DungeonRender.floorQueue()
   }
-
 }

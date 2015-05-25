@@ -1,6 +1,5 @@
 package entity.Monster
 
-import entity.Entity
 import graphics.ImageCache
 
 /**

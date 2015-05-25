@@ -1,7 +1,7 @@
 package entity
 
 import core.Implicits._
-import graphics.{BuffImg, Image, ImageCache}
+import graphics.ImageCache
 
 
 /**

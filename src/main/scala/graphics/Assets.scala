@@ -94,9 +94,9 @@ class Image(tex: Texture, x: Float, y: Float, width: Float, height: Float){
   }
 }
 
-class BuffImg(id: Int, x: Float, y: Float, width: Float, height: Float){
+class BuffImg(id: Int, width: Float, height: Float){
 
-  def draw: Unit ={
+  def draw(x: Float, y: Float): Unit ={
     if(id!=0){
       glPushMatrix()
         glBindTexture(GL_TEXTURE_2D, id)

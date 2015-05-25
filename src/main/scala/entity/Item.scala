@@ -1,7 +1,5 @@
 package entity
 
-import graphics.Image
-
 /**
  * Created by Torri on 3/1/2015.
  */

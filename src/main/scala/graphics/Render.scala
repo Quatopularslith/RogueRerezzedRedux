@@ -4,8 +4,6 @@ package graphics
 * Created by Mnenmenth
 */
 
-import java.awt.Rectangle
-
 import core.Implicits.SuperTuple
 import core.Main
 import generators.{Dungeon, Tile}
@@ -13,10 +11,8 @@ import generators.{Dungeon, Tile}
 import scala.Predef.{tuple2ToZippedOps => _}
 import scala.collection.mutable.ArrayBuffer
 
-object GamePanel{
 
-  var viewport = new Rectangle(0, 0, 1600, 900)
-
+object DungeonRender{
   val dungeon = Dungeon.genDungeon(20)
 
 
@@ -41,17 +37,17 @@ object GamePanel{
 
   def render() {
     renderQueue.foreach{qi =>
-      val img = new BuffImg(qi.getImg, qi.getPos.x, qi.getPos.y, qi.getWidth, qi.getHeight)
-      img.draw
+      val img = new BuffImg(qi.getImg, qi.getWidth, qi.getHeight)
+      img.draw(qi.getPos.x, qi.getPos.y)
     }
     renderQueue = ArrayBuffer.empty[QueueItem]
   }
 
   def floorQueue(): Unit ={
-        dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach{t =>
-          GamePanel.addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight)
-          GamePanel.addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight)
-        }
+    dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach{t =>
+      DungeonRender.addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight)
+      DungeonRender.addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight)
+    }
 
   }
 

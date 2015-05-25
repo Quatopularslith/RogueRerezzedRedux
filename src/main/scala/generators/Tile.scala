@@ -1,6 +1,5 @@
 package generators
 
-import core.Main
 import entity._
 import graphics.ImageCache
 

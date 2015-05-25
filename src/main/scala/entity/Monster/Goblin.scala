@@ -1,6 +1,6 @@
 package entity.Monster
 
-import graphics.{BuffImg, Image, ImageCache}
+import graphics.ImageCache
 
 /**
  * Created by torridon on 3/8/15.
