@@ -4,10 +4,10 @@ package core
 * Created by Mnenmenth
 */
 
-import graphics.{ImageCache, GamePanel}
+import graphics.{Image, ImageCache, GamePanel}
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
-import org.lwjgl.opengl.{Display, DisplayMode}
+import org.lwjgl.opengl.{GL11, Display, DisplayMode}
 
 import scala.Predef.{tuple2ToZippedOps => _}
 
@@ -27,9 +27,26 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 
+    glInit
+
+    while (!Display.isCloseRequested) {
+      render
+      update
+
+      Display.update()
+      Display.sync(60)
+    }
+
+    Display.destroy()
+
+  }
+
+  def glInit: Unit = {
+
     Display.setTitle("Rogue Rerezzed Redux")
     try {
       Display.setDisplayMode(new DisplayMode(SCREEN_WIDTH, SCREEN_HEIGHT))
+      Display.setVSyncEnabled(true)
       Display.create()
     } catch {
       case e: LWJGLException => System.out.println(e.printStackTrace())
@@ -41,16 +58,14 @@ object Main {
     glOrtho(0, WINDOW_WIDTH, WINDOW_HEIGHT, 0, 1, -1)
     glMatrixMode(GL_MODELVIEW)
     glEnable(GL_TEXTURE_2D)
+  }
 
-    while (!Display.isCloseRequested) {
-      GamePanel.render()
-      GamePanel.floorQueue()
-      Display.update()
-      Display.sync(60)
-    }
+  def render: Unit ={
+    GamePanel.render()
+  }
 
-    Display.destroy()
-
+  def update: Unit ={
+    GamePanel.floorQueue()
   }
 
 }

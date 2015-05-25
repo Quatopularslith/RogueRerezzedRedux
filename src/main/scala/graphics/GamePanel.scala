@@ -41,18 +41,17 @@ object GamePanel{
 
   def render() {
     renderQueue.foreach{qi =>
-      val id = qi.getImg
-      val img = new BuffImg(id, qi.getPos._1, qi.getPos._2, qi.getWidth, qi.getHeight).draw
-      System.out.println("hello?")
+      val img = new BuffImg(qi.getImg, qi.getPos.x, qi.getPos.y, qi.getWidth, qi.getHeight)
+      img.draw
     }
     renderQueue = ArrayBuffer.empty[QueueItem]
   }
 
   def floorQueue(): Unit ={
-        dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach(t => {
+        dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach{t =>
           GamePanel.addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight)
           GamePanel.addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight)
-        })
+        }
 
   }
 

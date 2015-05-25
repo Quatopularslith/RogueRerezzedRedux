@@ -13,7 +13,7 @@ import org.newdawn.slick.util.ResourceLoader
 import scala.collection.mutable
 
 /**
- * Created by torridon on 3/12/15.
+ * Created by Mnenmenth on 3/12/15.
  */
 class Spritesheet(path: String) {
   val img = ImageCache.loadImage(path)
@@ -55,7 +55,6 @@ object ImageCache {
 
       buffer.flip()
 
-      println(buffer)
 
       val textureId =glGenTextures()
       glBindTexture(GL_TEXTURE_2D, textureId)
@@ -66,7 +65,6 @@ object ImageCache {
       glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR)
 
       glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, image.getWidth, image.getHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer)
-
       textureId
     }
 
@@ -78,27 +76,8 @@ object ImageCache {
 class Image(tex: Texture, x: Float, y: Float, width: Float, height: Float){
 
   def draw: Unit ={
-    tex.bind()
-    glTranslatef(x, y, 0)
-    glBegin(GL_QUADS)
-      glTexCoord2f(0, 0)
-      glVertex2f(0, 0)
-      glTexCoord2f(1, 0)
-      glVertex2f(width, 0)
-      glTexCoord2f(1, 1)
-      glVertex2f(width, height)
-      glTexCoord2f(0, 1)
-      glVertex2f(0, height)
-      glLoadIdentity()
-    glEnd()
-  }
-}
-
-class BuffImg(id: Int, x: Float, y: Float, width: Float, height: Float){
-
-  def draw: Unit ={
-      if(id!=0){
-      glBindTexture(GL_TEXTURE_2D, id)
+    glPushMatrix()
+      tex.bind()
       glTranslatef(x, y, 0)
       glBegin(GL_QUADS)
         glTexCoord2f(0, 0)
@@ -111,6 +90,29 @@ class BuffImg(id: Int, x: Float, y: Float, width: Float, height: Float){
         glVertex2f(0, height)
         glLoadIdentity()
       glEnd()
+    glPopMatrix()
+  }
+}
+
+class BuffImg(id: Int, x: Float, y: Float, width: Float, height: Float){
+
+  def draw: Unit ={
+    if(id!=0){
+      glPushMatrix()
+        glBindTexture(GL_TEXTURE_2D, id)
+        glTranslatef(x, y, 0)
+        glBegin(GL_QUADS)
+          glTexCoord2f(0, 0)
+          glVertex2f(0, 0)
+          glTexCoord2f(1, 0)
+          glVertex2f(width, 0)
+          glTexCoord2f(1, 1)
+          glVertex2f(width, height)
+          glTexCoord2f(0, 1)
+          glVertex2f(0, height)
+          glLoadIdentity()
+        glEnd()
+      glPopMatrix()
     }
   }
 }

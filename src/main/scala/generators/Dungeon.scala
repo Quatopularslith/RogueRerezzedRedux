@@ -45,7 +45,7 @@ object Dungeon {
   }
 
   def genDungeon(roomCount: Int): Dungeon = {
-   // val thread = new Thread {
+    //val thread = new Thread {
       numR = roomCount
       val floor = mutable.Map.empty[(Int, Int), Tile]
       var n = 0
@@ -54,7 +54,7 @@ object Dungeon {
         addShape(Circle((0, 0), spawnRoomSize), floor)
         while (n < roomCount) {
           comP = n
-          println(percentComplete)
+          ///println(percentComplete)
           val chosen = rand.shuffle(getEdges(floor)).head
           val shape = chooseShape(chosen._2)
           val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
@@ -62,7 +62,7 @@ object Dungeon {
             val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
             floor += (chosen._1 -> doorType)
             addShape(fitShape, floor)
-            println(n)
+            //println(n)
             n += 1
           })
         }
