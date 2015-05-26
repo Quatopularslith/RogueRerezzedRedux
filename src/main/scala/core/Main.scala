@@ -4,11 +4,12 @@ package core
 * Created by Mnenmenth
 */
 
-import graphics.DungeonRender
+import generators.Tile
 import input.KeyboardInput
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
 import org.lwjgl.opengl.{Display, DisplayMode}
+import graphics.RenderDungeon
 
 import scala.Predef.{tuple2ToZippedOps => _}
 
@@ -66,11 +67,11 @@ object Main {
 
   def render: Unit ={
     glClear(GL_COLOR_BUFFER_BIT)
-    DungeonRender.render()
+    RenderDungeon.render()
   }
 
   def update: Unit ={
     KeyboardInput.mapCam
-    DungeonRender.floorQueue()
+    RenderDungeon.floorQueue()
   }
 }

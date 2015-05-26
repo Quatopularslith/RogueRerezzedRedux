@@ -4,15 +4,16 @@ package input
 * Created by Mnenmenth
 */
 
-import graphics.DungeonRender
+import graphics.RenderDungeon
 import org.lwjgl.input.Keyboard
 
 object KeyboardInput {
   def mapCam: Unit ={
-    val mod = 2
-    if(Keyboard.isKeyDown(Keyboard.KEY_UP)) DungeonRender.offy += mod
-    if(Keyboard.isKeyDown(Keyboard.KEY_DOWN)) DungeonRender.offy -= mod
-    if(Keyboard.isKeyDown(Keyboard.KEY_LEFT)) DungeonRender.offx -= mod
-    if(Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) DungeonRender.offx += mod
+    var mod = 2
+    if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) mod = 10
+    if(Keyboard.isKeyDown(Keyboard.KEY_UP)) RenderDungeon.offy += mod
+    if(Keyboard.isKeyDown(Keyboard.KEY_DOWN)) RenderDungeon.offy -= mod
+    if(Keyboard.isKeyDown(Keyboard.KEY_LEFT)) RenderDungeon.offx -= mod
+    if(Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) RenderDungeon.offx += mod
   }
 }

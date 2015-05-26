@@ -1,7 +1,7 @@
 package entity
 
+import core.ImageCache
 import core.Implicits._
-import graphics.ImageCache
 
 
 /**

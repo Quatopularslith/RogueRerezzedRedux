@@ -1,6 +1,6 @@
 package entity.Monster
 
-import graphics.ImageCache
+import core.ImageCache
 
 /**
  * Created by torridon on 3/14/15.

@@ -1,6 +1,7 @@
 package generators
 
 import core.Implicits._
+import core.{BuffImg, Main}
 import entity.Item
 import entity.Monster.Monster
 import generators.Shape._
