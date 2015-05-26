@@ -1,9 +1,7 @@
 package entity
 
-import java.awt.image.BufferedImage
-import graphics.{ImageCache, Spritesheet}
+import core.ImageCache
 import core.Implicits._
-import org.newdawn.slick.Image
 
 
 /**
@@ -14,9 +12,11 @@ abstract class Entity(var pos: (Int, Int), var maxHealth: Int) {
 
   def move(distance: (Int, Int)): Unit = pos += distance
 
-  def getImage: Image
+  def getImage: Int
+  def getImgWidth: Int
+  def getImgHeight: Int
 }
 
 object Entity {
-  val spriteSheet = ImageCache.loadSlickImg("spritesheet.png")
+  val spriteSheet = ImageCache.loadImage("spritesheet.png")
 }

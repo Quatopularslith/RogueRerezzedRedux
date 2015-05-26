@@ -1,6 +1,7 @@
 package generators
 
 import core.Implicits._
+import core.{BuffImg, Main}
 import entity.Item
 import entity.Monster.Monster
 import generators.Shape._
@@ -45,16 +46,16 @@ object Dungeon {
   }
 
   def genDungeon(roomCount: Int): Dungeon = {
-    val thread = new Thread {
+    //val thread = new Thread {
       numR = roomCount
       val floor = mutable.Map.empty[(Int, Int), Tile]
       var n = 0
 
-      override def run() {
+      //override def run() {
         addShape(Circle((0, 0), spawnRoomSize), floor)
         while (n < roomCount) {
           comP = n
-          println(percentComplete)
+          ///println(percentComplete)
           val chosen = rand.shuffle(getEdges(floor)).head
           val shape = chooseShape(chosen._2)
           val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
@@ -62,17 +63,17 @@ object Dungeon {
             val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
             floor += (chosen._1 -> doorType)
             addShape(fitShape, floor)
-            println(n)
+            //println(n)
             n += 1
           })
         }
         //println(s"Actual Rooms: $n")
         populate(floor, n)
-        join()
-      }
-    }
-    thread.start()
-    new Dungeon(thread.floor)
+        //join()
+      //}
+    //}
+    //thread.start()
+    new Dungeon(/*thread.*/floor)
   }
 
   def addShape(feature: Shape, floor: mutable.Map[(Int, Int), Tile]): Unit = {
