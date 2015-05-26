@@ -4,7 +4,6 @@ package core
 * Created by Mnenmenth
 */
 
-import generators.Tile
 import input.KeyboardInput
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
