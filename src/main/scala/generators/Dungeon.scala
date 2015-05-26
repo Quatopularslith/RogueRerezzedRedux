@@ -1,5 +1,7 @@
 package generators
 
+import java.util.concurrent.locks.ReentrantLock
+
 import core.Implicits._
 import core.{BuffImg, Main}
 import entity.Item
@@ -10,6 +12,13 @@ import generators.Tile._
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
+import org.lwjgl.{LWJGLException, BufferUtils}
+import org.lwjgl.opengl.Drawable
+import org.lwjgl.opengl.GLContext
+import org.lwjgl.opengl.GLSync
+import java.util.concurrent.locks.ReentrantLock
+import org.lwjgl.opengl.GL11._
+import org.lwjgl.opengl.GL32._
 
 /**
  * Created by Torri on 3/1/2015.
@@ -44,14 +53,13 @@ object Dungeon {
     val sto = d * math.pow(10, decPlace.toDouble)
     math.round(sto).toDouble / math.pow(10, decPlace.toDouble)
   }
-
   def genDungeon(roomCount: Int): Dungeon = {
     //val thread = new Thread {
       numR = roomCount
       val floor = mutable.Map.empty[(Int, Int), Tile]
       var n = 0
-
       //override def run() {
+
         addShape(Circle((0, 0), spawnRoomSize), floor)
         while (n < roomCount) {
           comP = n
