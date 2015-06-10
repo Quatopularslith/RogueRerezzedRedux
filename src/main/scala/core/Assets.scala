@@ -2,11 +2,13 @@ package core
 
 import java.awt.image.BufferedImage
 import java.nio.ByteBuffer
+import java.util.concurrent.locks.ReentrantLock
 import javax.imageio.ImageIO
 
 import org.lwjgl.BufferUtils
 import org.lwjgl.opengl.GL11._
-import org.lwjgl.opengl.GL12
+import org.lwjgl.opengl.{GLContext, Drawable, GL12}
+import org.lwjgl.opengl.GL32._
 import org.newdawn.slick.opengl.{Texture, TextureLoader}
 import org.newdawn.slick.util.ResourceLoader
 
@@ -37,7 +39,6 @@ object ImageCache {
   }
 
   def loadTextureFromBuffImg(img: BufferedImage): Int ={
-
     def genTexInt(image: BufferedImage): Int ={
       val BYTES_PER_PIXEL = 4
       val pixels: Array[Int] = new Array(image.getWidth * image.getHeight)

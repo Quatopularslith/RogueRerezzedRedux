@@ -32,13 +32,24 @@ object RenderDungeon{
 
   var renderQueue:ArrayBuffer[QueueItem] = ArrayBuffer.empty[QueueItem]
 
-  def addToQueue(img: Int, pos:(Int,Int), width: Int, height: Int, tileType: String) = renderQueue.+=(new QueueItem(img, pos, width, height, tileType))
+  def addToQueue(id: Int, pos:(Int,Int), width: Int, height: Int, tileType: String) = renderQueue.+=(new QueueItem(id, pos, width, height, tileType))
 
   def edges = Dungeon.getEdges(dungeon.floor)
 
+
+  var spriteArray = Array(
+    0,//blank
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(0, 0, 64, 64)),//chest
+    ImageCache.loadTextureFromBuffImg(ImageCache.loadImage("spritesheet.png").getSubimage(64, 64, 64, 64)),//goblin
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 0, 64, 64)),//floor
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 0, 64, 64)),//door
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 0, 64, 64)),//secret door
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(0, 2 * 64, 64, 64)),//spawn
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 2 * 64, 64, 64)))//exit
+
   def render() {
     renderQueue.foreach{qi =>
-      val img = new BuffImg(qi.getImg, qi.getWidth, qi.getHeight)
+      val img = new BuffImg(spriteArray(qi.getId), qi.getWidth, qi.getHeight)
       img.draw(qi.getPos.x, qi.getPos.y)
       if(qi.tileType.equals("Spawn")) System.out.println(qi.getPos)
     }
@@ -47,14 +58,14 @@ object RenderDungeon{
 
   def floorQueue(): Unit ={
     dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach{t =>
-      addToQueue(Tile.Floor.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight, Tile.Floor.tileType)
-      addToQueue(t._2.img, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight, t._2.tileType)
+      addToQueue(Tile.Floor.id, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight, Tile.Floor.tileType)
+      addToQueue(t._2.id, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight, t._2.tileType)
     }
 
   }
 
-  class QueueItem(img: Int, pos: (Int, Int), width: Int, height: Int, tile: String){
-    def getImg = img
+  class QueueItem(id: Int, pos: (Int, Int), width: Int, height: Int, tile: String){
+    def getId = id
     def getPos = pos
     def getWidth = width
     def getHeight = height
