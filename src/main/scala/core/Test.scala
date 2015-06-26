@@ -15,12 +15,10 @@ object Test {
 
   def main(args: Array[String]) {
     println("Starting Generation")
-    //for (x <- 1 to 5) {150
-      val roomCount = Dungeon.rand.nextInt(100) + 150
-      val dungeon = genDungeon(roomCount)
-    //println(dungeon.toString)
+    val roomCount = Dungeon.rand.nextInt(100) + 150
+    val dungeon = genDungeonNoThread(roomCount)
+    println(dungeon.toString)
     Files.write(Paths.get(s"dungeon1.txt"), dungeon.toString)
-    //}
     println("DONE")
   }
 }

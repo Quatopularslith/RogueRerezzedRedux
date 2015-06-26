@@ -24,9 +24,12 @@ import org.lwjgl.opengl.GL32._
  * Created by Torri on 3/1/2015.
  */
 class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
-  def getSpawn(): (Int, Int) ={
+  def getSpawn: (Int, Int) ={
     val thing = floor.filter(t => t._2 == Tile.Spawn).toList
-    thing(0)._1
+    thing.head._1
+  }
+  def getAllof(tile: Tile): List[((Int,Int), Tile)] ={
+    floor.filter(t => t._2 == Tile.Spawn).toList
   }
   override def toString: String = {
     val xs = floor.keys.map(_._1)
@@ -82,6 +85,26 @@ object Dungeon {
     }
     thread.start()
     new Dungeon(thread.floor)
+  }
+  def genDungeonNoThread(roomCount: Int): Dungeon = {
+    numR = roomCount
+    val floor = mutable.Map.empty[(Int, Int), Tile]
+    var n = 0
+    addShape(Circle((0, 0), spawnRoomSize), floor)
+    while (n < roomCount) {
+      comP = n
+      val chosen = rand.shuffle(getEdges(floor)).head
+      val shape = chooseShape(chosen._2)
+      val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
+      accepted.map(fitShape => {
+        val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
+        floor += (chosen._1 -> doorType)
+        addShape(fitShape, floor)
+        n += 1
+      })
+    }
+    populate(floor, n)
+    new Dungeon(floor)
   }
 
   def addShape(feature: Shape, floor: mutable.Map[(Int, Int), Tile]): Unit = {
