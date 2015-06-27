@@ -1,30 +1,35 @@
 package util.pathFinding
 
-import generators.{Tile, Dungeon}
-import util.MutableArray
+import generators.{Door, Dungeon}
 
 /**
  * Created by Torri on 6/25/2015.
  */
-class DepthFirst(val dungeon: Dungeon) extends  PathFinder{
+class DepthFirst(dungeon: Dungeon) extends PathFinder{
+  val simple:Wandering = new Wandering
   override def makePath(start: (Double, Double), end: (Double, Double), speed: Double, limit: Int): Path = {
-    val doors: List[((Int, Int), Tile)] = dungeon.getAllof(Tile.Door)
-
     val startInt = (start._1.toInt, start._2.toInt)
-    val startDoor = {
-      doors.sortBy(t => t._1._1 - startInt._1).sortBy(t => t._1._2 - startInt._2)
+    var curDoor = {
+      dungeon.doors.filter(t=> simple.pathExists(start, (t.pos._1.toDouble, t.pos._2.toDouble), dungeon)).sortBy(t => t.pos._1 - startInt._1).sortBy(t => t.pos._2 - startInt._2).head
     }
     val endInt = (start._1.toInt, start._2.toInt)
     val endDoor = {
-      doors.sortBy(t => t._1._1 - endInt._1).sortBy(t => t._1._2 - endInt._2)
+      dungeon.doors.filter(t=> simple.pathExists(start, (t.pos._1.toDouble, t.pos._2.toDouble), dungeon)).sortBy(t => t.pos._1 - endInt._1).sortBy(t => t.pos._2 - endInt._2).head
     }
-
-
-  }
-  class Node(val value:Double){
-    val children:MutableArray[Node] = new MutableArray[Node]
-    def +=(child:Node): Unit ={
-      children += child
+    var prevDoor:Door = curDoor
+    val path:Path = new Path(start)
+    var pos = start
+    for(i <- 0 until limit){
+      path += simple.makePath(pos, (curDoor.pos._1.toDouble, curDoor.pos._2.toDouble), speed, 50000)
+      pos = path.toArray.last
+      val isDoor = curDoor.connected.toArray.filter(p=> !p.connected.arr.isEmpty)
+      if(isDoor.isEmpty){
+        curDoor = prevDoor
+      }else{
+        prevDoor = curDoor
+        curDoor = isDoor.sortBy(t=> t.distTo(endDoor)).head
+      }
     }
+    path
   }
 }

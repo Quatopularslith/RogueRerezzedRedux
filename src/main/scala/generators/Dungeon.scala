@@ -8,6 +8,7 @@ import entity.Item
 import entity.Monster.Monster
 import generators.Shape._
 import generators.Tile._
+import util.MutableArray
 
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
@@ -30,6 +31,29 @@ class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
   }
   def getAllof(tile: Tile): List[((Int,Int), Tile)] ={
     floor.filter(t => t._2 == Tile.Spawn).toList
+  }
+  val doors = {
+    val rawdoors: Array[((Int, Int), Tile)] = (new MutableArray[((Int,Int),Tile)] + getAllof(Tile.Door) + getAllof(Tile.SecretDoor)).toArray
+    val doors: Array[Door] = {
+      val ma = new MutableArray[Door]
+      rawdoors.foreach(t=> {
+        ma += new Door(t._1, {
+          t._2 match {
+            case Door => true
+            case _ => false
+          }
+        }, this)
+      })
+      ma.toArray
+    }
+    doors.foreach(t=> {
+      doors.foreach(u=> {
+        if(u.isConnectedTo(t)){
+          t.connected += u
+        }
+      })
+    })
+    doors
   }
   override def toString: String = {
     val xs = floor.keys.map(_._1)
