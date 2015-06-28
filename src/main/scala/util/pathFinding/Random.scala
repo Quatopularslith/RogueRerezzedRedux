@@ -1,6 +1,7 @@
 package util.pathFinding
 
 import util.Vector
+
 import scala.math._
 
 /**

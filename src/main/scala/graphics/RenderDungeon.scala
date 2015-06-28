@@ -1,11 +1,11 @@
 package graphics
 
-import core.{ImageCache, BuffImg, Main}
+import core.Implicits._
+import core.{Image, ImageCache, Main}
 import generators.{Dungeon, Tile}
 
-import scala.collection.mutable.ArrayBuffer
-import core.Implicits._
 import scala.Predef.{tuple2ToZippedOps => _}
+import scala.collection.mutable.ArrayBuffer
 
 /**
  * Created by Mnenmenth Alkaborin
@@ -49,8 +49,9 @@ object RenderDungeon{
 
   def render() {
     renderQueue.foreach{qi =>
-      val img = new BuffImg(spriteArray(qi.getId), qi.getWidth, qi.getHeight)
-      img.draw(qi.getPos.x, qi.getPos.y)
+      val img = new Image(spriteArray(qi.getId), qi.getWidth, qi.getHeight)
+      img.setPos(qi.getPos.x, qi.getPos.y)
+      img.draw
       if(qi.tileType.equals("Spawn")) System.out.println(qi.getPos)
     }
     renderQueue = ArrayBuffer.empty[QueueItem]
