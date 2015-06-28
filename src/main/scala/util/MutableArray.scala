@@ -30,7 +30,9 @@ class MutableArray[T:Manifest] {
   def get(index:Int):T = {
     arr(index)
   }
-  def toArray ={
-    arr
+  def exists(isThere: T):Boolean ={
+    arr.contains(isThere)
   }
+  def length = arr.length
+  def toArray = arr
 }

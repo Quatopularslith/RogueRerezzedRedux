@@ -48,8 +48,9 @@ class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
     }
     doors.foreach(t=> {
       doors.foreach(u=> {
-        if(u.isConnectedTo(t)){
+        if(u.isConnectedTo(t) && !t.connected.exists(u)){
           t.connected += u
+          u.connected += t
         }
       })
     })

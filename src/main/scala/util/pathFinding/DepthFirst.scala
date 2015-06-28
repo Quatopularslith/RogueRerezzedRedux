@@ -19,7 +19,7 @@ class DepthFirst(dungeon: Dungeon) extends PathFinder{
     var prevDoor:Door = curDoor
     val path:Path = new Path(start)
     var pos = start
-    for(i <- 0 until limit){
+    while(path.length < limit){
       path += simple.makePath(pos, (curDoor.pos._1.toDouble, curDoor.pos._2.toDouble), speed, 50000)
       pos = path.toArray.last
       val isDoor = curDoor.connected.toArray.filter(p=> !p.connected.arr.isEmpty)
