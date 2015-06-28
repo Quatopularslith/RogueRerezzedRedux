@@ -26,11 +26,11 @@ object Tile {
     override val tileType = "Chest"
   }
 
-  case class MonsterSpawn(monster: Entity) extends Tile {
+  case object MonsterSpawn extends Tile {
     override val toChar = 'M'
-    override val id = monster.getImage
-    override val imgWidth = monster.getImgWidth
-    override val imgHeight = monster.getImgHeight
+    override val id = 3
+    override val imgWidth = sprite.getSubimage(3 * 64, 0, 64, 64).getWidth
+    override val imgHeight = sprite.getSubimage(3 * 64, 0, 64, 64).getHeight
     override val tileType = "Monster"
   }
 

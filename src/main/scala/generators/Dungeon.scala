@@ -20,10 +20,15 @@ class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: MutableArr
     val thing = floor.filter(t => t._2 == Tile.Spawn).toList
     thing.head._1
   }
-  entities += new Player((getSpawn._1, getSpawn._2), this)
   def getAllof(tile: Tile): List[((Int,Int), Tile)] ={
     floor.filter(t => t._2 == Tile.Spawn).toList
   }
+
+  entities += new Player((getSpawn._1, getSpawn._2), this)
+  getAllof(MonsterSpawn).foreach(t=> {
+    entities += Monster.pickRand((t._1._1.toDouble, t._1._2.toDouble), this)
+  })
+
   val doors = {
     val rawdoors: Array[((Int, Int), Tile)] = (new MutableArray[((Int,Int),Tile)] + getAllof(Tile.Door) + getAllof(Tile.SecretDoor)).toArray
     val doors: Array[Door] = {
@@ -75,17 +80,16 @@ object Dungeon {
     math.round(sto).toDouble / math.pow(10, decPlace.toDouble)
   }
   def genDungeon(roomCount: Int): Dungeon = {
+    var dungeon:Dungeon = null
     val thread = new Thread {
       entities = new MutableArray[Entity]
       numR = roomCount
       val floor = mutable.Map.empty[(Int, Int), Tile]
       var n = 0
       override def run() {
-
         addShape(Circle((0, 0), spawnRoomSize), floor)
         while (n < roomCount) {
           comP = n
-          ///println(percentComplete)
           val chosen = rand.shuffle(getEdges(floor)).head
           val shape = chooseShape(chosen._2)
           val accepted = jiggle(floor, chosen._2, shape).orElse(jiggle(floor, chosen._2, shape.transpose))
@@ -93,17 +97,16 @@ object Dungeon {
             val doorType = if (rand.nextDouble() > 0.9) SecretDoor else Door
             floor += (chosen._1 -> doorType)
             addShape(fitShape, floor)
-            //println(n)
             n += 1
           })
         }
-        //println(s"Actual Rooms: $n")
         populate(floor, n)
+        dungeon = new Dungeon(floor, entities)
         join()
       }
     }
     thread.start()
-    new Dungeon(thread.floor, entities)
+    dungeon
   }
   def genDungeonNoThread(roomCount: Int): Dungeon = {
     entities = new MutableArray[Entity]
@@ -152,9 +155,7 @@ object Dungeon {
     val monsterCount = rand.nextInt(tileCount / 25) + tileCount / 50
     for (i <- 0 to monsterCount) {
       val pos = setRandom(floor)
-      val monster = Monster.pickRand((pos._1.toDouble, pos._2.toDouble), this)
-      entities += monster
-      floor += pos -> MonsterSpawn(monster)
+      floor += pos -> MonsterSpawn
     }
     floor += setRandom(floor) -> Spawn
     floor += setRandom(floor) -> Exit
