@@ -3,7 +3,7 @@ package generators
 import core.Implicits._
 import entity.Entity
 import entity.Item
-import entity.Monster.Monster
+import entity.Monster.{Player, Monster}
 import generators.Shape._
 import generators.Tile._
 import util.MutableArray
@@ -20,6 +20,7 @@ class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: MutableArr
     val thing = floor.filter(t => t._2 == Tile.Spawn).toList
     thing.head._1
   }
+  entities += new Player((getSpawn._1, getSpawn._2), this)
   def getAllof(tile: Tile): List[((Int,Int), Tile)] ={
     floor.filter(t => t._2 == Tile.Spawn).toList
   }
@@ -151,7 +152,7 @@ object Dungeon {
     val monsterCount = rand.nextInt(tileCount / 25) + tileCount / 50
     for (i <- 0 to monsterCount) {
       val pos = setRandom(floor)
-      val monster = Monster.pickRand((pos._1.toDouble, pos._2.toDouble))
+      val monster = Monster.pickRand((pos._1.toDouble, pos._2.toDouble), this)
       entities += monster
       floor += pos -> MonsterSpawn(monster)
     }
