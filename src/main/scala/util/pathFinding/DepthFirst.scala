@@ -19,7 +19,6 @@ class DepthFirst(dungeon: Dungeon) extends PathFinder{
       //val filt = dungeon.doors.filter(t=> simple.pathExists(start, (t.pos._1.toDouble, t.pos._2.toDouble), dungeon))
       dungeon.doors.sortBy(t => t.pos._1 - endInt._1).sortBy(t => t.pos._2 - endInt._2).head
     }
-    println("Found Doors")
     var prevDoor:Door = curDoor
     val path:Path = new Path(start)
     var pos = start
