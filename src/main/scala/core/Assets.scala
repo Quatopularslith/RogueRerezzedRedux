@@ -2,13 +2,11 @@ package core
 
 import java.awt.image.BufferedImage
 import java.nio.ByteBuffer
-import java.util.concurrent.locks.ReentrantLock
 import javax.imageio.ImageIO
 
 import org.lwjgl.BufferUtils
 import org.lwjgl.opengl.GL11._
-import org.lwjgl.opengl.{GLContext, Drawable, GL12}
-import org.lwjgl.opengl.GL32._
+import org.lwjgl.opengl.GL12
 import org.newdawn.slick.opengl.{Texture, TextureLoader}
 import org.newdawn.slick.util.ResourceLoader
 
@@ -74,46 +72,34 @@ object ImageCache {
 
 }
 
-class Image(tex: Texture, x: Float, y: Float, width: Float, height: Float){
+class Image(tex: Int, width: Float, height: Float){
+
+  var getHeight = height
+  var getWidth = width
+  var xPos = 0
+  var yPos = 0
+
+  def setPos(x: Int, y: Int): Unit ={
+    xPos = x
+    yPos = y
+  }
 
   def draw: Unit ={
     glPushMatrix()
-      tex.bind()
-      glTranslatef(x, y, 0)
-      glBegin(GL_QUADS)
-        glTexCoord2f(0, 0)
-        glVertex2f(0, 0)
-        glTexCoord2f(1, 0)
-        glVertex2f(width, 0)
-        glTexCoord2f(1, 1)
-        glVertex2f(width, height)
-        glTexCoord2f(0, 1)
-        glVertex2f(0, height)
-        glLoadIdentity()
-      glEnd()
+      glBindTexture(GL_TEXTURE_2D, tex)
+    glBegin(GL_QUADS)
+      glTexCoord2f(0,0)
+      glVertex2f(xPos, yPos)
+
+      glTexCoord2f(0,1)
+      glVertex2f(xPos, yPos + height)
+
+      glTexCoord2f(1,1)
+      glVertex2f(xPos + width, yPos + height)
+
+      glTexCoord2f(1,0)
+      glVertex2f(xPos + width, yPos)
+    glEnd()
     glPopMatrix()
-  }
-}
-
-class BuffImg(id: Int, width: Float, height: Float){
-
-  def draw(x: Float, y: Float): Unit ={
-    if(id!=0){
-      glPushMatrix()
-        glBindTexture(GL_TEXTURE_2D, id)
-        glTranslatef(x, y, 0)
-        glBegin(GL_QUADS)
-          glTexCoord2f(0, 0)
-          glVertex2f(0, 0)
-          glTexCoord2f(1, 0)
-          glVertex2f(width, 0)
-          glTexCoord2f(1, 1)
-          glVertex2f(width, height)
-          glTexCoord2f(0, 1)
-          glVertex2f(0, height)
-          glLoadIdentity()
-        glEnd()
-      glPopMatrix()
-    }
   }
 }

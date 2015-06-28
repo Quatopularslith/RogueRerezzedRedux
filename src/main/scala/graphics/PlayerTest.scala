@@ -1,6 +1,6 @@
 package graphics
 
-import core.{ImageCache, BuffImg}
+import core.{Image, ImageCache}
 
 /**
  * Created by Mnenmenth Alkaborin
@@ -13,7 +13,6 @@ object PlayerTest{
   def render(): Unit ={
     val buffImg = ImageCache.loadImage("spritesheet.png").getSubimage(0, 32, 16, 16)
     val sprite = ImageCache.loadTextureFromBuffImg(buffImg)
-    val img = new BuffImg(sprite, buffImg.getWidth, buffImg.getHeight)
-    //img.draw()
+    val img = new Image(sprite, buffImg.getWidth, buffImg.getHeight)
   }
 }

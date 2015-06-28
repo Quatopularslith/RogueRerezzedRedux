@@ -1,8 +1,6 @@
 package generators
 
-import core.{ImageCache}
 import entity._
-import org.lwjgl.opengl.Drawable
 
 /**
  * Created by Torri on 3/1/2015.

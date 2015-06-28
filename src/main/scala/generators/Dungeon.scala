@@ -1,9 +1,6 @@
 package generators
 
-import java.util.concurrent.locks.ReentrantLock
-
 import core.Implicits._
-import core.{BuffImg, Main}
 import entity.Item
 import entity.Monster.Monster
 import generators.Shape._
@@ -13,13 +10,6 @@ import util.MutableArray
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
-import org.lwjgl.{LWJGLException, BufferUtils}
-import org.lwjgl.opengl.Drawable
-import org.lwjgl.opengl.GLContext
-import org.lwjgl.opengl.GLSync
-import java.util.concurrent.locks.ReentrantLock
-import org.lwjgl.opengl.GL11._
-import org.lwjgl.opengl.GL32._
 
 /**
  * Created by Torri on 3/1/2015.

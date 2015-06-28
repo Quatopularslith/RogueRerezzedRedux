@@ -4,11 +4,11 @@ package core
 * Created by Mnenmenth
 */
 
+import graphics.RenderDungeon
 import input.KeyboardInput
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
 import org.lwjgl.opengl.{Display, DisplayMode}
-import graphics.RenderDungeon
 
 import scala.Predef.{tuple2ToZippedOps => _}
 
