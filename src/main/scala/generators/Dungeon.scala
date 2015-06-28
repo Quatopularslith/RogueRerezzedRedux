@@ -1,30 +1,21 @@
 package generators
 
-import java.util.concurrent.locks.ReentrantLock
-
 import core.Implicits._
-import core.{BuffImg, Main}
+import entity.Entity
 import entity.Item
 import entity.Monster.Monster
 import generators.Shape._
 import generators.Tile._
 import util.MutableArray
-
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
-import org.lwjgl.{LWJGLException, BufferUtils}
-import org.lwjgl.opengl.Drawable
-import org.lwjgl.opengl.GLContext
-import org.lwjgl.opengl.GLSync
-import java.util.concurrent.locks.ReentrantLock
-import org.lwjgl.opengl.GL11._
-import org.lwjgl.opengl.GL32._
 
 /**
+ * Just roll with it OK?
  * Created by Torri on 3/1/2015.
  */
-class Dungeon(var floor: mutable.Map[(Int, Int), Tile]) {
+class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: MutableArray[Entity]) {
   def getSpawn: (Int, Int) ={
     val thing = floor.filter(t => t._2 == Tile.Spawn).toList
     thing.head._1
@@ -76,6 +67,7 @@ object Dungeon {
   val edges = ArrayBuffer.empty[(Int, Int)]
   val EdgeOffsets = Set((1, 0), (0, 1), (-1, 0), (0, -1))
   val rand = new Random()
+  var entities = new MutableArray[Entity]
 
   def roundTo(d: Double, decPlace: Int): Double = {
     val sto = d * math.pow(10, decPlace.toDouble)
@@ -83,6 +75,7 @@ object Dungeon {
   }
   def genDungeon(roomCount: Int): Dungeon = {
     val thread = new Thread {
+      entities = new MutableArray[Entity]
       numR = roomCount
       val floor = mutable.Map.empty[(Int, Int), Tile]
       var n = 0
@@ -109,9 +102,10 @@ object Dungeon {
       }
     }
     thread.start()
-    new Dungeon(thread.floor)
+    new Dungeon(thread.floor, entities)
   }
   def genDungeonNoThread(roomCount: Int): Dungeon = {
+    entities = new MutableArray[Entity]
     numR = roomCount
     val floor = mutable.Map.empty[(Int, Int), Tile]
     var n = 0
@@ -129,7 +123,7 @@ object Dungeon {
       })
     }
     populate(floor, n)
-    new Dungeon(floor)
+    new Dungeon(floor, entities)
   }
 
   def addShape(feature: Shape, floor: mutable.Map[(Int, Int), Tile]): Unit = {
@@ -143,7 +137,7 @@ object Dungeon {
   def chooseShape(pos: (Int, Int)): Shape = {
     rand.nextDouble() match {
       case x if x > 0.60 => Rect(pos, (rand.nextInt(maxSize) + 2, rand.nextInt(maxSize) + 2))
-      case y if y > 0.55 => Circle(pos, rand.nextInt(maxSize / 2) + 1)
+      //case y if y > 0.55 => Circle(pos, rand.nextInt(maxSize / 2) + 1)
       case _ => Hallway(pos, rand.nextInt(maxSize) + maxSize / 5)
     }
   }
@@ -157,7 +151,9 @@ object Dungeon {
     val monsterCount = rand.nextInt(tileCount / 25) + tileCount / 50
     for (i <- 0 to monsterCount) {
       val pos = setRandom(floor)
-      floor += pos -> MonsterSpawn(Monster.pickRand(pos))
+      val monster = Monster.pickRand((pos._1.toDouble, pos._2.toDouble))
+      entities += monster
+      floor += pos -> MonsterSpawn(monster)
     }
     floor += setRandom(floor) -> Spawn
     floor += setRandom(floor) -> Exit

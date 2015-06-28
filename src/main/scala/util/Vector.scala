@@ -1,6 +1,7 @@
 package util
 
 /**
+ * Now with both Direction and Magnitude!
  * Created by Torri on 6/18/2015.
  */
 class Vector(var x:Double, var y:Double) {

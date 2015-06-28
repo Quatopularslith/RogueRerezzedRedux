@@ -4,6 +4,8 @@ import generators.Dungeon
 import util.Vector
 
 /**
+ * He went that way!
+ * Oof! And I would have gotten away with it too, if it weren't for those meddling walls
  * Created by Torri on 6/25/2015.
  */
 class Simple extends PathFinder{
@@ -20,26 +22,67 @@ class Simple extends PathFinder{
     }
     path
   }
-  def pathExists(start: (Double,Double), end: (Double, Double), dungeon: Dungeon): Boolean ={
-    val slope = (end._2 - start._2)/(end._1 - start._1)
-    def f(x:Int) = slope*(x-start._1)+start._2
-    val from:Int = {
-      if(start._1>end._1){
-        end._1.toInt
+  def pathExists(pos: (Double,Double), end: (Double, Double), dungeon: Dungeon): Boolean ={
+    if(math.abs(pos._1-end._1) > Dungeon.maxSize*2 || math.abs(pos._2-end._2) > Dungeon.maxSize*2) return false
+    val sameX = end._1 == pos._1
+    val slope = {
+      if(sameX){
+        (end._1-pos._1)/(end._2-pos._2)
       }else{
-        start._1.toInt
+        (end._2-pos._2)/(end._1-pos._1)
+      }
+    }
+    def f(x:Int) = {
+      if(sameX){
+        slope*(x-pos._2)+pos._1 // x = f(y)
+      }else{
+        slope*(x-pos._1)+pos._2 // y = f(x)
+      }
+    }
+    val x = {
+      if(sameX){
+        pos._2
+      }else{
+        pos._1
+      }
+    }
+    val xx = {
+      if(sameX){
+        end._2
+      }else{
+        end._1
+      }
+    }
+    val from:Int = {
+      if(x>xx){
+        xx.toInt
+      }else{
+        x.toInt
       }
     }
     val to:Int = {
-      if(start._1>end._1){
-        start._1.toInt
+      if(x>xx){
+        x.toInt
       }else{
-        end._1.toInt
+        xx.toInt
       }
     }
-    if(from-to > Dungeon.maxSize*2) return false
     for(x <- from to to){
-      if(!dungeon.floor.keys.exists(t=> t == (x,f(x)))){
+      val xRange = {
+        if(sameX){
+          f(x)-1 to f(x)+1 by 1.0
+        }else{
+          x-1 to x+1
+        }
+      }
+      val yRange = {
+        if(sameX){
+          x-1 to x+1
+        }else{
+          f(x)-1 to f(x)+1 by 1.0
+        }
+      }
+      if(!dungeon.floor.keys.exists(t=> xRange.contains(t._1) && yRange.contains(t._2))){
         return false
       }
     }

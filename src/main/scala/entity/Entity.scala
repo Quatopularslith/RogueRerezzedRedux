@@ -5,13 +5,11 @@ import core.Implicits._
 
 
 /**
+ * All things not tile
  * Created by Torri on 3/1/2015.
  */
-abstract class Entity(var pos: (Int, Int), var maxHealth: Int) {
+abstract class Entity(var pos: (Double, Double), var maxHealth: Int) {
   var health = maxHealth
-
-  def move(distance: (Int, Int)): Unit = pos += distance
-
   def getImage: Int
   def getImgWidth: Int
   def getImgHeight: Int

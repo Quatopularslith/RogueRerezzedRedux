@@ -5,6 +5,7 @@ import util.Vector
 import scala.math._
 
 /**
+ * Gotta go somewhere? Lemme go to the shops first.
  * Created by Torri on 6/27/2015.
  */
 class Wandering extends Simple{
@@ -17,7 +18,7 @@ class Wandering extends Simple{
     for(a <- 1 to limit){
       if(rand.nextBoolean){
         val theta = (rand.nextInt(359)*Pi)/180
-        distVec = (new Vector(cos(theta),sin(theta))).getUnit * speed
+        distVec = new Vector(cos(theta),sin(theta)).getUnit * speed
       }else{
         distVec = new Vector(end._1-x,end._2-y).getUnit * speed
       }

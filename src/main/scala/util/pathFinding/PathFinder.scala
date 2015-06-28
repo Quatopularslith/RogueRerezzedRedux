@@ -3,6 +3,7 @@ package util.pathFinding
 import util.MutableArray
 
 /**
+ * Baseline stuff for pathing
  * Created by Torri on 6/25/2015.
  */
 abstract class PathFinder {

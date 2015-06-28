@@ -1,10 +1,10 @@
 package generators
 
 import core.Implicits._
-
 import scala.collection.mutable.ArrayBuffer
 
 /**
+ * Gee I'm a Tree
  * Created by Torri on 3/1/2015.
  */
 trait Shape {
@@ -31,7 +31,7 @@ object Shape {
 
   def getTestFoot(p: (Int, Int), fp: List[(Int, Int)]) = {
     val EdgeOffsets = Set((1, 0), (0, 1), (-1, 0), (0, -1))
-    val edges = fp.flatMap(t => EdgeOffsets.map(off => t + off)).toList.distinct
+    val edges = fp.flatMap(t => EdgeOffsets.map(off => t + off)).distinct
     var m: ArrayBuffer[(Int, Int)] = new ArrayBuffer(1)
     edges.foreach(m += _)
     fp.foreach(m += _)
@@ -43,7 +43,7 @@ object Shape {
 
   def Square(pos: (Int, Int), width: Int) = Rect(pos, (width, width))
 
-  def Hallway(pos: (Int, Int), length: Int) = Rect(pos, (1, length))
+  def Hallway(pos: (Int, Int), length: Int) = Rect(pos, (2, length))
 
   case class Circle(override val pos: (Int, Int), radius: Int) extends Shape {
     override def footprint = (for (x <- -radius to radius; y <- -radius to radius if x * x + y * y <= radius * radius) yield (x, y) + pos).toList
