@@ -8,7 +8,7 @@ import scala.math._
  * What is this "Getting from A to B" stuff?
  * Created by Torri on 6/25/2015.
  */
-class Random extends PathFinder{
+class Random extends PathFinder(null){
   override def makePath(start: (Double, Double), end: (Double, Double), speed: Double, limit: Int): Path = {
     val path = new Path(start)
     val rand = new scala.util.Random()

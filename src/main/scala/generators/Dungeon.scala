@@ -137,7 +137,7 @@ object Dungeon {
   def chooseShape(pos: (Int, Int)): Shape = {
     rand.nextDouble() match {
       case x if x > 0.60 => Rect(pos, (rand.nextInt(maxSize) + 2, rand.nextInt(maxSize) + 2))
-      //case y if y > 0.55 => Circle(pos, rand.nextInt(maxSize / 2) + 1)
+      case y if y > 0.55 => Circle(pos, rand.nextInt(maxSize / 2) + 1)
       case _ => Hallway(pos, rand.nextInt(maxSize) + maxSize / 5)
     }
   }

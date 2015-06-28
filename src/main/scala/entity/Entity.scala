@@ -13,6 +13,7 @@ abstract class Entity(var pos: (Double, Double), var maxHealth: Int) {
   def getImage: Int
   def getImgWidth: Int
   def getImgHeight: Int
+  def doTurn: Unit
 }
 
 object Entity {

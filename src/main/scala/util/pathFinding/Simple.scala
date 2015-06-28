@@ -8,7 +8,7 @@ import util.Vector
  * Oof! And I would have gotten away with it too, if it weren't for those meddling walls
  * Created by Torri on 6/25/2015.
  */
-class Simple extends PathFinder{
+class Simple(dungeon: Dungeon) extends PathFinder(dungeon){
   override def makePath(start: (Double, Double), end: (Double, Double), speed: Double, limit: Int): Path = {
     val path = new Path(start)
     var x = start._1
@@ -70,7 +70,7 @@ class Simple extends PathFinder{
     for(x <- from to to){
       val xRange = {
         if(sameX){
-          f(x)-1 to f(x)+1 by 1.0
+          (f(x)-1).toInt to (f(x)+1).toInt
         }else{
           x-1 to x+1
         }
@@ -79,7 +79,7 @@ class Simple extends PathFinder{
         if(sameX){
           x-1 to x+1
         }else{
-          f(x)-1 to f(x)+1 by 1.0
+          (f(x)-1).toInt to (f(x)+1).toInt
         }
       }
       if(!dungeon.floor.keys.exists(t=> xRange.contains(t._1) && yRange.contains(t._2))){

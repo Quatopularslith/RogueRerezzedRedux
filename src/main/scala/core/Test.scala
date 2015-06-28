@@ -26,7 +26,7 @@ object Test {
     var i:Int = 0
     dungeon.entities.toArray.foreach(t=> {
       i += 1
-      val path = new DepthFirst(dungeon).makePath(t.pos, (dungeon.getSpawn._1.toDouble, dungeon.getSpawn._2.toDouble), 0.5, 5000)
+      val path = new DepthFirst(dungeon).makePath(t.pos, (dungeon.getSpawn._1.toDouble, dungeon.getSpawn._2.toDouble), 0.5, 1000)
       println("The Path is " + path.length + " moves long")
       val pathString = {
         var temp = "x\ty"
