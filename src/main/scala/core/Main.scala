@@ -37,7 +37,7 @@ object Main {
     glInit
 
     while (!Display.isCloseRequested) {
-      if(RenderDungeon.dungeon != null) {
+      if(Dungeon.dungeon != null) {
         System.out.println("hi")
         renderGame
         updateGame
