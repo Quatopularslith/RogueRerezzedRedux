@@ -46,7 +46,7 @@ object Main {
       }else{
         font.drawString(CENTER_WIDTH, CENTER_HEIGHT, Dungeon.percentComplete, Color.magenta)
         System.out.println("no")
-        if(RenderDungeon.dungeon == null) System.out.println("nyes")
+        if(Dungeon.dungeon == null) System.out.println("nyes")
         System.out.println(Dungeon.percentComplete)
       }
 

@@ -3,6 +3,7 @@ package graphics
 import core.Implicits._
 import core.{Image, ImageCache, Main}
 import generators.{Dungeon, Tile}
+import generators.Dungeon.dungeon
 
 import scala.Predef.{tuple2ToZippedOps => _}
 import scala.collection.mutable.ArrayBuffer
@@ -16,8 +17,6 @@ import scala.collection.mutable.ArrayBuffer
 
 
 object RenderDungeon{
-  val dungeon = Dungeon.dungeon
-
   var offx = 0
   var offy = 0
   var tileSize = 64
@@ -58,11 +57,7 @@ object RenderDungeon{
   }
 
   def floorQueue(): Unit ={
-    val dung = dungeon
-    System.out.println(dung)
-    val floor = dung.floor
-    System.out.println(floor)
-    floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach{t =>
+    dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach{t =>
       addToQueue(Tile.Floor.id, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight, Tile.Floor.tileType)
       addToQueue(t._2.id, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight, t._2.tileType)
     }
