@@ -58,7 +58,11 @@ object RenderDungeon{
   }
 
   def floorQueue(): Unit ={
-    dungeon.floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach{t =>
+    val dung = dungeon
+    System.out.println(dung)
+    val floor = dung.floor
+    System.out.println(floor)
+    floor.filterKeys(p => xRange.contains(p.x) && yRange.contains(p.y)).foreach{t =>
       addToQueue(Tile.Floor.id, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight, Tile.Floor.tileType)
       addToQueue(t._2.id, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight, t._2.tileType)
     }
