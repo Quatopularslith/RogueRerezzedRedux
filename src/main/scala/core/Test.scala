@@ -15,14 +15,14 @@ object Test {
 
   def main(args: Array[String]) {
     println("Starting Generation")
-    val roomCount = Dungeon.rand.nextInt(150) + 100
+    val roomCount = Dungeon.rand.nextInt(10) + 10
     val dungeon = genDungeonNoThread(roomCount)
     println(dungeon.toString)
-    Files.write(Paths.get(s"dungeon1.txt"), dungeon.toString)
+    //Files.write(Paths.get(s"dungeon1.txt"), dungeon.toString)
     println("DONE")
 
 
-    println("Lets PathFind!")
+   /* println("Lets PathFind!")
     var i:Int = 0
     dungeon.entities.toArray.foreach(t=> {
       i += 1
@@ -34,6 +34,6 @@ object Test {
         temp
       }
       Files.write(Paths.get(s"path$i.txt"), pathString)
-    })
+    })*/
   }
 }
