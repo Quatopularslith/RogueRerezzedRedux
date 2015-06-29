@@ -64,7 +64,7 @@ class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: MutableArr
 }
 
 object Dungeon {
-  def percentComplete = (100 * comP / numR + 1).toString
+  def percentComplete = (100 * comP / numR).toString
 
   var numR: Int = 1
   var comP: Int = 0
@@ -114,7 +114,8 @@ object Dungeon {
     val floor = mutable.Map.empty[(Int, Int), Tile]
     var n = 0
     addShape(Circle((0, 0), spawnRoomSize), floor)
-    while (n < roomCount) {
+    while (n <= roomCount) {
+      println(percentComplete + s"= $n / $roomCount")
       comP = n
       val chosen = rand.shuffle(getEdges(floor)).head
       val shape = chooseShape(chosen._2)
