@@ -16,7 +16,7 @@ import scala.collection.mutable.ArrayBuffer
 
 
 object RenderDungeon{
-  val dungeon = Dungeon.genDungeon(100)
+  val dungeon = Dungeon.dungeon
 
   var offx = 0
   var offy = 0

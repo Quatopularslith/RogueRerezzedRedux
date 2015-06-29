@@ -31,13 +31,15 @@ object Main {
   def CENTER_WIDTH = WINDOW_WIDTH / 4
 
   var font: TrueTypeFont = null
-
+  var dungeon: Dungeon = null
   def main(args: Array[String]): Unit = {
 
     glInit
+    dungeon = Dungeon.genDungeon(100)
 
-    while (!Display.isCloseRequested) {
+    while(!Display.isCloseRequested) {
       if(Dungeon.dungeon != null) {
+        Thread.sleep(1000)
         System.out.println("hi")
         renderGame
         updateGame
@@ -89,4 +91,9 @@ object Main {
     KeyboardInput.mapCam
     RenderDungeon.floorQueue()
   }
+
+  def println(thing: Any): Unit ={
+    System.out.println(thing)
+  }
+
 }
