@@ -102,7 +102,6 @@ object Dungeon {
         }
         populate(floor, n)
         dungeon = new Dungeon(floor, entities)
-        println("Dungeon Generated. It is " + dungeon)
         join()
       }
     }

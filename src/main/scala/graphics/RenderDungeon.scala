@@ -41,9 +41,9 @@ object RenderDungeon{
     ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(0, 0, 64, 64)),//chest
     ImageCache.loadTextureFromBuffImg(ImageCache.loadImage("spritesheet.png").getSubimage(64, 64, 64, 64)),//goblin
     ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 0, 64, 64)),//floor
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 0, 64, 64)),//door
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 0, 64, 64)),//secret door
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(0, 2 * 64, 64, 64)),//spawn
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(4 * 64, 0, 64, 64)),//door
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(4 * 64, 64, 64, 64)),//secret door
+    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(4 * 64, 2 * 64, 64, 64)),//spawn
     ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 2 * 64, 64, 64)))//exit
 
   def render() {
