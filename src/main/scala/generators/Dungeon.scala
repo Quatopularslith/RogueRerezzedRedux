@@ -68,6 +68,7 @@ object Dungeon {
 
   var numR: Int = 1
   var comP: Int = 0
+  var dungeon: Dungeon = null
   val spawnRoomSize = 5
   val maxSize = 20
   val edges = ArrayBuffer.empty[(Int, Int)]
@@ -80,7 +81,6 @@ object Dungeon {
     math.round(sto).toDouble / math.pow(10, decPlace.toDouble)
   }
   def genDungeon(roomCount: Int): Dungeon = {
-    var dungeon:Dungeon = null
     val thread = new Thread {
       entities = new MutableArray[Entity]
       numR = roomCount
