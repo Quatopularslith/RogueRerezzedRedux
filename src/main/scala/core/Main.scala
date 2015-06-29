@@ -12,6 +12,7 @@ import input.KeyboardInput
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
 import org.lwjgl.opengl.{Display, DisplayMode}
+import org.newdawn.slick.opengl.TextureImpl
 import org.newdawn.slick.{Color, TrueTypeFont}
 
 import scala.Predef.{tuple2ToZippedOps => _}
@@ -39,15 +40,12 @@ object Main {
 
     while(!Display.isCloseRequested) {
       if(Dungeon.dungeon != null) {
-        Thread.sleep(1000)
-        System.out.println("hi")
         renderGame
         updateGame
       }else{
-        font.drawString(CENTER_WIDTH, CENTER_HEIGHT, Dungeon.percentComplete, Color.magenta)
-        System.out.println("no")
-        if(Dungeon.dungeon == null) System.out.println("nyes")
-        System.out.println(Dungeon.percentComplete)
+        glClear(GL_COLOR_BUFFER_BIT)
+        TextureImpl.bindNone()
+        font.drawString(CENTER_WIDTH, CENTER_HEIGHT, Dungeon.percentComplete)
       }
 
       Display.update()
@@ -76,9 +74,13 @@ object Main {
     glOrtho(0, WINDOW_WIDTH, WINDOW_HEIGHT, 0, 1, -1)
     glMatrixMode(GL_MODELVIEW)
     glEnable(GL_TEXTURE_2D)
+    glShadeModel(GL_SMOOTH)
+    glDisable(GL_DEPTH_TEST)
+    glDisable(GL_LIGHTING)
     glEnable(GL_BLEND)
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     glClearColor(0f, 0f, 0f, 0f)
+    glClearDepth(1)
     font =  new TrueTypeFont(new Font("Arial", Font.PLAIN, 28), true)
   }
 
