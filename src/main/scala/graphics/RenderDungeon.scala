@@ -16,7 +16,7 @@ import scala.collection.mutable.ArrayBuffer
 
 
 object RenderDungeon{
-  val dungeon = Dungeon.genDungeon(20)
+  val dungeon = Dungeon.genDungeon(100)
 
   var offx = 0
   var offy = 0
@@ -62,7 +62,6 @@ object RenderDungeon{
       addToQueue(Tile.Floor.id, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), Tile.Floor.imgWidth, Tile.Floor.imgHeight, Tile.Floor.tileType)
       addToQueue(t._2.id, (t._1.x * tileSize - offx, t._1.y * tileSize + offy), t._2.imgWidth, t._2.imgHeight, t._2.tileType)
     }
-
   }
 
   class QueueItem(id: Int, pos: (Int, Int), width: Int, height: Int, tile: String){

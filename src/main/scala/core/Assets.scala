@@ -86,7 +86,7 @@ class Image(tex: Int, width: Float, height: Float){
 
   def draw: Unit ={
     glPushMatrix()
-      glBindTexture(GL_TEXTURE_2D, tex)
+    glBindTexture(GL_TEXTURE_2D, tex)
     glBegin(GL_QUADS)
       glTexCoord2f(0,0)
       glVertex2f(xPos, yPos)

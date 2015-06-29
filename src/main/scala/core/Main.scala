@@ -4,11 +4,15 @@ package core
 * Created by Mnenmenth
 */
 
+import java.awt.Font
+
+import generators.Dungeon
 import graphics.RenderDungeon
 import input.KeyboardInput
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
 import org.lwjgl.opengl.{Display, DisplayMode}
+import org.newdawn.slick.{Color, TrueTypeFont}
 
 import scala.Predef.{tuple2ToZippedOps => _}
 
@@ -26,19 +30,30 @@ object Main {
 
   def CENTER_WIDTH = WINDOW_WIDTH / 4
 
+  var font: TrueTypeFont = null
+
   def main(args: Array[String]): Unit = {
 
     glInit
 
     while (!Display.isCloseRequested) {
-      render
-      update
+      if(RenderDungeon.dungeon != null) {
+        System.out.println("hi")
+        renderGame
+        updateGame
+      }else{
+        font.drawString(CENTER_WIDTH, CENTER_HEIGHT, Dungeon.percentComplete, Color.magenta)
+        System.out.println("no")
+        if(RenderDungeon.dungeon == null) System.out.println("nyes")
+        System.out.println(Dungeon.percentComplete)
+      }
 
       Display.update()
       Display.sync(60)
     }
 
     Display.destroy()
+    System.exit(1)
 
   }
 
@@ -62,14 +77,15 @@ object Main {
     glEnable(GL_BLEND)
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     glClearColor(0f, 0f, 0f, 0f)
+    font =  new TrueTypeFont(new Font("Arial", Font.PLAIN, 28), true)
   }
 
-  def render: Unit ={
+  def renderGame: Unit ={
     glClear(GL_COLOR_BUFFER_BIT)
     RenderDungeon.render()
   }
 
-  def update: Unit ={
+  def updateGame: Unit = {
     KeyboardInput.mapCam
     RenderDungeon.floorQueue()
   }

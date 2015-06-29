@@ -64,7 +64,7 @@ class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: MutableArr
 }
 
 object Dungeon {
-  def percentComplete = (100 * comP / numR + 1).toString
+  def percentComplete = (100 * comP / numR).toString
 
   var numR: Int = 1
   var comP: Int = 0
