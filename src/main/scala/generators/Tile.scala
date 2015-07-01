@@ -28,7 +28,7 @@ object Tile {
 
   case object MonsterSpawn extends Tile {
     override val toChar = 'M'
-    override val id = 3
+    override val id = 2
     override val imgWidth = sprite.getSubimage(3 * 64, 0, 64, 64).getWidth
     override val imgHeight = sprite.getSubimage(3 * 64, 0, 64, 64).getHeight
     override val tileType = "Monster"
@@ -36,7 +36,7 @@ object Tile {
 
   case object Floor extends Tile {
     override val toChar = '#'
-    override val id = 3
+    override val id = 2
     override val imgWidth = sprite.getSubimage(3 * 64, 0, 64, 64).getWidth
     override val imgHeight = sprite.getSubimage(3 * 64, 0, 64, 64).getHeight
     override val tileType = "Floor"
@@ -44,7 +44,7 @@ object Tile {
 
   case object Door extends Tile {
     override val toChar = 'D'
-    override val id = 4
+    override val id = 3
     override val imgWidth = sprite.getSubimage(3 * 64, 0, 64, 64).getWidth
     override val imgHeight = sprite.getSubimage(3 * 64, 0, 64, 64).getHeight
     override val tileType = "Door"
@@ -52,7 +52,7 @@ object Tile {
 
   case object SecretDoor extends Tile {
     override val toChar = 'S'
-    override val id = 5
+    override val id = 4
     override val imgWidth = sprite.getSubimage(3 * 64, 0, 64, 64).getWidth
     override val imgHeight = sprite.getSubimage(3 * 64, 0, 64, 64).getHeight
     override val tileType = "Secret Door"
@@ -60,7 +60,7 @@ object Tile {
 
   case object Spawn extends Tile {
     override val toChar = '@'
-    override val id = 6
+    override val id = 5
     override val imgWidth = sprite.getSubimage(0, 2 * 64, 64, 64).getWidth
     override val imgHeight = sprite.getSubimage(0, 2 * 64, 64, 64).getHeight
     override val tileType = "Spawn"

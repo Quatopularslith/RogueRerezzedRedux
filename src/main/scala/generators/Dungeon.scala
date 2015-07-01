@@ -1,12 +1,12 @@
 package generators
 
 import core.Implicits._
-import entity.Entity
-import entity.Item
-import entity.Monster.{Player, Monster}
+import entity.Monster.{Monster, Player}
+import entity.{Entity, Item}
 import generators.Shape._
 import generators.Tile._
 import util.MutableArray
+
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
@@ -15,7 +15,7 @@ import scala.util.Random
  * Just roll with it OK?
  * Created by Torri on 3/1/2015.
  */
-class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: MutableArray[Entity]) {
+class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: ArrayBuffer[Entity]) {
   def getSpawn: (Int, Int) ={
     val thing = floor.filter(t => t._2 == Tile.Spawn).toList
     thing.head._1
@@ -74,7 +74,7 @@ object Dungeon {
   val edges = ArrayBuffer.empty[(Int, Int)]
   val EdgeOffsets = Set((1, 0), (0, 1), (-1, 0), (0, -1))
   val rand = new Random()
-  var entities = new MutableArray[Entity]
+  var entities = new ArrayBuffer[Entity]
 
   def roundTo(d: Double, decPlace: Int): Double = {
     val sto = d * math.pow(10, decPlace.toDouble)
@@ -82,7 +82,7 @@ object Dungeon {
   }
   def genDungeon(roomCount: Int): Dungeon = {
     val thread = new Thread {
-      entities = new MutableArray[Entity]
+      entities = new ArrayBuffer[Entity]
       numR = roomCount
       val floor = mutable.Map.empty[(Int, Int), Tile]
       var n = 0
@@ -109,7 +109,7 @@ object Dungeon {
     dungeon
   }
   def genDungeonNoThread(roomCount: Int): Dungeon = {
-    entities = new MutableArray[Entity]
+    entities = new ArrayBuffer[Entity]
     numR = roomCount
     val floor = mutable.Map.empty[(Int, Int), Tile]
     var n = 0

@@ -7,13 +7,14 @@ package core
 import java.awt.Font
 
 import generators.Dungeon
+import generators.Dungeon._
 import graphics.RenderDungeon
 import input.KeyboardInput
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.GL11._
 import org.lwjgl.opengl.{Display, DisplayMode}
+import org.newdawn.slick.TrueTypeFont
 import org.newdawn.slick.opengl.TextureImpl
-import org.newdawn.slick.{Color, TrueTypeFont}
 
 import scala.Predef.{tuple2ToZippedOps => _}
 
@@ -32,14 +33,13 @@ object Main {
   def CENTER_WIDTH = WINDOW_WIDTH / 4
 
   var font: TrueTypeFont = null
-  var dungeon: Dungeon = null
   def main(args: Array[String]): Unit = {
 
     glInit
-    dungeon = Dungeon.genDungeon(100)
+    Dungeon.genDungeon(10)
 
     while(!Display.isCloseRequested) {
-      if(Dungeon.dungeon != null) {
+      if(dungeon != null) {
         renderGame
         updateGame
       }else{
@@ -92,6 +92,11 @@ object Main {
   def updateGame: Unit = {
     KeyboardInput.mapCam
     RenderDungeon.floorQueue()
+
+    if(dungeon.entities.nonEmpty){
+      dungeon.entities.foreach(t=> t.doTurn)
+      RenderDungeon.entityQueue()
+    }
   }
 
   def println(thing: Any): Unit ={
