@@ -66,7 +66,7 @@ object RenderDungeon{
 
   def entityQueue(): Unit ={
     dungeon.entities.filter(e=> xRange.contains(e.pos.x) && yRange.contains(e.pos.y)).foreach{t =>
-      addToQueue(t.getImage, ((t.pos.x * tileSize - offx).toInt, (t.pos.y * tileSize + offy).toInt), tileSize, tileSize, "Entity thing")
+      addToQueue(t.getImage, ((t.pos._1 * tileSize - offx).toInt, (t.pos._2 * tileSize + offy).toInt), tileSize, tileSize, "Entity thing")
     }
   }
 
