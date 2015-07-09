@@ -61,7 +61,7 @@ object RenderDungeon{
 
   val blank = new Sprite(9000, 0, 0)
 
-  val spriteArray= Array(
+  val spriteArray: Array[Sprite]= Array(
     blank,//blank
     chestSprite,//chest
     floorSprite,//floor
