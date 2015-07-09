@@ -16,8 +16,8 @@ object KeyboardInput {
     if(Keyboard.isKeyDown(Keyboard.KEY_LEFT)) RenderDungeon.offx -= mod
     if(Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) RenderDungeon.offx += mod
   }
-  def playerMove: (Double, Double) ={
-    val speed = 5.0/64.0
+  def playerMove: (Double, Double) = {
+    val speed = 1.0
     var y = 0.0
     var x = 0.0
     if(Keyboard.isKeyDown(Keyboard.KEY_W)) y -= speed

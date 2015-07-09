@@ -78,6 +78,11 @@ object Main {
     glDisable(GL_DEPTH_TEST)
     glDisable(GL_LIGHTING)
     glEnable(GL_BLEND)
+
+    glEnableClientState(GL_VERTEX_ARRAY)
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY)
+    glEnableClientState(GL_COLOR_ARRAY)
+
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     glClearColor(0f, 0f, 0f, 0f)
     glClearDepth(1)
@@ -92,11 +97,8 @@ object Main {
   def updateGame: Unit = {
     KeyboardInput.mapCam
     RenderDungeon.floorQueue()
-
-    if(dungeon.entities.nonEmpty){
-      dungeon.entities.foreach(t=> t.doTurn)
-      RenderDungeon.entityQueue()
-    }
+    dungeon.entities.foreach(t=> t.doTurn)
+    RenderDungeon.entityQueue()
   }
 
   def println(thing: Any): Unit ={

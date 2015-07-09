@@ -35,24 +35,49 @@ object RenderDungeon{
 
   def edges = Dungeon.getEdges(dungeon.floor)
 
+  val chestSubImg = new Image(Tile.sprite.getSubimage(0, 0, 64, 64))
+  val chestSprite = new Sprite(ImageCache.loadTextureFromBuffImg(chestSubImg.image), chestSubImg.width, chestSubImg.height)
 
-  var spriteArray = Array(
-    0,//blank
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(0, 0, 64, 64)),//chest
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 0, 64, 64)),//floor
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(4 * 64, 0, 64, 64)),//door
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(4 * 64, 64, 64, 64)),//secret door
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 0, 64, 64)),//spawn (missing tex)
-    ImageCache.loadTextureFromBuffImg(Tile.sprite.getSubimage(3 * 64, 2 * 64, 64, 64)),//exit
-    ImageCache.loadTextureFromBuffImg(ImageCache.loadImage("spritesheet.png").getSubimage(0, 2*64, 64, 64)), //player
-    ImageCache.loadTextureFromBuffImg(ImageCache.loadImage("spritesheet.png").getSubimage(64, 64, 64, 64))) //goblin
+  val floorSubImg = new Image(Tile.sprite.getSubimage(3 * 64, 0, 64, 64))
+  val floorSprite = new Sprite(ImageCache.loadTextureFromBuffImg(chestSubImg.image), floorSubImg.width, floorSubImg.height)
+
+  val doorSubImg = new Image(Tile.sprite.getSubimage(4 * 64, 0, 64, 64))
+  val doorSprite = new Sprite(ImageCache.loadTextureFromBuffImg(doorSubImg.image), doorSubImg.width, doorSubImg.height)
+
+  val secretDoorSubImg = new Image(Tile.sprite.getSubimage(4 * 64, 64, 64, 64))
+  val secretDoorSprite = new Sprite(ImageCache.loadTextureFromBuffImg(secretDoorSubImg.image), secretDoorSubImg.width, secretDoorSubImg.height)
+
+  val spawnSubImg = new Image(Tile.sprite.getSubimage(3 * 64, 0, 64, 64))
+  val spawnSprite = new Sprite(ImageCache.loadTextureFromBuffImg(spawnSubImg.image), spawnSubImg.width, spawnSubImg.height)
+
+  val exitSubImg = new Image(Tile.sprite.getSubimage(3 * 64, 2 * 64, 64, 64))
+  val exitSprite = new Sprite(ImageCache.loadTextureFromBuffImg(exitSubImg.image), exitSubImg.width, exitSubImg.height)
+
+  val playerSubImg = new Image(ImageCache.loadImage("spritesheet.png").getSubimage(0, 2*64, 64, 64))
+  val playerSprite = new Sprite(ImageCache.loadTextureFromBuffImg(playerSubImg.image), playerSubImg.width, playerSubImg.height)
+
+  val goblinSubImg = new Image(ImageCache.loadImage("spritesheet.png").getSubimage(64, 64, 64, 64))
+  val goblinSprite = new Sprite(ImageCache.loadTextureFromBuffImg(goblinSubImg.image), goblinSubImg.width, goblinSubImg.height)
+
+  val blank = new Sprite(9000, 0, 0)
+
+  val spriteArray= Array(
+    blank,//blank
+    chestSprite,//chest
+    floorSprite,//floor
+    doorSprite,//door
+    secretDoorSprite,//secret door
+    spawnSprite,//spawn (missing tex)
+    exitSprite,//exit
+    playerSprite, //player
+    goblinSprite) //goblin
 
   def render() {
     renderQueue.foreach{qi =>
-      val img = new Image(spriteArray(qi.getId), qi.getWidth, qi.getHeight)
-      img.setPos(qi.getPos.x, qi.getPos.y)
-      img.draw
-      //if(qi.tileType.equals("Spawn")) System.out.println(qi.getPos)
+      val sprite = spriteArray(qi.getId)
+      System.out.println(sprite.texid)
+      sprite.setPos(qi.getPos.x, qi.getPos.y)
+      sprite.draw()
     }
     renderQueue = ArrayBuffer.empty[QueueItem]
   }
@@ -66,7 +91,7 @@ object RenderDungeon{
 
   def entityQueue(): Unit ={
     dungeon.entities.filter(e=> xRange.contains(e.pos.x) && yRange.contains(e.pos.y)).foreach{t =>
-      addToQueue(t.getImage, ((t.pos._1 * tileSize - offx).toInt, (t.pos._2 * tileSize + offy).toInt), tileSize, tileSize, "Entity thing")
+      addToQueue(t.getId, ((t.pos._1 * tileSize - offx).toInt, (t.pos._2 * tileSize + offy).toInt), tileSize, tileSize, "Entity thing")
     }
   }
 

@@ -10,7 +10,7 @@ import util.pathFinding.{DepthFirst, Path, Random}
 
 class Goblin(inipos: (Double, Double), dungeon: Dungeon) extends Monster(inipos, 10, 10, 10, 0, dungeon) {
   //override def getImage: Int = ImageCache.loadTextureFromBuffImg(ImageCache.loadImage("spritesheet.png").getSubimage(64, 64, 64, 64))
-  override def getImage: Int = 8
+  override def getId: Int = 8
   override def getImgWidth: Int = ImageCache.loadImage("spritesheet.png").getSubimage(64, 64, 64, 64).getWidth
   override def getImgHeight: Int = ImageCache.loadImage("spritesheet.png").getSubimage(64, 64, 64, 64).getHeight
 

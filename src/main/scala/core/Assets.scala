@@ -72,34 +72,10 @@ object ImageCache {
 
 }
 
-class Image(tex: Int, width: Float, height: Float){
+class Image(img: BufferedImage){
 
-  var getHeight = height
-  var getWidth = width
-  var xPos = 0
-  var yPos = 0
+  val width = img.getWidth
+  val height = img.getHeight
+  val image = img
 
-  def setPos(x: Int, y: Int): Unit ={
-    xPos = x
-    yPos = y
-  }
-
-  def draw: Unit ={
-    glPushMatrix()
-    glBindTexture(GL_TEXTURE_2D, tex)
-    glBegin(GL_QUADS)
-      glTexCoord2f(0,0)
-      glVertex2f(xPos, yPos)
-
-      glTexCoord2f(0,1)
-      glVertex2f(xPos, yPos + height)
-
-      glTexCoord2f(1,1)
-      glVertex2f(xPos + width, yPos + height)
-
-      glTexCoord2f(1,0)
-      glVertex2f(xPos + width, yPos)
-    glEnd()
-    glPopMatrix()
-  }
 }

@@ -2,6 +2,7 @@ package entity
 
 import core.ImageCache
 import generators.Dungeon
+import graphics.Sprite
 
 
 /**
@@ -12,7 +13,7 @@ abstract class Entity(inipos: (Double, Double), var maxHealth: Int, dungeon: Dun
   var health = maxHealth
   var pos = inipos
   def setPos(newPos: (Double,Double)):Unit = {pos = newPos}
-  def getImage: Int
+  def getId: Int
   def getImgWidth: Int
   def getImgHeight: Int
   def doTurn: Unit
