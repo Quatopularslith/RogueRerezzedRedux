@@ -15,8 +15,8 @@ class StaticSprite(texId: Int, width: Float, height: Float, vertices: Int = 64, 
   var vertex_data: FloatBuffer = _
   var color_data: FloatBuffer = _
 
-  val vbo_vertex_handle = glGenBuffers()
-  val vbo_color_handle = glGenBuffers()
+  var vbo_vertex_handle = glGenBuffers()
+  var vbo_color_handle = glGenBuffers()
 
   def createVBO(): Unit ={
     println("Creating")
@@ -31,6 +31,18 @@ class StaticSprite(texId: Int, width: Float, height: Float, vertices: Int = 64, 
     color_data.put(Array(0f, 1f, 0f))
     color_data.put(Array(0f, 0f, 1f))
     color_data.flip()
+
+    vbo_vertex_handle = glGenBuffers()
+
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_vertex_handle)
+    glBufferData(GL_ARRAY_BUFFER, vertex_data, GL_STATIC_DRAW)
+    glBindBuffer(GL_ARRAY_BUFFER, 0)
+
+    vbo_color_handle = glGenBuffers()
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_color_handle)
+    glBufferData(GL_ARRAY_BUFFER, color_data, GL_STATIC_DRAW)
+    glBindBuffer(GL_ARRAY_BUFFER, 0)
+
     println("Created")
   }
 
@@ -42,17 +54,25 @@ class StaticSprite(texId: Int, width: Float, height: Float, vertices: Int = 64, 
 
   def renderVBO(): Unit ={
 
-    if(!vboCreated) {
+    /*if(!vboCreated) {
+
+      //vbo_vertex_handle = glGenBuffers()
+
+      glBindBuffer(GL_ARRAY_BUFFER, vbo_vertex_handle)
+      glBufferData(GL_ARRAY_BUFFER, vertex_data, GL_STATIC_DRAW)
+      glBindBuffer(GL_ARRAY_BUFFER, 0)
+
+      //vbo_color_handle = glGenBuffers()
       glBindBuffer(GL_ARRAY_BUFFER, vbo_color_handle)
       glBufferData(GL_ARRAY_BUFFER, color_data, GL_STATIC_DRAW)
       glBindBuffer(GL_ARRAY_BUFFER, 0)
       vboCreated = true
-    }
+    }*/
 
-    glPushMatrix()
+    //glPushMatrix()
       glBindTexture(GL_TEXTURE_2D, texId)
-      glTranslatef(x, y, 0)
-    glPopMatrix()
+      //glTranslatef(x, y, 0)
+    //glPopMatrix()
 
     glBindBuffer(GL_ARRAY_BUFFER, vbo_vertex_handle)
     glVertexPointer(vertex_size, GL_FLOAT, 0, 0l)

@@ -78,6 +78,7 @@ object RenderDungeon {
 
   def render() {
     renderQueue.foreach { qi =>
+      System.out.println(qi.isStatic)
       if(!qi.isStatic) {
         val sprite = spriteArray(qi.getId-7)
         sprite.setPos(qi.getPos.x, qi.getPos.y)
