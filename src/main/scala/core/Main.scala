@@ -33,16 +33,17 @@ object Main {
   def CENTER_WIDTH = WINDOW_WIDTH / 4
 
   var font: TrueTypeFont = null
+
   def main(args: Array[String]): Unit = {
 
     glInit
     Dungeon.genDungeon(10)
 
-    while(!Display.isCloseRequested) {
-      if(dungeon != null) {
+    while (!Display.isCloseRequested) {
+      if (dungeon != null) {
         renderGame
         updateGame
-      }else{
+      } else {
         glClear(GL_COLOR_BUFFER_BIT)
         TextureImpl.bindNone()
         font.drawString(CENTER_WIDTH, CENTER_HEIGHT, Dungeon.percentComplete)
@@ -86,10 +87,10 @@ object Main {
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     glClearColor(0f, 0f, 0f, 0f)
     glClearDepth(1)
-    font =  new TrueTypeFont(new Font("Arial", Font.PLAIN, 28), true)
+    font = new TrueTypeFont(new Font("Arial", Font.PLAIN, 28), true)
   }
 
-  def renderGame: Unit ={
+  def renderGame: Unit = {
     glClear(GL_COLOR_BUFFER_BIT)
     RenderDungeon.render()
   }
@@ -97,11 +98,11 @@ object Main {
   def updateGame: Unit = {
     KeyboardInput.mapCam
     RenderDungeon.floorQueue()
-    dungeon.entities.foreach(t=> t.doTurn)
+    dungeon.entities.foreach(t => t.doTurn)
     RenderDungeon.entityQueue()
   }
 
-  def println(thing: Any): Unit ={
+  def println(thing: Any): Unit = {
     System.out.println(thing)
   }
 

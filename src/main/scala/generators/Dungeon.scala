@@ -16,24 +16,25 @@ import scala.util.Random
  * Created by Torri on 3/1/2015.
  */
 class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: ArrayBuffer[Entity]) {
-  def getSpawn: (Int, Int) ={
+  def getSpawn: (Int, Int) = {
     val thing = floor.filter(t => t._2 == Tile.Spawn).toList
     thing.head._1
   }
-  def getAllof(tile: Tile): List[((Int,Int), Tile)] ={
+
+  def getAllof(tile: Tile): List[((Int, Int), Tile)] = {
     floor.filter(t => t._2 == Tile.Spawn).toList
   }
 
   entities += new Player((getSpawn._1, getSpawn._2), this)
-  getAllof(MonsterSpawn).foreach(t=> {
+  getAllof(MonsterSpawn).foreach(t => {
     entities += Monster.pickRand((t._1._1.toDouble, t._1._2.toDouble), this)
   })
 
   val doors = {
-    val rawdoors: Array[((Int, Int), Tile)] = (new MutableArray[((Int,Int),Tile)] + getAllof(Tile.Door) + getAllof(Tile.SecretDoor)).toArray
+    val rawdoors: Array[((Int, Int), Tile)] = (new MutableArray[((Int, Int), Tile)] + getAllof(Tile.Door) + getAllof(Tile.SecretDoor)).toArray
     val doors: Array[Door] = {
       val ma = new MutableArray[Door]
-      rawdoors.foreach(t=> {
+      rawdoors.foreach(t => {
         ma += new Door(t._1, {
           t._2 match {
             case Door => true
@@ -43,9 +44,9 @@ class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: ArrayBuffe
       })
       ma.toArray
     }
-    doors.foreach(t=> {
-      doors.foreach(u=> {
-        if(u.isConnectedTo(t) && !t.connected.exists(u)){
+    doors.foreach(t => {
+      doors.foreach(u => {
+        if (u.isConnectedTo(t) && !t.connected.exists(u)) {
           t.connected += u
           u.connected += t
         }
@@ -53,6 +54,7 @@ class Dungeon(val floor: mutable.Map[(Int, Int), Tile], val entities: ArrayBuffe
     })
     doors
   }
+
   override def toString: String = {
     val xs = floor.keys.map(_._1)
     val bounds = xs.min to xs.max
@@ -80,12 +82,14 @@ object Dungeon {
     val sto = d * math.pow(10, decPlace.toDouble)
     math.round(sto).toDouble / math.pow(10, decPlace.toDouble)
   }
+
   def genDungeon(roomCount: Int): Dungeon = {
     val thread = new Thread {
       entities = new ArrayBuffer[Entity]
       numR = roomCount
       val floor = mutable.Map.empty[(Int, Int), Tile]
       var n = 0
+
       override def run() {
         addShape(Circle((0, 0), spawnRoomSize), floor)
         while (n < roomCount) {
@@ -108,6 +112,7 @@ object Dungeon {
     thread.start()
     dungeon
   }
+
   def genDungeonNoThread(roomCount: Int): Dungeon = {
     entities = new ArrayBuffer[Entity]
     numR = roomCount

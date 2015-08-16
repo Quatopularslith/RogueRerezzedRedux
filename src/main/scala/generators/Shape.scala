@@ -1,6 +1,7 @@
 package generators
 
 import core.Implicits._
+
 import scala.collection.mutable.ArrayBuffer
 
 /**

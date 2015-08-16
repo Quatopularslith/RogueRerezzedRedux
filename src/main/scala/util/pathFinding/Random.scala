@@ -8,18 +8,18 @@ import scala.math._
  * What is this "Getting from A to B" stuff?
  * Created by Torri on 6/25/2015.
  */
-class Random extends PathFinder(null){
+class Random extends PathFinder(null) {
   override def makePath(start: (Double, Double), end: (Double, Double), speed: Double, limit: Int): Path = {
     val path = new Path(start)
     val rand = new scala.util.Random()
     var x = start._1
     var y = start._2
-    for(a <- 1 to limit){
-      val theta = (rand.nextInt(359)*Pi)/180
-      val dirVec = new Vector(cos(theta),sin(theta)).getUnit * speed
+    for (a <- 1 to limit) {
+      val theta = (rand.nextInt(359) * Pi) / 180
+      val dirVec = new Vector(cos(theta), sin(theta)).getUnit * speed
       x += dirVec.x
       y += dirVec.y
-      path += (x,y)
+      path +=(x, y)
     }
     path
   }
